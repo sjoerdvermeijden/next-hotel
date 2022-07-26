@@ -14,7 +14,6 @@ export const data = [
         type: 'Hotel',
         price: 115,
         facilities: [
-            'Gym',
             'Internet Access',
             'Spa',
             'Swimming pool',
@@ -59,7 +58,6 @@ export const data = [
         type: 'Hotel',
         price: 120,
         facilities: [
-            'Gym',
             'Internet Access',
             'Spa',
             'Swimming pool'
@@ -148,7 +146,6 @@ export const data = [
         type: 'Motel',
         price: 88,
         facilities: [
-            'Gym',
             'Internet Access',
             'Free wifi'
         ],
@@ -191,7 +188,6 @@ export const data = [
         type: 'Hotel',
         price: 72,
         facilities: [
-            'Gym',
             'Internet Access',
             'Spa',
             'Swimming pool'
@@ -279,7 +275,6 @@ export const data = [
         type: 'Hotel',
         price: 99,
         facilities: [
-            'Gym',
             'Internet Access',
             'Swimming pool'
         ],
@@ -366,7 +361,6 @@ export const data = [
         facilities: [
             'Internet Access',
             'Swimming pool',
-            'Gym',
             'Free wifi'
         ],
         reviews: [

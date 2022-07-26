@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import styled from "styled-components";
 
 import Hotel from "../Hotel/Hotel";
@@ -18,6 +18,22 @@ export const StyledLink = styled.a`
 
 function Hotels() {
   const [filters, setFilters] = useContext(FilterContext);
+
+  // This works
+  const runFunction = (item, filters) => {
+    const newArray = data.filter((item) => {
+      if (filters.some(r=> item.facilities.includes(r))) {
+        return true;
+      } else {
+        return false;
+      }
+    })
+  }
+
+  useEffect(() => {
+    runFunction()
+  }, [])
+  
 
   return (
     <>

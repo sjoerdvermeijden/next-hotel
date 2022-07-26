@@ -19,8 +19,6 @@ function Filters() {
       .filter((item) => item.querySelector("input:checked"))
       .map((item) => item.querySelector("input").id);
 
-    console.log(newArray);
-
     setFilters(newArray);
   };
 
