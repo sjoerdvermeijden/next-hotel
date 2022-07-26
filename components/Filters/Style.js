@@ -12,7 +12,7 @@ export const FiltersWrapper = styled.div`
     padding: 15px;
 
     &__item {
-      padding: 10px;
+      padding: 10px 0;
       
       &:not(:last-child) {
         border-bottom: 1px solid var(--gray);
@@ -25,18 +25,52 @@ export const FiltersWrapper = styled.div`
   .filter {
     min-width: 220px;
 
+    &.is-open {
+
+      .filter__title {
+
+        &:not(:last-child) {
+          margin-bottom: 8px;
+        }
+
+        svg {
+          transform: rotate(180deg);
+        }
+
+      }
+
+      .filter__list {
+        display: block;
+      }
+
+    }
+
     &__label {
       display: inline-block;
       margin-top: 1px;
+    }
+
+    &__title {
+      display: flex;
+      align-items: center;
+      transition: transform .3s ease;
 
       &:focus,
       &:hover {
         cursor: pointer;
       }
+      
+    }
+
+    &__label {
+      display: inline-block;
+
+      &:not(:last-child) {
+        margin-right: 8px;
+      }
 
     }
 
-    &__title,
     &__item {
       display: flex;
 
@@ -44,6 +78,10 @@ export const FiltersWrapper = styled.div`
         margin-bottom: 8px;
       }
 
+    }
+
+    &__list {
+      display: none;
     }
 
     &__checkbox {

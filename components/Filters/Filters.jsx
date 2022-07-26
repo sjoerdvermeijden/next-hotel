@@ -1,5 +1,7 @@
 import React, { useState, useContext } from "react";
 
+import { BsChevronUp } from "react-icons/bs";
+
 import { FiltersWrapper } from "./Style";
 
 import { FilterContext } from "../../context/FilterContext";
@@ -17,18 +19,26 @@ function Filters() {
       .filter((item) => item.querySelector("input:checked"))
       .map((item) => item.querySelector("input").id);
 
-    console.log(newArray);
-
     setFilters(newArray);
   };
+
+  const openFunction = (e) => {
+    const title = e.target.parentNode;
+    const filter = title.parentNode;
+    
+    filter.classList.toggle('is-open');
+  }
 
   return (
     <>
       <FiltersWrapper>
         <ul className="filter-list" onChange={(e) => listFunction(e)}>
           <li className="filter-list__item">
-            <div className="filter">
-              <h3 className="filter__title">Type</h3>
+            <div className="filter is-open">
+              <h3 className="filter__title" onClick={(e) => openFunction(e)}>
+                <span className="filter__label">Type</span>
+                <BsChevronUp style={{ marginTop: 2 }} size="12px" />
+              </h3>
               <ul className="filter__list">
                 <li className="filter__item">
                   <input
@@ -68,7 +78,10 @@ function Filters() {
           </li>
           <li className="filter-list__item">
             <div className="filter">
-              <h3 className="filter__title">Facilities</h3>
+              <h3 className="filter__title" onClick={(e) => openFunction(e)}>
+                <span className="filter__label">Facilities</span>
+                <BsChevronUp style={{ marginTop: 2 }} size="12px" />
+              </h3>
               <ul className="filter__list" onChange={(e) => listFunction(e)}>
                 <li className="filter__item">
                   <input
@@ -130,7 +143,10 @@ function Filters() {
           </li>
           <li className="filter-list__item">
             <div className="filter">
-              <h3 className="filter__title">Stars</h3>
+              <h3 className="filter__title" onClick={(e) => openFunction(e)}>
+                <span className="filter__label">Stars</span>
+                <BsChevronUp style={{ marginTop: 2 }} size="12px" />
+              </h3>
               <ul className="filter__list" onChange={(e) => listFunction(e)}>
                 <li className="filter__item">
                   <input
