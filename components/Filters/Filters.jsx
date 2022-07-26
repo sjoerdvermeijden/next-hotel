@@ -10,14 +10,16 @@ function Filters() {
   const [filters, setFilters] = useContext(FilterContext);
 
   const listFunction = (e) => {
-    const listItem = e.target.parentNode;
-    const list = listItem.parentNode;
+    const listItem = e.target;
+    const parentList = listItem.closest('.filter-list');
 
-    const filterList = Array.from(list.querySelectorAll("li.filter__item"));
+    const filterList = Array.from(parentList.querySelectorAll("li.filter__item"));
 
     const newArray = filterList
       .filter((item) => item.querySelector("input:checked"))
       .map((item) => item.querySelector("input").id);
+
+    console.log(newArray);
 
     setFilters(newArray);
   };
