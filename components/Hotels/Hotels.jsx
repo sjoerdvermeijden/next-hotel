@@ -19,15 +19,17 @@ export const StyledLink = styled.a`
 function Hotels() {
   const [filters, setFilters] = useContext(FilterContext);
 
-  // This works
   const runFunction = (item, filters) => {
+    const filterArray = ['Gym']
+
     const newArray = data.filter((item) => {
-      if (filters.some(r=> item.facilities.includes(r))) {
+      if (filterArray.some(r=> item.facilities.includes(r))) {
         return true;
       } else {
         return false;
       }
     })
+    console.log(newArray);
   }
 
   useEffect(() => {
