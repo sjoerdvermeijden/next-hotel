@@ -59,11 +59,16 @@ export const FiltersWrapper = styled.div`
       &:hover {
         cursor: pointer;
       }
-      
+
     }
 
     &__label {
       display: inline-block;
+
+      &:hover,
+      &:focus {
+        cursor: pointer;
+      }
 
       &:not(:last-child) {
         margin-right: 8px;
