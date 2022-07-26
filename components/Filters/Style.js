@@ -8,21 +8,26 @@ export const FiltersWrapper = styled.div`
   
   .filter-list {
     list-style: none;
-    margin: -10px;
+    background: var(--lightgray);
+    padding: 15px;
 
     &__item {
       padding: 10px;
+      
+      &:not(:last-child) {
+        border-bottom: 1px solid var(--gray);
+      }
+
     }
 
   }
 
   .filter {
-    padding: 15px;
-    background: var(--lightgray);
-    min-width: 250px;
+    min-width: 220px;
 
     &__label {
       display: inline-block;
+      margin-top: 1px;
 
       &:focus,
       &:hover {
@@ -36,14 +41,13 @@ export const FiltersWrapper = styled.div`
       display: flex;
 
       &:not(:last-child) {
-        margin-bottom: 5px;
+        margin-bottom: 8px;
       }
 
     }
 
     &__checkbox {
       display: inline-block;
-      margin-top: 1px;
 
       &:not(:last-child) {
         margin-right: 10px;
