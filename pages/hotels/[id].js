@@ -37,14 +37,10 @@ function HotelPage() {
 
       setRatingState(newArray);
     }
-
-    console.log(ratingState)
   }
 
   useEffect(() => {
     newFunction();
-
-    console.log(ratingState)
   }, [])
 
   return (

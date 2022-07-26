@@ -82,7 +82,7 @@ function Filters() {
                 <span className="filter__label">Facilities</span>
                 <BsChevronUp style={{ marginTop: 2 }} size="12px" />
               </h3>
-              <ul className="filter__list" onChange={(e) => listFunction(e)}>
+              <ul className="filter__list">
                 <li className="filter__item">
                   <input
                     type="checkbox"
@@ -147,7 +147,7 @@ function Filters() {
                 <span className="filter__label">Stars</span>
                 <BsChevronUp style={{ marginTop: 2 }} size="12px" />
               </h3>
-              <ul className="filter__list" onChange={(e) => listFunction(e)}>
+              <ul className="filter__list">
                 <li className="filter__item">
                   <input
                     type="checkbox"
