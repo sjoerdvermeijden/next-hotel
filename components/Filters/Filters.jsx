@@ -11,7 +11,7 @@ function Filters() {
 
   const listFunction = (e) => {
     const listItem = e.target;
-    const parentList = listItem.closest('.filter-list');
+    const parentList = listItem.closest('.filter-list__item');
 
     const filterList = Array.from(parentList.querySelectorAll("li.filter__item"));
 
@@ -19,7 +19,17 @@ function Filters() {
       .filter((item) => item.querySelector("input:checked"))
       .map((item) => item.querySelector("input").id);
 
-    setFilters(newArray);
+    if (parentList.classList.contains('js-type')) {
+      setFilters(prevState => ({...prevState, type: newArray}));
+    }
+
+    if (parentList.classList.contains('js-facilities')) {
+      setFilters(prevState => ({...prevState, facilities: newArray}));
+    }
+    if (parentList.classList.contains('js-stars')) {
+      setFilters(prevState => ({...prevState, stars: newArray}));
+    }
+
   };
 
   const openFunction = (e) => {
@@ -33,7 +43,7 @@ function Filters() {
     <>
       <FiltersWrapper>
         <ul className="filter-list" onChange={(e) => listFunction(e)}>
-          <li className="filter-list__item">
+          <li className="filter-list__item js-type">
             <div className="filter is-open">
               <h3 className="filter__title" onClick={(e) => openFunction(e)}>
                 <span className="filter__label">Type</span>
@@ -76,7 +86,7 @@ function Filters() {
               </ul>
             </div>
           </li>
-          <li className="filter-list__item">
+          <li className="filter-list__item js-facilities">
             <div className="filter">
               <h3 className="filter__title" onClick={(e) => openFunction(e)}>
                 <span className="filter__label">Facilities</span>
@@ -141,7 +151,7 @@ function Filters() {
               </ul>
             </div>
           </li>
-          <li className="filter-list__item">
+          <li className="filter-list__item js-stars">
             <div className="filter">
               <h3 className="filter__title" onClick={(e) => openFunction(e)}>
                 <span className="filter__label">Stars</span>

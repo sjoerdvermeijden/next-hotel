@@ -41,14 +41,7 @@ function Hotels() {
     <>
       <HotelList>
         <ul className="hotel-list">
-          {data
-            .filter(
-              (item) =>
-                filters.length === 0 ||
-                filters.includes(item.type.toLowerCase()) ||
-                filters.includes(item.stars.toString())
-            )
-            .map((hotel) => {
+          {data.map((hotel) => {
               return (
                 <li key={hotel.id} className="hotel-list__item">
                   <StyledLink href={`/hotels/${hotel.id}`}>
