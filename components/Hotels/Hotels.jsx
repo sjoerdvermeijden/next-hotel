@@ -19,29 +19,35 @@ export const StyledLink = styled.a`
 function Hotels() {
   const [filters, setFilters] = useContext(FilterContext);
 
-  const runFunction = (item, filters) => {
-    const filterArray = ['Gym']
+  const filterFunction = (item) => {
 
-    const newArray = data.filter((item) => {
-      if (filterArray.some(r=> item.facilities.includes(r))) {
-        return true;
-      } else {
-        return false;
+    if (filters.stars.length >= 1) {
+      const starArray = filters.stars.map((item) => Number(item))
+  
+      if (starArray.includes(item?.stars)) {
+        return item;
       }
-    })
-    console.log(newArray);
+    }
+   
+    if (filters.type.length >= 1) {
+
+      if (filters.type.includes(item?.type.toLowerCase())) {
+        return item;
+      }
+    }
+
   }
 
   useEffect(() => {
-    runFunction()
-  }, [])
+    filterFunction()
+  }, [filters])
   
 
   return (
     <>
       <HotelList>
         <ul className="hotel-list">
-          {data.map((hotel) => {
+          {data.filter(filterFunction).map((hotel) => {
               return (
                 <li key={hotel.id} className="hotel-list__item">
                   <StyledLink href={`/hotels/${hotel.id}`}>
