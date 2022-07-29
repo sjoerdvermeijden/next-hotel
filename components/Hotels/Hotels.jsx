@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from "react";
+import React, { useContext, useState } from "react";
 import styled from "styled-components";
 
 import Hotel from "../Hotel/Hotel";
@@ -18,30 +18,34 @@ export const StyledLink = styled.a`
 
 function Hotels() {
   const [filters, setFilters] = useContext(FilterContext);
+  const [filteredItems, setFilteredItems] = useState([]);
 
   const filterFunction = (item) => {
 
     if (filters.stars.length >= 1) {
       const starArray = filters.stars.map((item) => Number(item))
-  
+      
       if (starArray.includes(item?.stars)) {
-        return item;
+        setFilteredItems(item)
       }
     }
-   
+    
+    if (filters.facilities.length >= 1) {
+      
+      if (filters.facilities.some(r=> item?.facilities.map((item) => item.toLowerCase()).includes(r))) {
+        setFilteredItems(item)
+      }
+    }
+    
     if (filters.type.length >= 1) {
-
+      
       if (filters.type.includes(item?.type.toLowerCase())) {
-        return item;
+        setFilteredItems(item)
       }
     }
 
-  }
-
-  useEffect(() => {
-    filterFunction()
-  }, [filters])
-  
+    console.log(filteredItems);
+  }  
 
   return (
     <>

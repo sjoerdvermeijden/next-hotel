@@ -8,6 +8,7 @@ import { FilterContext } from "../../context/FilterContext";
 
 function Filters() {
   const [filters, setFilters] = useContext(FilterContext);
+  const [filteredItems, setFilteredItems] = useState([])
 
   const listFunction = (e) => {
     const listItem = e.target;

@@ -17,7 +17,7 @@ export const data = [
             'Internet Access',
             'Spa',
             'Swimming pool',
-            'Free wifi'
+            'Wifi'
         ],
         reviews: [
             {
@@ -105,7 +105,7 @@ export const data = [
             'Internet Access',
             'Spa',
             'Swimming pool',
-            'Free wifi'
+            'Wifi'
         ],
         reviews: [
             {
@@ -147,7 +147,7 @@ export const data = [
         price: 88,
         facilities: [
             'Internet Access',
-            'Free wifi'
+            'Wifi'
         ],
         reviews: [
             {
@@ -234,7 +234,7 @@ export const data = [
             'Gym',
             'Internet Access',
             'Swimming pool',
-            'Free wifi'
+            'Wifi'
         ],
         reviews: [
             {
@@ -318,7 +318,7 @@ export const data = [
         price: 43,
         facilities: [
             'Internet Access',
-            'Free wifi'
+            'Wifi'
         ],
         reviews: [
             {
@@ -361,7 +361,7 @@ export const data = [
         facilities: [
             'Internet Access',
             'Swimming pool',
-            'Free wifi'
+            'Wifi'
         ],
         reviews: [
             {
