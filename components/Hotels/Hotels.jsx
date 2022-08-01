@@ -61,15 +61,25 @@ function Hotels() {
     <>
       <HotelList>
         <ul className="hotel-list">
-          {filteredItems.map((hotel) => {
-            return (
-              <li key={hotel.id} className="hotel-list__item">
-                <StyledLink href={`/hotels/${hotel.id}`}>
-                  <Hotel {...hotel} />
-                </StyledLink>
-              </li>
-            );
-          })}
+          {filteredItems.length < 1
+            ? data.map((hotel) => {
+                return (
+                  <li key={hotel.id} className="hotel-list__item">
+                    <StyledLink href={`/hotels/${hotel.id}`}>
+                      <Hotel {...hotel} />
+                    </StyledLink>
+                  </li>
+                );
+              })
+            : filteredItems.map((hotel) => {
+                return (
+                  <li key={hotel.id} className="hotel-list__item">
+                    <StyledLink href={`/hotels/${hotel.id}`}>
+                      <Hotel {...hotel} />
+                    </StyledLink>
+                  </li>
+                );
+              })}
         </ul>
       </HotelList>
     </>
