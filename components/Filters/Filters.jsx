@@ -124,7 +124,7 @@ function Filters() {
                     id="parking"
                   />
                   <label className="filter__label" htmlFor="parking">
-                    Parking
+                    Free parking
                   </label>
                 </li>
                 <li className="filter__item">
@@ -143,10 +143,10 @@ function Filters() {
                     type="checkbox"
                     className="filter__checkbox"
                     name=""
-                    id="pool"
+                    id="swimming-pool"
                   />
-                  <label className="filter__label" htmlFor="pool">
-                    Pool
+                  <label className="filter__label" htmlFor="swimming-pool">
+                    Swimming pool
                   </label>
                 </li>
               </ul>
