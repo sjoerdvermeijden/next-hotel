@@ -21,9 +21,7 @@ function Hotels() {
   const [filteredItems, setFilteredItems] = useState([]);
 
   const filterFunction = () => {
-
-    console.log(filters)
-
+    
     const newArray = data.filter((item) => {
 
       if (filters.stars.length >= 1) {
@@ -62,7 +60,7 @@ function Hotels() {
       <HotelList>
         <ul className="hotel-list">
           {filteredItems.length < 1
-            ? data.map((hotel) => {
+            ? data.map((hotel, index) => {
                 return (
                   <li key={hotel.id} className="hotel-list__item">
                     <StyledLink href={`/hotels/${hotel.id}`}>

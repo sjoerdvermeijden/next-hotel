@@ -9,7 +9,6 @@ export const data = [
             image: 'https://images.unsplash.com/photo-1618773928121-c32242e63f39?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
             label: 'Rotterdam'
         },
-        rating: 8.3,
         stars: 3,
         type: 'Hotel',
         price: 115,
@@ -53,7 +52,6 @@ export const data = [
             image: 'https://images.unsplash.com/photo-1618773928121-c32242e63f39?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
             label: 'Rotterdam'
         },
-        rating: 7.2,
         stars: 3,
         type: 'Hotel',
         price: 120,
@@ -96,7 +94,6 @@ export const data = [
             image: 'https://images.unsplash.com/photo-1618773928121-c32242e63f39?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
             label: 'Den Haag'
         },
-        rating: 5.6,
         stars: 3,
         type: 'Hotel',
         price: 64,
@@ -141,7 +138,6 @@ export const data = [
             image: '/images/newyork.jpg',
             label: 'New York'
         },
-        rating: 7.9,
         stars: 3,
         type: 'Motel',
         price: 88,
@@ -183,7 +179,6 @@ export const data = [
             image: '/images/hotel-4.jpg',
             label: 'Amsterdam'
         },
-        rating: 6.4,
         stars: 3,
         type: 'Hotel',
         price: 72,
@@ -226,7 +221,6 @@ export const data = [
             image: 'https://images.unsplash.com/photo-1618773928121-c32242e63f39?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
             label: 'Groningen'
         },
-        rating: 6.0,
         stars: 2,
         type: 'BB',
         price: 59,
@@ -242,7 +236,7 @@ export const data = [
                 author: 'Sjoerd Vermeijden',
                 email: 'Sjoerd_v92@live.nl',
                 review: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, deleniti.',
-                rating: 10
+                rating: 5
             },
             {
                 id: 1,
@@ -270,7 +264,6 @@ export const data = [
             image: 'https://images.unsplash.com/photo-1618773928121-c32242e63f39?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
             label: 'Beverwijk'
         },
-        rating: 7.2,
         stars: 4,
         type: 'Hotel',
         price: 99,
@@ -312,7 +305,6 @@ export const data = [
             image: 'https://images.unsplash.com/photo-1618773928121-c32242e63f39?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
             label: 'Rotterdam'
         },
-        rating: 6.8,
         stars: 4,
         type: 'Motel',
         price: 43,
@@ -354,7 +346,6 @@ export const data = [
             image: 'https://images.unsplash.com/photo-1618773928121-c32242e63f39?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
             label: 'Amsterdam'
         },
-        rating: 9.2,
         stars: 5,
         type: 'Hotel',
         price: 111,

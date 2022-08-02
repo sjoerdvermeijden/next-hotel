@@ -27,6 +27,8 @@ function HotelPage() {
         }
       });
     }
+
+    console.log(hotelState)
   }, [id]);
 
   const newFunction = () => {
@@ -74,7 +76,7 @@ function HotelPage() {
                       <div className="hotel__container">
                         <p className="hotel__adress">{hotelState.adress}</p>
                         <div className="hotel__ratings">
-                          <p className="hotel__rating">{ratingState}</p>
+                          <p className="hotel__rating">{hotelState?.rating}</p>
                           <p className="hotel__rating-amount">
                             ({hotelState.reviews.length} reviews)
                           </p>
