@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 
 import styled from 'styled-components';
 
-import { HotelWrapper } from "./Style";
+import { HotelWrapper } from "../../components/Styles/Style";
 
 import Layout from "../../components/Layout/Layout";
 import Block from "../../components/Block/Block";
