@@ -207,7 +207,7 @@ export const data = [
                 author: 'Tom Lucas',
                 email: 'tom@gmail.nl',
                 review: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, deleniti.',
-                rating: 9
+                rating: 4
             }
         ]
     },

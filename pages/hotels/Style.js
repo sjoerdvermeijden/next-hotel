@@ -92,10 +92,8 @@ export const HotelWrapper = styled.div`
 
     &__rating {
       display: inline-block;
-      border-top-left-radius: 5px;
-      border-top-right-radius: 5px;
-      border-bottom-right-radius: 5px;
-      padding: 5px;
+      border-radius: 5px;
+      padding: 1px 5px;
       background: green;
       color: white;
       font-weight: bold;

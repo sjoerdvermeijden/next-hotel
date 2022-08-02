@@ -17,18 +17,10 @@ function Hotel({id,name,type,image,adress,reviews,stars,price,facilities,descrip
 
     const rating = newArray.reduce((partialSum, a) => partialSum + a, 0) / reviews.length;
     setRatingState(rating)
-
-    data.forEach((hotel) => {
-      if (hotel.id === id) {
-        hotel.rating = rating;
-      }
-    })
   }
 
   useEffect(() => {
     ratingFunction();
-
-    console.log(ratingState)
   }, [])
 
   return (

@@ -19,6 +19,18 @@ function HotelPage() {
   const router = useRouter();
   const { id } = router.query;
 
+  const ratingFunction = () => {
+    const newArray = hotelState?.reviews.map((item) => {
+      return item.rating;
+    })
+
+    if (newArray) {
+      const rating = newArray.reduce((partialSum, a) => partialSum + a, 0) / hotelState?.reviews.length;
+      setRatingState(rating)
+    }
+
+  }
+
   useEffect(() => {
     if (id) {
       data.map((item) => {
@@ -27,23 +39,11 @@ function HotelPage() {
         }
       });
     }
-
-    console.log(hotelState)
   }, [id]);
 
-  const newFunction = () => {
-    if (hotelState) {
-      const newArray = hotelState?.reviews.map((item) => {
-        return item.rating;
-      })
-
-      setRatingState(newArray);
-    }
-  }
-
   useEffect(() => {
-    newFunction();
-  }, [])
+    ratingFunction();
+  }, [hotelState])
 
   return (
     <>
@@ -76,7 +76,7 @@ function HotelPage() {
                       <div className="hotel__container">
                         <p className="hotel__adress">{hotelState.adress}</p>
                         <div className="hotel__ratings">
-                          <p className="hotel__rating">{hotelState?.rating}</p>
+                          <span className="hotel__rating">{ratingState.toFixed(0)}</span>
                           <p className="hotel__rating-amount">
                             ({hotelState.reviews.length} reviews)
                           </p>

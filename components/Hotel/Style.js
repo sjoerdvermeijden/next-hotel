@@ -102,7 +102,7 @@ export const HotelWrapper = styled.div`
     }
 
     &__rating {
-      padding: 3px;
+      padding: 1px 5px;
       background: green;
       color: white;
       font-weight: bold;
