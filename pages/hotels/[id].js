@@ -1,6 +1,8 @@
 import React from "react";
 import { useEffect, useState } from "react";
 
+import styled from 'styled-components';
+
 import { HotelWrapper } from "./Style";
 
 import Layout from "../../components/Layout/Layout";
@@ -11,6 +13,35 @@ import { useRouter } from "next/router";
 import { data } from "../../Hotels";
 
 import { BsFillStarFill } from "react-icons/bs";
+import { BsArrowLeft } from "react-icons/bs";
+
+export const StyledLink = styled.a`
+  color: blue;
+  text-decoration: none;
+
+  .breadcrumb {
+
+    &__label {
+      display: inline-block;
+      transition: transform .3s ease;
+    }
+
+  }
+
+  &:hover,
+  &:focus {
+
+    .breadcrumb {
+
+      &__label {
+        transform: translateX(10px);
+      }
+
+    }
+
+  }
+
+`;
 
 function HotelPage() {
   const [hotelState, setHotelState] = useState();
@@ -54,6 +85,16 @@ function HotelPage() {
               <>
                 <HotelWrapper>
                   <div className="hotel">
+                    <div className="hotel__breadcrumbs">
+                      <StyledLink href="/">
+                        <div className="breadcrumb">
+                          <BsArrowLeft size={12} />
+                          <span className="breadcrumb__label">
+                            Back to homepage
+                          </span>
+                        </div>
+                      </StyledLink>
+                    </div>
                     <div className="hotel__header">
                       <h1 className="hotel__title">{hotelState.name}</h1>
                       <ul className="hotel__stars">

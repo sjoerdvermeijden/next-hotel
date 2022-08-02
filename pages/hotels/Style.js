@@ -4,6 +4,16 @@ export const HotelWrapper = styled.div`
 
   .hotel {
 
+    &__breadcrumbs {
+      border-bottom: 1px solid var(--lightgray);
+      padding-bottom: 15px;
+      
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+
+    }
+
     &__image {
 
       &:not(:last-child) {
@@ -176,5 +186,23 @@ export const HotelWrapper = styled.div`
         margin-bottom: 8px;
       }
     }
+  }
+
+  .breadcrumb {
+    display: flex;
+    align-items: center;
+
+    svg {
+
+      &:not(:last-child) {
+        margin-right: 5px;
+      }
+
+    }
+
+    &__label {
+
+    }
+
   }
 `;
