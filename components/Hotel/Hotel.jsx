@@ -2,21 +2,32 @@ import React, { useState, useEffect } from "react";
 
 import { HotelWrapper } from "./Style";
 
-import { data } from '../../Hotels' 
-
 import { BsFillStarFill } from "react-icons/bs";
 
 function Hotel({id,name,type,image,adress,reviews,stars,price,facilities,description,}) {
   const [ratingState, setRatingState] = useState(0);
+  const [ratingClass, setRatingClass] = useState('');
 
   const ratingFunction = () => {
-
     const newArray = reviews.map((item) => {
       return item.rating;
     })
 
     const rating = newArray.reduce((partialSum, a) => partialSum + a, 0) / reviews.length;
     setRatingState(rating)
+    
+    if (rating.toFixed(0)) {
+      setRatingClass('hotel-reviews__label')
+    }
+
+    if (rating.toFixed(0) <= 6) {
+      setRatingClass('hotel-reviews__label hotel-reviews__label--middle')
+    } 
+    
+    if (rating.toFixed(0) <= 3) {
+      setRatingClass('hotel-reviews__label hotel-reviews__label--low')
+    }
+
   }
 
   useEffect(() => {
@@ -62,7 +73,7 @@ function Hotel({id,name,type,image,adress,reviews,stars,price,facilities,descrip
                   <span className="hotel-reviews__reviews">
                     {reviews?.length > 0 ? `(${reviews.length}) reviews` : ""}
                   </span>
-                  <span className="hotel-reviews__label">
+                  <span className={ratingClass}>
                     {ratingState.toFixed(0)}
                   </span>
                 </div>

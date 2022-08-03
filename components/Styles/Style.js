@@ -199,7 +199,7 @@ export const HotelWrapper = styled.div`
     svg {
 
       &:not(:last-child) {
-        margin-right: 5px;
+        margin-right: 8px;
       }
 
     }

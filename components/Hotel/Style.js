@@ -117,6 +117,15 @@ export const HotelWrapper = styled.div`
       font-weight: bold;
       border-radius: 3px;
       font-size: 16px;
+
+      &--middle {
+        background: orange;
+      }
+
+      &--low {
+        background: red;
+      }
+
     }
 
     &__reviews {
