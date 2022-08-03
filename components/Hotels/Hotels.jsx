@@ -63,7 +63,7 @@ function Hotels() {
       <HotelList>
         <ul className="hotel-list">
           {filteredItems.length < 1
-            ? data.map((hotel, index) => {
+            ? data.map((hotel) => {
                 return (
                   <li key={hotel.id} className="hotel-list__item">
                     <StyledLink href={`/hotels/${hotel.id}`}>
