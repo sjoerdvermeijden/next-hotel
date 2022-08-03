@@ -18,7 +18,7 @@ import { BsFillStarFill } from "react-icons/bs";
 import { BsArrowLeft } from "react-icons/bs";
 
 export const StyledLink = styled.a`
-  color: blue;
+  color: var(--darkgray);
   text-decoration: none;
 
   .breadcrumb {

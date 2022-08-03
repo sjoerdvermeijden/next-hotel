@@ -48,7 +48,7 @@ function Hotel({id,name,type,image,adress,reviews,stars,price,facilities,descrip
                 <ul className="hotel__stars">
                   {[...Array(stars)].map((elementInArray, index) => (
                     <li className="hotel__star" key={index}>
-                      <BsFillStarFill size={12} />
+                      <BsFillStarFill size={12} color="darkorange" />
                     </li>
                   ))}
                 </ul>
