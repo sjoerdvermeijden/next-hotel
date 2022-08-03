@@ -75,7 +75,7 @@ export const FiltersWrapper = styled.div`
       }
 
       &:not(:last-child) {
-        margin-right: 8px;
+        margin-right: auto;
       }
 
     }
