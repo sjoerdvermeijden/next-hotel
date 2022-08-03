@@ -16,6 +16,10 @@ export const HotelWrapper = styled.div`
 
     &__image {
 
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+
       img {
         display: block;
         aspect-ratio: 5 / 3;
@@ -140,6 +144,7 @@ export const HotelWrapper = styled.div`
       &__image {
 
         &:not(:last-child) {
+          margin-bottom: 0;
           margin-right: 20px;
         }
 
