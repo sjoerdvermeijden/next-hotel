@@ -46,20 +46,26 @@ function Hotel({id,name,type,image,adress,reviews,stars,price,facilities,descrip
               <p className="hotel__description">{description}</p>
               <p className="hotel__type">{type}</p>
               <ul className="hotel__facilities">
-                {
-                  facilities.map((item, index) => {
-                    return <li key={index} className="hotel__facility">{item}</li>
-                  })
-                }
+                {facilities.map((item, index) => {
+                  return (
+                    <li key={index} className="hotel__facility">
+                      {item}
+                    </li>
+                  );
+                })}
               </ul>
             </div>
             <div className="hotel__details">
               <p className="hotel__price">€{price}</p>
-              <p className="hotel__rating">{ratingState.toFixed(0)}</p>
               <span className="hotel__reviews">
-                {
-                (reviews?.length > 0) ? `${reviews.length} reviews` : ''
-                }
+                <div className="hotel-reviews">
+                  <span className="hotel-reviews__reviews">
+                    {reviews?.length > 0 ? `(${reviews.length}) reviews` : ""}
+                  </span>
+                  <span className="hotel-reviews__label">
+                    {ratingState.toFixed(0)}
+                  </span>
+                </div>
               </span>
             </div>
           </div>

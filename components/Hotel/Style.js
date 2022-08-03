@@ -82,7 +82,6 @@ export const HotelWrapper = styled.div`
     &__title,
     &__price,
     &__adress,
-    &__rating,
     &__stars,
     &__type {
 
@@ -101,16 +100,31 @@ export const HotelWrapper = styled.div`
       font-weight: bold;
     }
 
-    &__rating {
+    &__reviews {
+      font-size: 12px;
+    }
+
+  }
+
+  .hotel-reviews {
+    display: flex;
+    align-items: center;
+
+    &__label {
       padding: 1px 5px;
       background: green;
       color: white;
       font-weight: bold;
       border-radius: 3px;
+      font-size: 16px;
     }
 
     &__reviews {
-      font-size: 12px;
+
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+
     }
 
   }

@@ -23,7 +23,6 @@ export const StyledLink = styled.a`
 
     &__label {
       display: inline-block;
-      transition: transform .3s ease;
     }
 
   }
@@ -33,9 +32,7 @@ export const StyledLink = styled.a`
 
     .breadcrumb {
 
-      &__label {
-        transform: translateX(10px);
-      }
+      &__label {}
 
     }
 
