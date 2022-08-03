@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 
 import styled from 'styled-components';
 
+import Head from "next/head";
+
 import { HotelWrapper } from "../../components/Styles/Style";
 
 import Layout from "../../components/Layout/Layout";
@@ -78,6 +80,14 @@ function HotelPage() {
 
   return (
     <>
+      <Head>
+        {hotelState?.name ? (
+          <title>Hotel App | {hotelState?.name}</title>
+        ) : (
+          <title></title>
+        )}
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
       <Layout>
         <Block>
           <Wrap>
@@ -117,7 +127,9 @@ function HotelPage() {
                       <div className="hotel__container">
                         <p className="hotel__adress">{hotelState.adress}</p>
                         <div className="hotel__ratings">
-                          <span className="hotel__rating">{ratingState.toFixed(0)}</span>
+                          <span className="hotel__rating">
+                            {ratingState.toFixed(0)}
+                          </span>
                           <p className="hotel__rating-amount">
                             ({hotelState.reviews.length} reviews)
                           </p>
