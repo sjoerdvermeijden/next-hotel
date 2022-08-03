@@ -48,6 +48,7 @@ export const StyledLink = styled.a`
 function HotelPage() {
   const [hotelState, setHotelState] = useState();
   const [ratingState, setRatingState] = useState(0);
+  const [ratingClass, setRatingClass] = useState('');
 
   const router = useRouter();
   const { id } = router.query;
@@ -64,6 +65,20 @@ function HotelPage() {
 
   }
 
+  const classFunction = () => {
+    if (ratingState.toFixed(0)) {
+      setRatingClass('hotel__rating')
+    }
+    
+    if (ratingState.toFixed(0) <= 6) {
+      setRatingClass('hotel__rating hotel__rating--middle')
+    }
+
+    if (ratingState.toFixed(0) <= 3) {
+      setRatingClass('hotel__rating hotel__rating--low')
+    }
+  }
+
   useEffect(() => {
     if (id) {
       data.map((item) => {
@@ -73,6 +88,11 @@ function HotelPage() {
       });
     }
   }, [id]);
+
+  useEffect(() => {
+    classFunction()
+  }, [ratingState])
+  
 
   useEffect(() => {
     ratingFunction();
@@ -127,7 +147,7 @@ function HotelPage() {
                       <div className="hotel__container">
                         <p className="hotel__adress">{hotelState.adress}</p>
                         <div className="hotel__ratings">
-                          <span className="hotel__rating">
+                          <span className={ratingClass}>
                             {ratingState.toFixed(0)}
                           </span>
                           <p className="hotel__rating-amount">

@@ -106,6 +106,15 @@ export const HotelWrapper = styled.div`
       background: green;
       color: white;
       font-weight: bold;
+
+      &--middle {
+        background: orange;
+      }
+      
+      &--low {
+        background: red;
+      }
+      
     }
 
     &__stars {
