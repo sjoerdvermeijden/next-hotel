@@ -21,7 +21,7 @@ function Hotels() {
   const [filters, setFilters] = useContext(FilterContext);
   const [filteredItems, setFilteredItems] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const [postPerPage, setPostsPerPage] = useState(10);
+  const [postPerPage, setPostsPerPage] = useState(3);
 
   const filterFunction = () => {
     
