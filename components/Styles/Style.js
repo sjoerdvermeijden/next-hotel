@@ -16,10 +16,6 @@ export const HotelWrapper = styled.div`
 
     &__image {
 
-      &:not(:last-child) {
-        margin-bottom: 15px;
-      }
-
       img {
         display: block;
         aspect-ratio: 5 / 3;
@@ -48,7 +44,6 @@ export const HotelWrapper = styled.div`
     }
 
     &__container {
-      border-bottom: 1px solid var(--lightgray);
       flex-grow: 1;
       padding: 0 0 20px 0;
     }
@@ -122,8 +117,7 @@ export const HotelWrapper = styled.div`
     }
 
     &__reviews,
-    &__utilities,
-    &__details {
+    &__utilities {
       padding: 20px 0;
       border-top: 1px solid var(--lightgray);
     }
@@ -151,7 +145,12 @@ export const HotelWrapper = styled.div`
 
       }
 
+      &__container {
+        border-bottom: 1px solid var(--lightgray);
+      }
+
       &__details {
+        padding: 0 0 20px 0;
         display: flex;
         align-items: flex-start;
         width: 100%;
