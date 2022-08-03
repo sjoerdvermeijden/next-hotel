@@ -187,7 +187,7 @@ export const HotelWrapper = styled.div`
     &__rating,
     &__author {
       &:not(:last-child) {
-        margin-bottom: 8px;
+        margin-bottom: 5px;
       }
     }
   }
