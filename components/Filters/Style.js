@@ -43,6 +43,7 @@ export const FiltersWrapper = styled.div`
 
       }
 
+      .filter__slider,
       .filter__list {
         display: block;
       }
@@ -89,6 +90,7 @@ export const FiltersWrapper = styled.div`
 
     }
 
+    &__slider,
     &__list {
       display: none;
     }

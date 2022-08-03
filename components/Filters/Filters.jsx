@@ -6,6 +6,9 @@ import { FiltersWrapper } from "./Style";
 
 import { FilterContext } from "../../context/FilterContext";
 
+import Slider, { Range } from 'rc-slider';
+import 'rc-slider/assets/index.css';
+
 function Filters() {
   const [filters, setFilters] = useContext(FilterContext);
   const [filteredItems, setFilteredItems] = useState([])
@@ -215,6 +218,17 @@ function Filters() {
                   </label>
                 </li>
               </ul>
+            </div>
+          </li>
+          <li className="filter-list__item js-price">
+            <div className="filter">
+              <h3 className="filter__title" onClick={(e) => openFunction(e)}>
+                <span className="filter__label">Price</span>
+                <BsChevronUp style={{ marginTop: 2 }} size="12px" />
+              </h3>
+              <div className="filter__slider">
+                <Slider />
+              </div>
             </div>
           </li>
         </ul>
