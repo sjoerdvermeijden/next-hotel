@@ -12,10 +12,14 @@ export const FiltersWrapper = styled.div`
     padding: 15px;
 
     &__item {
-      padding: 10px 0;
       
       &:not(:last-child) {
         border-bottom: 1px solid var(--gray);
+        padding-bottom: 10px;
+      }
+      
+      &:not(:first-child) {
+        padding-top: 10px;
       }
 
     }
