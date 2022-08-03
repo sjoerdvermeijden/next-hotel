@@ -7,6 +7,10 @@ export const HotelList = styled.div`
     list-style: none;
     margin: -10px;
 
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+
     &__item {
       padding: 10px;
     }

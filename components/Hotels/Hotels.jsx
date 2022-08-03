@@ -2,6 +2,7 @@ import React, { useContext, useState, useEffect } from "react";
 import styled from "styled-components";
 
 import Hotel from "../Hotel/Hotel";
+import Pagination from '../Pagination/Pagination'
 
 import { FilterContext } from "../../context/FilterContext";
 
@@ -19,6 +20,8 @@ export const StyledLink = styled.a`
 function Hotels() {
   const [filters, setFilters] = useContext(FilterContext);
   const [filteredItems, setFilteredItems] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [postPerPage, setPostsPerPage] = useState(10);
 
   const filterFunction = () => {
     
@@ -79,6 +82,7 @@ function Hotels() {
                 );
               })}
         </ul>
+        <Pagination postPerPage={postPerPage} />
       </HotelList>
     </>
   );
