@@ -34,10 +34,19 @@ function Hotels() {
 
   const filterFunction = () => {
     const newArray = data.filter((item) => {
+      
       if (filters.stars.length >= 1) {
         const starArray = filters.stars.map((item) => Number(item));
 
         if (starArray.includes(item?.stars)) {
+          return item;
+        }
+      }
+      
+      if (filters.rating.length >= 1) {
+        const starArray = filters.rating.map((item) => Number(item));
+
+        if (starArray.includes(item?.rating)) {
           return item;
         }
       }

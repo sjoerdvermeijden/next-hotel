@@ -30,6 +30,10 @@ function Filters() {
     if (parentList.classList.contains("js-type")) {
       setFilters((prevState) => ({ ...prevState, type: newArray }));
     }
+    
+    if (parentList.classList.contains("js-type")) {
+      setFilters((prevState) => ({ ...prevState, rating: newArray }));
+    }
 
     if (parentList.classList.contains("js-facilities")) {
       setFilters((prevState) => ({ ...prevState, facilities: newArray }));

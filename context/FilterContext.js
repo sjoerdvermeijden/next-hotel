@@ -6,6 +6,7 @@ export function FilterComponent({ children }) {
   const [filters, setFilters] = useState({
     type: [],
     stars: [],
+    rating: [],
     facilities: []
   });
 
