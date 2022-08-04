@@ -347,7 +347,7 @@ export const data = [
             label: 'Amsterdam'
         },
         stars: 5,
-        type: 'Hotel',
+        type: 'Apartement',
         price: 111,
         facilities: [
             'Internet Access',
