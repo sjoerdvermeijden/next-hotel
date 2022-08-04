@@ -44,9 +44,9 @@ function Hotels() {
       }
       
       if (filters.rating.length >= 1) {
-        const starArray = filters.rating.map((item) => Number(item));
+        const ratingArray = filters.rating.map((item) => Number(item));
 
-        if (starArray.includes(item?.rating)) {
+        if (ratingArray.includes(item?.rating)) {
           return item;
         }
       }

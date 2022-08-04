@@ -8,7 +8,7 @@ import { FilterContext } from "../../context/FilterContext";
 
 import { data } from "../../filters";
 
-import Slider, { Range } from "rc-slider";
+import Slider from "rc-slider";
 import "rc-slider/assets/index.css";
 
 function Filters() {
@@ -31,7 +31,7 @@ function Filters() {
       setFilters((prevState) => ({ ...prevState, type: newArray }));
     }
     
-    if (parentList.classList.contains("js-type")) {
+    if (parentList.classList.contains("js-rating")) {
       setFilters((prevState) => ({ ...prevState, rating: newArray }));
     }
 
