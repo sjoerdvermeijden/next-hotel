@@ -57,39 +57,21 @@ function Filters() {
                 <BsChevronUp style={{ marginTop: 2 }} size="12px" />
               </h3>
               <ul className="filter__list">
-                <li className="filter__item">
-                  <input
-                    type="checkbox"
-                    className="filter__checkbox"
-                    name=""
-                    id="hotel"
-                  />
-                  <label className="filter__label" htmlFor="hotel">
-                    Hotel
-                  </label>
-                </li>
-                <li className="filter__item">
-                  <input
-                    type="checkbox"
-                    className="filter__checkbox"
-                    name=""
-                    id="bb"
-                  />
-                  <label className="filter__label" htmlFor="bb">
-                    Bed & Breakfast
-                  </label>
-                </li>
-                <li className="filter__item">
-                  <input
-                    type="checkbox"
-                    className="filter__checkbox"
-                    name=""
-                    id="motel"
-                  />
-                  <label className="filter__label" htmlFor="motel">
-                    Motel
-                  </label>
-                </li>
+                {data[2].type.map((item, index) => {
+                  return (    
+                    <li className="filter__item" key={index}>
+                      <input
+                        type="checkbox"
+                        className="filter__checkbox"
+                        name=""
+                        id={item.toLowerCase().replace(/\s+/g, '-')}
+                      />
+                      <label className="filter__label" htmlFor={item.toLowerCase().replace(/\s+/g, '-')}>
+                        {item}
+                      </label>
+                    </li>
+                  );
+                })}
               </ul>
             </div>
           </li>
@@ -107,9 +89,9 @@ function Filters() {
                         type="checkbox"
                         className="filter__checkbox"
                         name=""
-                        id={item.toLowerCase()}
+                        id={item.toLowerCase().replace(/\s+/g, '-')}
                       />
-                      <label className="filter__label" htmlFor={item.toLowerCase()}>
+                      <label className="filter__label" htmlFor={item.toLowerCase().replace(/\s+/g, '-')}>
                         {item}
                       </label>
                     </li>
