@@ -132,21 +132,50 @@ function Filters() {
                 <BsChevronUp style={{ marginTop: 2 }} size="12px" />
               </h3>
               <ul className="filter__list">
-                {data[3].rating.map((item) => {
-                  return (
-                    <li className="filter__item" key={item}>
-                      <input
-                        type="checkbox"
-                        className="filter__checkbox"
-                        name=""
-                        id={item}
-                      />
-                      <label className="filter__label" htmlFor={item}>
-                        {item}
-                      </label>
-                    </li>
-                  );
-                })}
+                <li className="filter__item">
+                  <input
+                    type="checkbox"
+                    className="filter__checkbox"
+                    name=""
+                    id='9-rating'
+                  />
+                  <label className="filter__label" htmlFor="9-rating">
+                    9
+                  </label>
+                </li>
+                <li className="filter__item">
+                  <input
+                    type="checkbox"
+                    className="filter__checkbox"
+                    name=""
+                    id='8-rating'
+                  />
+                  <label className="filter__label" htmlFor="8-rating">
+                    8
+                  </label>
+                </li>
+                <li className="filter__item">
+                  <input
+                    type="checkbox"
+                    className="filter__checkbox"
+                    name=""
+                    id='7-rating'
+                  />
+                  <label className="filter__label" htmlFor="7-rating">
+                    7
+                  </label>
+                </li>
+                <li className="filter__item">
+                  <input
+                    type="checkbox"
+                    className="filter__checkbox"
+                    name=""
+                    id='6-rating'
+                  />
+                  <label className="filter__label" htmlFor="6-rating">
+                    6
+                  </label>
+                </li>
               </ul>
             </div>
           </li>
