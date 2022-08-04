@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { PaginationWrapper } from "./Style";
+
 const Pagination = ({ postsPerPage, totalPosts, paginate }) => {
   const pageNumbers = [];
 
@@ -8,17 +10,21 @@ const Pagination = ({ postsPerPage, totalPosts, paginate }) => {
   }
 
   return (
-    <nav>
-      <ul className='pagination'>
-        {pageNumbers.map(number => (
-          <li key={number} className='page-item'>
-            <a onClick={() => paginate(number)} href='!#' className='page-link'>
+    <PaginationWrapper>
+      <ul className="pagination">
+        {pageNumbers.map((number) => (
+          <li key={number} className="pagination__item">
+            <a
+              onClick={() => paginate(number)}
+              href="#"
+              className="pagination__link"
+            >
               {number}
             </a>
           </li>
         ))}
       </ul>
-    </nav>
+    </PaginationWrapper>
   );
 };
 

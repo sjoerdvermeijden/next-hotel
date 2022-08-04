@@ -20,13 +20,20 @@ export const StyledLink = styled.a`
 function Hotels() {
   const [filters, setFilters] = useContext(FilterContext);
   const [filteredItems, setFilteredItems] = useState([]);
+
   const [currentPage, setCurrentPage] = useState(1);
-  const [postPerPage, setPostsPerPage] = useState(3);
+  const [postsPerPage] = useState(5);
+
+  // Get current posts
+  const indexOfLastPost = currentPage * postsPerPage;
+  const indexOfFirstPost = indexOfLastPost - postsPerPage;
+  const currentPosts = data.slice(indexOfFirstPost, indexOfLastPost);
+
+  // Change page
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   const filterFunction = () => {
-    
     const newArray = data.filter((item) => {
-
       if (filters.stars.length >= 1) {
         const starArray = filters.stars.map((item) => Number(item));
 
@@ -36,19 +43,20 @@ function Hotels() {
       }
 
       if (filters.facilities.length >= 1) {
-    
-        if (filters.facilities.some(r=> item?.facilities.map((item) => item.toLowerCase()).includes(r))) {
+        if (
+          filters.facilities.some((r) =>
+            item?.facilities.map((item) => item.toLowerCase()).includes(r)
+          )
+        ) {
           return item;
         }
       }
 
       if (filters.type.length >= 1) {
-
         if (filters.type.includes(item?.type.toLowerCase())) {
           return item;
         }
       }
-      
     });
 
     setFilteredItems(newArray);
@@ -63,7 +71,7 @@ function Hotels() {
       <HotelList>
         <ul className="hotel-list">
           {filteredItems.length < 1
-            ? data.map((hotel) => {
+            ? currentPosts.map((hotel) => {
                 return (
                   <li key={hotel.id} className="hotel-list__item">
                     <StyledLink href={`/hotels/${hotel.id}`}>
@@ -82,7 +90,22 @@ function Hotels() {
                 );
               })}
         </ul>
-        <Pagination postPerPage={postPerPage} />
+
+        {filteredItems.length < 1 ? (
+          <Pagination
+            postsPerPage={postsPerPage}
+            totalPosts={data.length}
+            paginate={paginate}
+          />
+        ) : filteredItems.length < 6 ? (
+          ""
+        ) : (
+          <Pagination
+            postsPerPage={postsPerPage}
+            totalPosts={data.length}
+            paginate={paginate}
+          />
+        )}
       </HotelList>
     </>
   );
