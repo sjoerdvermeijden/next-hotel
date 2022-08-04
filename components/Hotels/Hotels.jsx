@@ -34,7 +34,7 @@ function Hotels() {
 
   const filterFunction = () => {
     const newArray = data.filter((item) => {
-      
+
       if (filters.stars.length >= 1) {
         const starArray = filters.stars.map((item) => Number(item));
 
@@ -44,7 +44,7 @@ function Hotels() {
       }
       
       if (filters.rating.length >= 1) {
-        const ratingArray = filters.rating.map((item) => Number(item));
+        const ratingArray = filters.rating.map((item) => Number(item.charAt(0)));
 
         if (ratingArray.includes(item?.rating)) {
           return item;

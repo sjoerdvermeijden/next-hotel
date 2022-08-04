@@ -66,21 +66,21 @@ export const data = [
                 author: 'Sjoerd Vermeijden',
                 email: 'Sjoerd_v92@live.nl',
                 review: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, deleniti.',
-                rating: 10
+                rating: 8
             },
             {
                 id: 1,
                 author: 'Bas Lucas',
                 email: 'Bas@gmail.nl',
                 review: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, deleniti.',
-                rating: 8
+                rating: 9
             },
             {
                 id: 2,
                 author: 'Tom Lucas',
                 email: 'tom@gmail.nl',
                 review: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, deleniti.',
-                rating: 9
+                rating: 7
             }
         ]
     },

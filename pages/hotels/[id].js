@@ -131,7 +131,7 @@ function HotelPage() {
                         {[...Array(hotelState.stars)].map(
                           (elementInArray, index) => (
                             <li className="hotel__star" key={Math.random()}>
-                              <BsFillStarFill size={12} />
+                              <BsFillStarFill size={12} color="darkorange" />
                             </li>
                           )
                         )}

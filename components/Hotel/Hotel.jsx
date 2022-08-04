@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 import { HotelWrapper } from "./Style";
 
-import { BsFillStarFill } from "react-icons/bs";
+import { BsCloudLightning, BsFillStarFill } from "react-icons/bs";
 
 import { data } from '../../hotels'
 
@@ -18,11 +18,13 @@ function Hotel({id,name,type,image,adress,reviews,stars,price,facilities,descrip
     const rating = newArray.reduce((partialSum, a) => partialSum + a, 0) / reviews.length;
     setRatingState(rating)
 
-    if (rating) {
-      data.forEach((item) => {
+    data.forEach((item) => {
+      if (item.id === id) {
         item.rating = Number(rating.toFixed(0));
-      })
-    }
+      }
+    })
+
+    console.log(data)
     
     if (rating.toFixed(0)) {
       setRatingClass('hotel-reviews__label')
