@@ -4,7 +4,7 @@ import { HotelWrapper } from "./Style";
 
 import { BsCloudLightning, BsFillStarFill } from "react-icons/bs";
 
-import data from '../../hotels.js'
+import data from '../../hotels'
 
 function Hotel({id,name,type,image,adress,reviews,stars,price,facilities,description,}) {
   const [ratingState, setRatingState] = useState(0);
