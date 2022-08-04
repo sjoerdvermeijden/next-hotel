@@ -187,7 +187,7 @@ function Filters() {
                 <BsChevronUp style={{ marginTop: 2 }} size="12px" />
               </h3>
               <div className="filter__slider">
-                <input type="range" min="1" max="100" value="50" className="slider" id="myRange" />
+                <input type="range" min="1" max="100" className="slider" id="myRange" />
               </div>
             </div>
           </li>
