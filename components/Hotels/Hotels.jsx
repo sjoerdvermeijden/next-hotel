@@ -8,7 +8,7 @@ import { FilterContext } from "../../context/FilterContext";
 
 import { HotelList } from "./Style";
 
-import { data } from "../../Hotels";
+import { data } from "../../hotels";
 
 export const StyledLink = styled.a`
   display: inline-block;

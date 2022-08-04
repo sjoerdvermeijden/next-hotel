@@ -12,7 +12,7 @@ import Block from "../../components/Block/Block";
 import Wrap from "../../components/Wrap/Wrap";
 
 import { useRouter } from "next/router";
-import { data } from "../../Hotels";
+import { data } from "../../hotels";
 
 import { BsFillStarFill } from "react-icons/bs";
 import { BsArrowLeft } from "react-icons/bs";

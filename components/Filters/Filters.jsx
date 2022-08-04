@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 
 import { BsChevronUp } from "react-icons/bs";
 
@@ -6,42 +6,45 @@ import { FiltersWrapper } from "./Style";
 
 import { FilterContext } from "../../context/FilterContext";
 
-import Slider, { Range } from 'rc-slider';
-import 'rc-slider/assets/index.css';
+import { data } from "../../filters";
+
+import Slider, { Range } from "rc-slider";
+import "rc-slider/assets/index.css";
 
 function Filters() {
   const [filters, setFilters] = useContext(FilterContext);
-  const [filteredItems, setFilteredItems] = useState([])
+  const [filteredItems, setFilteredItems] = useState([]);
 
   const listFunction = (e) => {
     const listItem = e.target;
-    const parentList = listItem.closest('.filter-list__item');
+    const parentList = listItem.closest(".filter-list__item");
 
-    const filterList = Array.from(parentList.querySelectorAll("li.filter__item"));
+    const filterList = Array.from(
+      parentList.querySelectorAll("li.filter__item")
+    );
 
     const newArray = filterList
       .filter((item) => item.querySelector("input:checked"))
       .map((item) => item.querySelector("input").id);
 
-    if (parentList.classList.contains('js-type')) {
-      setFilters(prevState => ({...prevState, type: newArray}));
+    if (parentList.classList.contains("js-type")) {
+      setFilters((prevState) => ({ ...prevState, type: newArray }));
     }
 
-    if (parentList.classList.contains('js-facilities')) {
-      setFilters(prevState => ({...prevState, facilities: newArray}));
+    if (parentList.classList.contains("js-facilities")) {
+      setFilters((prevState) => ({ ...prevState, facilities: newArray }));
     }
-    if (parentList.classList.contains('js-stars')) {
-      setFilters(prevState => ({...prevState, stars: newArray}));
+    if (parentList.classList.contains("js-stars")) {
+      setFilters((prevState) => ({ ...prevState, stars: newArray }));
     }
-
   };
 
   const openFunction = (e) => {
     const title = e.target.parentNode;
     const filter = title.parentNode;
-    
-    filter.classList.toggle('is-open');
-  }
+
+    filter.classList.toggle("is-open");
+  };
 
   return (
     <>
@@ -97,61 +100,21 @@ function Filters() {
                 <BsChevronUp style={{ marginTop: 2 }} size="12px" />
               </h3>
               <ul className="filter__list">
-                <li className="filter__item">
-                  <input
-                    type="checkbox"
-                    className="filter__checkbox"
-                    name=""
-                    id="wifi"
-                  />
-                  <label className="filter__label" htmlFor="wifi">
-                    Wifi
-                  </label>
-                </li>
-                <li className="filter__item">
-                  <input
-                    type="checkbox"
-                    className="filter__checkbox"
-                    name=""
-                    id="spa"
-                  />
-                  <label className="filter__label" htmlFor="spa">
-                    Spa
-                  </label>
-                </li>
-                <li className="filter__item">
-                  <input
-                    type="checkbox"
-                    className="filter__checkbox"
-                    name=""
-                    id="parking"
-                  />
-                  <label className="filter__label" htmlFor="parking">
-                    Free parking
-                  </label>
-                </li>
-                <li className="filter__item">
-                  <input
-                    type="checkbox"
-                    className="filter__checkbox"
-                    name=""
-                    id="gym"
-                  />
-                  <label className="filter__label" htmlFor="gym">
-                    Gym
-                  </label>
-                </li>
-                <li className="filter__item">
-                  <input
-                    type="checkbox"
-                    className="filter__checkbox"
-                    name=""
-                    id="swimming-pool"
-                  />
-                  <label className="filter__label" htmlFor="swimming-pool">
-                    Swimming pool
-                  </label>
-                </li>
+                {data[1].facilities.map((item, index) => {
+                  return (
+                    <li className="filter__item" key={index}>
+                      <input
+                        type="checkbox"
+                        className="filter__checkbox"
+                        name=""
+                        id={item.toLowerCase()}
+                      />
+                      <label className="filter__label" htmlFor={item.toLowerCase()}>
+                        {item}
+                      </label>
+                    </li>
+                  );
+                })}
               </ul>
             </div>
           </li>
@@ -162,61 +125,46 @@ function Filters() {
                 <BsChevronUp style={{ marginTop: 2 }} size="12px" />
               </h3>
               <ul className="filter__list">
-                <li className="filter__item">
-                  <input
-                    type="checkbox"
-                    className="filter__checkbox"
-                    name=""
-                    id="1"
-                  />
-                  <label className="filter__label" htmlFor="1">
-                    1
-                  </label>
-                </li>
-                <li className="filter__item">
-                  <input
-                    type="checkbox"
-                    className="filter__checkbox"
-                    name=""
-                    id="2"
-                  />
-                  <label className="filter__label" htmlFor="2">
-                    2
-                  </label>
-                </li>
-                <li className="filter__item">
-                  <input
-                    type="checkbox"
-                    className="filter__checkbox"
-                    name=""
-                    id="3"
-                  />
-                  <label className="filter__label" htmlFor="3">
-                    3
-                  </label>
-                </li>
-                <li className="filter__item">
-                  <input
-                    type="checkbox"
-                    className="filter__checkbox"
-                    name=""
-                    id="4"
-                  />
-                  <label className="filter__label" htmlFor="4">
-                    4
-                  </label>
-                </li>
-                <li className="filter__item">
-                  <input
-                    type="checkbox"
-                    className="filter__checkbox"
-                    name=""
-                    id="5"
-                  />
-                  <label className="filter__label" htmlFor="5">
-                    5
-                  </label>
-                </li>
+                {data[0].stars.map((item) => {
+                  return (
+                    <li className="filter__item" key={item}>
+                      <input
+                        type="checkbox"
+                        className="filter__checkbox"
+                        name=""
+                        id={item}
+                      />
+                      <label className="filter__label" htmlFor={item}>
+                        {item}
+                      </label>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+          </li>
+          <li className="filter-list__item js-rating">
+            <div className="filter">
+              <h3 className="filter__title" onClick={(e) => openFunction(e)}>
+                <span className="filter__label">Rating</span>
+                <BsChevronUp style={{ marginTop: 2 }} size="12px" />
+              </h3>
+              <ul className="filter__list">
+                {data[3].rating.map((item) => {
+                  return (
+                    <li className="filter__item" key={item}>
+                      <input
+                        type="checkbox"
+                        className="filter__checkbox"
+                        name=""
+                        id={item}
+                      />
+                      <label className="filter__label" htmlFor={item}>
+                        {item}
+                      </label>
+                    </li>
+                  );
+                })}
               </ul>
             </div>
           </li>
