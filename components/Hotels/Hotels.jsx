@@ -54,7 +54,7 @@ function Hotels() {
       if (filters.facilities.length >= 1) {
         if (
           filters.facilities.some((r) =>
-            item?.facilities.map((item) => item.toLowerCase()).includes(r)
+            item?.facilities.map((item) => item.toLowerCase().replace(/\s+/g, '-')).includes(r.toLowerCase().replace(/\s+/g, '-'))
           )
         ) {
           return item;
@@ -62,7 +62,7 @@ function Hotels() {
       }
 
       if (filters.type.length >= 1) {
-        if (filters.type.includes(item?.type.toLowerCase())) {
+        if (filters.type.includes(item?.type.toLowerCase().replace(/\s+/g, '-'))) {
           return item;
         }
       }

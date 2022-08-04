@@ -222,7 +222,7 @@ export const data = [
             label: 'Groningen'
         },
         stars: 2,
-        type: 'BB',
+        type: 'Bed & breakfast',
         price: 59,
         facilities: [
             'Gym',
@@ -269,7 +269,8 @@ export const data = [
         price: 99,
         facilities: [
             'Internet Access',
-            'Swimming pool'
+            'Swimming pool',
+            'Free parking'
         ],
         reviews: [
             {

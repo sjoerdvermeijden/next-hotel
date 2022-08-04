@@ -8,9 +8,6 @@ import { FilterContext } from "../../context/FilterContext";
 
 import { data } from "../../filters";
 
-import Slider from "rc-slider";
-import "rc-slider/assets/index.css";
-
 function Filters() {
   const [filters, setFilters] = useContext(FilterContext);
   const [filteredItems, setFilteredItems] = useState([]);
@@ -190,7 +187,7 @@ function Filters() {
                 <BsChevronUp style={{ marginTop: 2 }} size="12px" />
               </h3>
               <div className="filter__slider">
-                <Slider />
+                <input type="range" min="1" max="100" value="50" class="slider" id="myRange" />
               </div>
             </div>
           </li>
