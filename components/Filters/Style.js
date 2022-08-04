@@ -43,9 +43,12 @@ export const FiltersWrapper = styled.div`
 
       }
 
-      .filter__slider,
       .filter__list {
         display: block;
+      }
+
+      .filter__price {
+        display: flex;
       }
 
     }
@@ -90,7 +93,7 @@ export const FiltersWrapper = styled.div`
 
     }
 
-    &__slider,
+    &__price,
     &__list {
       display: none;
     }
@@ -102,6 +105,39 @@ export const FiltersWrapper = styled.div`
         margin-right: 10px;
       }
 
+    }
+
+    &__starting-price,
+    &__ending-price {
+      display: inline-block;
+    }
+
+    &__starting-price,
+    &__slider {
+
+      &:not(:last-child) {
+        margin-right: 8px;
+      }
+      
+    }
+
+    &__input {
+      max-width: 40px;
+      padding: 5px;
+      border-radius: 3px;
+      border-width: 0;
+    }
+
+    &__input-label {
+      display: inline-block;
+
+      &:not(:last-child) {
+        margin-right: 5px;
+      }
+    }
+
+    &__slider {
+      width: 100%;
     }
 
   }

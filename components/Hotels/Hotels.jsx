@@ -50,6 +50,13 @@ function Hotels() {
           return item;
         }
       }
+      
+      if (filters.price.length >= 1) {
+
+        if (filters.price >= item?.price) {
+          return item;
+        }
+      }
 
       if (filters.facilities.length >= 1) {
         if (

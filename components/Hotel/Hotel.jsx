@@ -23,8 +23,6 @@ function Hotel({id,name,type,image,adress,reviews,stars,price,facilities,descrip
         item.rating = Number(rating.toFixed(0));
       }
     })
-
-    console.log(data)
     
     if (rating.toFixed(0)) {
       setRatingClass('hotel-reviews__label')

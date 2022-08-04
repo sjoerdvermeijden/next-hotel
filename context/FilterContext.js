@@ -7,7 +7,8 @@ export function FilterComponent({ children }) {
     type: [],
     stars: [],
     rating: [],
-    facilities: []
+    facilities: [],
+    price: 0
   });
 
   return (

@@ -6,11 +6,15 @@ import { FiltersWrapper } from "./Style";
 
 import { FilterContext } from "../../context/FilterContext";
 
-import { data } from "../../filters";
+import { data } from '../../hotels'
+
+import { filterData } from "../../filters";
 
 function Filters() {
   const [filters, setFilters] = useContext(FilterContext);
   const [filteredItems, setFilteredItems] = useState([]);
+  const [smallestPrice, setSmallestPrice] = useState();
+  const [highestPrice, setHighestPrice] = useState();
 
   const listFunction = (e) => {
     const listItem = e.target;
@@ -47,6 +51,22 @@ function Filters() {
     filter.classList.toggle("is-open");
   };
 
+  const priceFunction = (e) => {
+    setFilters((prevState) => ({ ...prevState, price: e.target.value }));
+  }
+
+  useEffect(() => {
+    const priceArray = data.map((item) => item.price)
+    setSmallestPrice(Math.min(...priceArray))
+    setHighestPrice(Math.max(...priceArray))
+  }, [])
+
+  useEffect(() => {
+    console.log(filters)
+  }, [filters])
+  
+  
+
   return (
     <>
       <FiltersWrapper>
@@ -58,7 +78,7 @@ function Filters() {
                 <BsChevronUp style={{ marginTop: 2 }} size="12px" />
               </h3>
               <ul className="filter__list">
-                {data[2].type.map((item, index) => {
+                {filterData[2].type.map((item, index) => {
                   return (    
                     <li className="filter__item" key={index}>
                       <input
@@ -83,7 +103,7 @@ function Filters() {
                 <BsChevronUp style={{ marginTop: 2 }} size="12px" />
               </h3>
               <ul className="filter__list">
-                {data[1].facilities.map((item, index) => {
+                {filterData[1].facilities.map((item, index) => {
                   return (
                     <li className="filter__item" key={index}>
                       <input
@@ -108,7 +128,7 @@ function Filters() {
                 <BsChevronUp style={{ marginTop: 2 }} size="12px" />
               </h3>
               <ul className="filter__list">
-                {data[0].stars.map((item) => {
+                {filterData[0].stars.map((item) => {
                   return (
                     <li className="filter__item" key={item}>
                       <input
@@ -186,8 +206,15 @@ function Filters() {
                 <span className="filter__label">Price</span>
                 <BsChevronUp style={{ marginTop: 2 }} size="12px" />
               </h3>
-              <div className="filter__slider">
-                <input type="range" min="1" max="100" className="slider" id="myRange" />
+              <div className="filter__price">
+                <div className="filter__starting-price">
+                  <span className="filter__input-label">Min:</span>
+                  <input type="text" name="" id="" className="filter__input" placeholder={`€${smallestPrice}`} />
+                </div>
+                <span className="filter__ending-price">
+                  <span className="filter__input-label">Max:</span>
+                  <input type="text" name="" id="" className="filter__input" placeholder={`€${highestPrice}`} />
+                </span>
               </div>
             </div>
           </li>
