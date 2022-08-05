@@ -57,14 +57,9 @@ function Filters() {
     const minValue = document.querySelector('.js-minprice').value;
     const maxValue = document.querySelector('.js-maxprice').value;
 
-    if (minValue) {
-      setFilters((prevState) => ({ ...prevState, minPrice: minValue }));
-    }
+    setFilters((prevState) => ({ ...prevState, minPrice: minValue }));
     
-    if (maxValue) {
-      setFilters((prevState) => ({ ...prevState, maxPrice: maxValue }));
-    }
-    
+    setFilters((prevState) => ({ ...prevState, maxPrice: maxValue }));
   }
 
   useEffect(() => {

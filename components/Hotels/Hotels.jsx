@@ -35,6 +35,8 @@ function Hotels() {
   const filterFunction = () => {
     const newArray = data.filter((item) => {
 
+      console.log(filters)
+
       if (filters.stars.length >= 1) {
         const starArray = filters.stars.map((item) => Number(item));
 
@@ -75,6 +77,8 @@ function Hotels() {
         if (item.price >= filters.minPrice && item.price <= filters.maxPrice) {
           return item;
         }
+      } else if (!filters.minPrice && !filters.maxPrice) {
+        return false;
       }
 
       if (filters.type.length >= 1) {
