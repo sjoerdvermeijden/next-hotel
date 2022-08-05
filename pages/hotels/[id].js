@@ -146,6 +146,7 @@ function HotelPage() {
                       </figure>
                       <div className="hotel__container">
                         <p className="hotel__adress">{hotelState.adress}</p>
+                        <p className="hotel__type">{hotelState.type}</p>
                         <div className="hotel__ratings">
                           <span className={ratingClass}>
                             {ratingState.toFixed(0)}

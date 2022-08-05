@@ -84,7 +84,12 @@ export const HotelWrapper = styled.div`
       border-radius: 3px;
     }
 
+    &__type {
+      font-weight: bold;
+    }
+
     &__adress,
+    &__type,
     &__stars {
       &:not(:last-child) {
         margin-bottom: 10px;
