@@ -51,8 +51,15 @@ function Filters() {
     filter.classList.toggle("is-open");
   };
 
-  const priceFunction = (e) => {
-    setFilters((prevState) => ({ ...prevState, price: e.target.value }));
+  const minPriceFunction = (e) => {
+    setFilters((prevState) => ({ ...prevState, minPrice: Number(e.target.value) }));
+    console.log(filters)
+  }
+  
+  const maxPriceFunction = (e) => {
+    setFilters((prevState) => ({ ...prevState, maxPrice: Number(e.target.value) }));
+
+    console.log(filters)
   }
 
   useEffect(() => {
@@ -64,8 +71,6 @@ function Filters() {
   useEffect(() => {
     console.log(filters)
   }, [filters])
-  
-  
 
   return (
     <>
@@ -209,11 +214,11 @@ function Filters() {
               <div className="filter__price">
                 <div className="filter__starting-price">
                   <span className="filter__input-label">Min:</span>
-                  <input type="text" name="" id="" className="filter__input" placeholder={`€${smallestPrice}`} />
+                  <input type="text" name="" id="" className="filter__input" placeholder={`€${smallestPrice}`} onChange={(e) => minPriceFunction(e)} />
                 </div>
                 <span className="filter__ending-price">
                   <span className="filter__input-label">Max:</span>
-                  <input type="text" name="" id="" className="filter__input" placeholder={`€${highestPrice}`} />
+                  <input type="text" name="" id="" className="filter__input" placeholder={`€${highestPrice}`} onChange={(e) => maxPriceFunction(e)} />
                 </span>
               </div>
             </div>

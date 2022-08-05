@@ -50,13 +50,6 @@ function Hotels() {
           return item;
         }
       }
-      
-      if (filters.price.length >= 1) {
-
-        if (filters.price >= item?.price) {
-          return item;
-        }
-      }
 
       if (filters.facilities.length >= 1) {
         if (
@@ -64,6 +57,12 @@ function Hotels() {
             item?.facilities.map((item) => item.toLowerCase().replace(/\s+/g, '-')).includes(r.toLowerCase().replace(/\s+/g, '-'))
           )
         ) {
+          return item;
+        }
+      }
+      
+      if (filters.minPrice) {
+        if (item?.price > filters.minPrice) {
           return item;
         }
       }
