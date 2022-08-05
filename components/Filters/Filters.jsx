@@ -53,13 +53,10 @@ function Filters() {
 
   const minPriceFunction = (e) => {
     setFilters((prevState) => ({ ...prevState, minPrice: Number(e.target.value) }));
-    console.log(filters)
   }
   
   const maxPriceFunction = (e) => {
     setFilters((prevState) => ({ ...prevState, maxPrice: Number(e.target.value) }));
-
-    console.log(filters)
   }
 
   useEffect(() => {
@@ -67,10 +64,6 @@ function Filters() {
     setSmallestPrice(Math.min(...priceArray))
     setHighestPrice(Math.max(...priceArray))
   }, [])
-
-  useEffect(() => {
-    console.log(filters)
-  }, [filters])
 
   return (
     <>

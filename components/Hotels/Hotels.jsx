@@ -60,13 +60,12 @@ function Hotels() {
           return item;
         }
       }
-      
-      if (filters.minPrice) {
-        if (item?.price > filters.minPrice) {
+
+      if (filters.minPrice && filters.maxPrice) {
+        if (item.price >= filters.minPrice && item.price <= filters.maxPrice) {
           return item;
         }
       }
-
       if (filters.type.length >= 1) {
         if (filters.type.includes(item?.type.toLowerCase().replace(/\s+/g, '-'))) {
           return item;
