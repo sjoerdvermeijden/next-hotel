@@ -54,7 +54,17 @@ function Filters() {
   const priceFunction = (e) => {
     e.preventDefault();
     
-    console.log('test')
+    const minValue = document.querySelector('.js-minprice').value;
+    const maxValue = document.querySelector('.js-maxprice').value;
+
+    if (minValue) {
+      setFilters((prevState) => ({ ...prevState, minPrice: minValue }));
+    }
+    
+    if (maxValue) {
+      setFilters((prevState) => ({ ...prevState, maxPrice: maxValue }));
+    }
+    
   }
 
   useEffect(() => {
@@ -205,11 +215,11 @@ function Filters() {
               <form className="filter__price" onSubmit={(e) => priceFunction(e)}>
                 <div className="filter__starting-price">
                   <span className="filter__input-label">€</span>
-                  <input type="text" name="" id="" className="filter__input" placeholder={`${smallestPrice}`} />
+                  <input type="text" name="" id="" className="filter__input js-minprice" placeholder={`${smallestPrice}`} />
                 </div>
                 <span className="filter__ending-price">
                   <span className="filter__input-label">tot</span>
-                  <input type="text" name="" id="" className="filter__input" placeholder={`${highestPrice}`}/>
+                  <input type="text" name="" id="" className="filter__input js-maxprice" placeholder={`${highestPrice}`}/>
                 </span>
                 <button type="submit"><BsChevronRight /></button>
               </form>
