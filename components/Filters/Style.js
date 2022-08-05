@@ -111,7 +111,8 @@ export const FiltersWrapper = styled.div`
     &__ending-price {
       display: inline-block;
     }
-
+  
+    &__ending-price,
     &__starting-price,
     &__slider {
 

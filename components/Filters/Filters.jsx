@@ -1,6 +1,6 @@
 import React, { useState, useContext, useEffect } from "react";
 
-import { BsChevronUp } from "react-icons/bs";
+import { BsChevronUp, BsChevronRight } from "react-icons/bs";
 
 import { FiltersWrapper } from "./Style";
 
@@ -51,12 +51,10 @@ function Filters() {
     filter.classList.toggle("is-open");
   };
 
-  const minPriceFunction = (e) => {
-    setFilters((prevState) => ({ ...prevState, minPrice: Number(e.target.value) }));
-  }
-  
-  const maxPriceFunction = (e) => {
-    setFilters((prevState) => ({ ...prevState, maxPrice: Number(e.target.value) }));
+  const priceFunction = (e) => {
+    e.preventDefault();
+    
+    console.log('test')
   }
 
   useEffect(() => {
@@ -204,16 +202,17 @@ function Filters() {
                 <span className="filter__label">Price</span>
                 <BsChevronUp style={{ marginTop: 2 }} size="12px" />
               </h3>
-              <div className="filter__price">
+              <form className="filter__price" onSubmit={(e) => priceFunction(e)}>
                 <div className="filter__starting-price">
-                  <span className="filter__input-label">Min:</span>
-                  <input type="text" name="" id="" className="filter__input" placeholder={`€${smallestPrice}`} onChange={(e) => minPriceFunction(e)} />
+                  <span className="filter__input-label">€</span>
+                  <input type="text" name="" id="" className="filter__input" placeholder={`${smallestPrice}`} />
                 </div>
                 <span className="filter__ending-price">
-                  <span className="filter__input-label">Max:</span>
-                  <input type="text" name="" id="" className="filter__input" placeholder={`€${highestPrice}`} onChange={(e) => maxPriceFunction(e)} />
+                  <span className="filter__input-label">tot</span>
+                  <input type="text" name="" id="" className="filter__input" placeholder={`${highestPrice}`}/>
                 </span>
-              </div>
+                <button type="submit"><BsChevronRight /></button>
+              </form>
             </div>
           </li>
         </ul>
