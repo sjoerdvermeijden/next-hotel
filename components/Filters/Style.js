@@ -137,6 +137,10 @@ export const FiltersWrapper = styled.div`
       }
     }
 
+    &__button {
+      padding: 0 5px;
+    }
+
     &__slider {
       width: 100%;
     }

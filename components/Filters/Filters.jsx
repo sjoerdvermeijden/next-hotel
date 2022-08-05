@@ -221,7 +221,7 @@ function Filters() {
                   <span className="filter__input-label">tot</span>
                   <input type="text" name="" id="" className="filter__input js-maxprice" placeholder={`${highestPrice}`}/>
                 </span>
-                <button type="submit"><BsChevronRight /></button>
+                <button className="filter__button" type="submit"><BsChevronRight size="10px" /></button>
               </form>
             </div>
           </li>

@@ -63,11 +63,20 @@ function Hotels() {
         }
       }
 
-      if (filters.minPrice && filters.maxPrice) {
+      if (filters.minPrice && !filters.maxPrice) {
+        if (item.price >= filters.minPrice) {
+          return item;
+        }
+      } else if (!filters.minPrice && filters.maxPrice) {
+        if (item.price <= filters.maxPrice) {
+          return item;
+        }
+      } else if (filters.minPrice && filters.maxPrice) {
         if (item.price >= filters.minPrice && item.price <= filters.maxPrice) {
           return item;
         }
       }
+
       if (filters.type.length >= 1) {
         if (filters.type.includes(item?.type.toLowerCase().replace(/\s+/g, '-'))) {
           return item;
