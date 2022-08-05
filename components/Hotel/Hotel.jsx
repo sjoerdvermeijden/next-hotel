@@ -23,6 +23,18 @@ function Hotel({
   const [ratingClass, setRatingClass] = useState("");
 
   const ratingFunction = () => {
+    const newArray = reviews?.map((item) => {
+      return item.rating;
+    })
+
+    const rating = newArray.reduce((partialSum, a) => partialSum + a, 0) / reviews.length;
+    setRatingState(rating)
+
+    data.forEach((item) => {
+      if (item.id === id) {
+        item.rating = Number(rating.toFixed(0));
+      }
+    })
 
     if (rating?.toFixed(0)) {
       setRatingClass("hotel-reviews__label");
