@@ -46,7 +46,9 @@ function Hotels() {
       if (filters.rating.length >= 1) {
         const ratingArray = filters.rating.map((item) => Number(item.charAt(0)));
 
-        if (ratingArray.includes(item?.rating)) {
+        console.log(`${ratingArray} ${item.rating}`);
+
+        if (ratingArray.includes(item.rating)) {
           return item;
         }
       }

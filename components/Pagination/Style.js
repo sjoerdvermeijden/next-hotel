@@ -8,20 +8,18 @@ export const PaginationWrapper = styled.div`
     justify-content: center;
 
     &__item {
-      border-left: 1px solid var(--darkgray);
-      border-top: 1px solid var(--darkgray);
-      border-bottom: 1px solid var(--darkgray);
-
-      &:last-child {
-        border-right: 1px solid var(--darkgray);
+      
+      &:not(:last-child) {
+        margin-right: 10px;
       }
-
+      
     }
 
     &__link {
       display: inline-block;
       padding: 6px 12px;
       text-decoration: none;
+      background: var(--lightgray);
       color: var(--darkgray);
 
       &:hover,
