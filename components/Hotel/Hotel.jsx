@@ -6,41 +6,40 @@ import { BsCloudLightning, BsFillStarFill } from "react-icons/bs";
 
 import { data } from '../../hotels'
 
-function Hotel({id,name,type,image,adress,reviews,stars,price,facilities,description,}) {
+function Hotel({
+  id,
+  name,
+  type,
+  image,
+  adress,
+  reviews,
+  stars,
+  price,
+  rating,
+  facilities,
+  description,
+}) {
   const [ratingState, setRatingState] = useState(0);
-  const [ratingClass, setRatingClass] = useState('');
+  const [ratingClass, setRatingClass] = useState("");
 
   const ratingFunction = () => {
-    const newArray = reviews?.map((item) => {
-      return item.rating;
-    })
 
-    const rating = newArray.reduce((partialSum, a) => partialSum + a, 0) / reviews.length;
-    setRatingState(rating)
-
-    data.forEach((item) => {
-      if (item.id === id) {
-        item.rating = Number(rating.toFixed(0));
-      }
-    })
-    
-    if (rating.toFixed(0)) {
-      setRatingClass('hotel-reviews__label')
+    if (rating?.toFixed(0)) {
+      setRatingClass("hotel-reviews__label");
     }
 
-    if (rating.toFixed(0) <= 6) {
-      setRatingClass('hotel-reviews__label hotel-reviews__label--middle')
-    } 
-    
-    if (rating.toFixed(0) <= 3) {
-      setRatingClass('hotel-reviews__label hotel-reviews__label--low')
+    if (rating?.toFixed(0) <= 6) {
+      setRatingClass("hotel-reviews__label hotel-reviews__label--middle");
     }
 
-  }
+    if (rating?.toFixed(0) <= 3) {
+      setRatingClass("hotel-reviews__label hotel-reviews__label--low");
+    }
+  };
 
   useEffect(() => {
     ratingFunction();
-  }, [])
+  }, []);
 
   return (
     <>
@@ -81,9 +80,7 @@ function Hotel({id,name,type,image,adress,reviews,stars,price,facilities,descrip
                   <span className="hotel-reviews__reviews">
                     {reviews?.length > 0 ? `(${reviews.length}) reviews` : ""}
                   </span>
-                  <span className={ratingClass}>
-                    {ratingState.toFixed(0)}
-                  </span>
+                  <span className={ratingClass}>{rating}</span>
                 </div>
               </span>
             </div>
