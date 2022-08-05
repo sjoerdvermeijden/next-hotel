@@ -33,6 +33,7 @@ function Hotels() {
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   const filterFunction = () => {
+
     const newArray = data.filter((item) => {
 
       if (filters.type.length >= 1) {
@@ -84,6 +85,8 @@ function Hotels() {
       }
 
     });
+
+    console.log(newArray)
 
     setFilteredItems(newArray);
   };
