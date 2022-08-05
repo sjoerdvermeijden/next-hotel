@@ -35,7 +35,11 @@ function Hotels() {
   const filterFunction = () => {
     const newArray = data.filter((item) => {
 
-      console.log(filters)
+      if (filters.type.length >= 1) {
+        if (filters.type.includes(item?.type.toLowerCase().replace(/\s+/g, '-'))) {
+          return item;
+        }
+      }
 
       if (filters.stars.length >= 1) {
         const starArray = filters.stars.map((item) => Number(item));
@@ -47,8 +51,6 @@ function Hotels() {
       
       if (filters.rating.length >= 1) {
         const ratingArray = filters.rating.map((item) => Number(item.charAt(0)));
-
-        console.log(`${ratingArray} ${item.rating}`);
 
         if (ratingArray.includes(item.rating)) {
           return item;
@@ -81,11 +83,6 @@ function Hotels() {
         return false;
       }
 
-      if (filters.type.length >= 1) {
-        if (filters.type.includes(item?.type.toLowerCase().replace(/\s+/g, '-'))) {
-          return item;
-        }
-      }
     });
 
     setFilteredItems(newArray);

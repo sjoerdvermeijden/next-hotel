@@ -60,6 +60,7 @@ function Filters() {
     setFilters((prevState) => ({ ...prevState, minPrice: minValue }));
     
     setFilters((prevState) => ({ ...prevState, maxPrice: maxValue }));
+    
   }
 
   useEffect(() => {
