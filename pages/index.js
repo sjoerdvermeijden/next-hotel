@@ -27,9 +27,7 @@ export default function Home() {
       const newArray = reviewArray.map((item) => {
         return item.rating;
       });
-
-      const rating =
-        newArray.reduce((partialSum, a) => partialSum + a, 0) / newArray.length;
+      const rating = newArray.reduce((partialSum, a) => partialSum + a, 0) / newArray.length;
       item.rating = Number(rating.toFixed(0));
       return item;
     });
