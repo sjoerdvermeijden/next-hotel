@@ -100,11 +100,6 @@ function Hotels() {
     setFilteredItems(newArray);
   };
 
-  const getFilteredPosts = () => {
-    const filteredArray = filteredItems.slice(indexOfFirstPost, indexOfLastPost);
-    setFilteredPosts(filteredArray);
-  };
-
   useEffect(() => {
     filterFunction();
   }, [filters]);
