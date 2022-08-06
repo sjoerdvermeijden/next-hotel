@@ -144,10 +144,12 @@ function Hotels() {
             totalPosts={data.length}
             paginate={paginate}
           />
+        ) : filteredItems.length < 6 ? (
+          ""
         ) : (
           <Pagination
             postsPerPage={postsPerPage}
-            totalPosts={filteredItems.length}
+            totalPosts={data.length}
             paginate={paginate}
           />
         )}
