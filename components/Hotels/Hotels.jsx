@@ -2,7 +2,7 @@ import React, { useContext, useState, useEffect } from "react";
 import styled from "styled-components";
 
 import Hotel from "../Hotel/Hotel";
-import Pagination from '../Pagination/Pagination'
+import Pagination from "../Pagination/Pagination";
 
 import { FilterContext } from "../../context/FilterContext";
 
@@ -20,6 +20,7 @@ export const StyledLink = styled.a`
 function Hotels() {
   const [filters, setFilters] = useContext(FilterContext);
   const [filteredItems, setFilteredItems] = useState([]);
+  const [filteredPosts, setFilteredPosts] = useState([])
   const [showPagination, setShowPagination] = useState(false);
 
   const [currentPage, setCurrentPage] = useState(1);
@@ -30,16 +31,15 @@ function Hotels() {
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentPosts = data.slice(indexOfFirstPost, indexOfLastPost);
 
-
   // Change page
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   const filterFunction = () => {
-
     const newArray = data.filter((item) => {
-
       if (filters.type.length >= 1) {
-        if (filters.type.includes(item?.type.toLowerCase().replace(/\s+/g, '-'))) {
+        if (
+          filters.type.includes(item?.type.toLowerCase().replace(/\s+/g, "-"))
+        ) {
           return item;
         }
       }
@@ -51,9 +51,11 @@ function Hotels() {
           return item;
         }
       }
-      
+
       if (filters.rating.length >= 1) {
-        const ratingArray = filters.rating.map((item) => Number(item.charAt(0)));
+        const ratingArray = filters.rating.map((item) =>
+          Number(item.charAt(0))
+        );
 
         if (ratingArray.includes(item.rating)) {
           return item;
@@ -63,7 +65,9 @@ function Hotels() {
       if (filters.facilities.length >= 1) {
         if (
           filters.facilities.some((r) =>
-            item?.facilities.map((item) => item.toLowerCase().replace(/\s+/g, '-')).includes(r.toLowerCase().replace(/\s+/g, '-'))
+            item?.facilities
+              .map((item) => item.toLowerCase().replace(/\s+/g, "-"))
+              .includes(r.toLowerCase().replace(/\s+/g, "-"))
           )
         ) {
           return item;
@@ -85,33 +89,25 @@ function Hotels() {
       } else if (!filters.minPrice && !filters.maxPrice) {
         return false;
       }
-
     });
 
     setFilteredItems(newArray);
   };
 
   const getFilteredPosts = () => {
-    if (filteredItems.length < 1) {
-      setShowPagination(true)
-    } else if (filteredItems.length >= 1 && filteredItems.length <= 5) {
-      setShowPagination(false)
-    } else if (filteredItems.length > 5) {
-      const indexOfLastPost = currentPage * postsPerPage;
-      const indexOfFirstPost = indexOfLastPost - postsPerPage;
-      const filteredArray = filteredItems.slice(indexOfFirstPost, indexOfLastPost);
-      setShowPagination(true)
-      setFilteredItems(filteredArray);
-    }
-  }
+    const indexOfLastPost = currentPage * postsPerPage;
+    const indexOfFirstPost = indexOfLastPost - postsPerPage;
+    const filteredArray = filteredItems.slice(indexOfFirstPost, indexOfLastPost);
+    setFilteredPosts(filteredArray);
+  };
 
   useEffect(() => {
     filterFunction();
   }, [filters]);
-  
+
   useEffect(() => {
     getFilteredPosts();
-  }, [filteredItems])
+  }, [filteredItems]);
 
   return (
     <>
@@ -138,15 +134,19 @@ function Hotels() {
               })}
         </ul>
 
-        {
-          showPagination &&
+        {filteredItems.length < 1 ? (
           <Pagination
             postsPerPage={postsPerPage}
             totalPosts={data.length}
             paginate={paginate}
           />
-        }
-
+        ) : (
+          <Pagination
+            postsPerPage={postsPerPage}
+            totalPosts={filteredItems.length}
+            paginate={paginate}
+          />
+        )}
       </HotelList>
     </>
   );
