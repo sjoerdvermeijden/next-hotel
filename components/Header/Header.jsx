@@ -18,7 +18,7 @@ function Header() {
       <HeaderWrapper>
         <Wrap>
           <StyledLink href="/">
-            <h1>React Portfolio</h1>
+            <h1>Booking app</h1>
           </StyledLink>
         </Wrap>
       </HeaderWrapper>
