@@ -20,6 +20,7 @@ export const StyledLink = styled.a`
 function Hotels() {
   const [filters, setFilters] = useContext(FilterContext);
   const [filteredItems, setFilteredItems] = useState([]);
+  const [showPagination, setShowPagination] = useState(false);
 
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage] = useState(5);
@@ -28,6 +29,7 @@ function Hotels() {
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentPosts = data.slice(indexOfFirstPost, indexOfLastPost);
+
 
   // Change page
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
@@ -89,9 +91,27 @@ function Hotels() {
     setFilteredItems(newArray);
   };
 
+  const getFilteredPosts = () => {
+    if (filteredItems.length < 1) {
+      setShowPagination(true)
+    } else if (filteredItems.length >= 1 && filteredItems.length <= 5) {
+      setShowPagination(false)
+    } else if (filteredItems.length > 5) {
+      const indexOfLastPost = currentPage * postsPerPage;
+      const indexOfFirstPost = indexOfLastPost - postsPerPage;
+      const filteredArray = filteredItems.slice(indexOfFirstPost, indexOfLastPost);
+      setShowPagination(true)
+      setFilteredItems(filteredArray);
+    }
+  }
+
   useEffect(() => {
     filterFunction();
   }, [filters]);
+  
+  useEffect(() => {
+    getFilteredPosts();
+  }, [filteredItems])
 
   return (
     <>
@@ -118,21 +138,15 @@ function Hotels() {
               })}
         </ul>
 
-        {filteredItems.length < 1 ? (
+        {
+          showPagination &&
           <Pagination
             postsPerPage={postsPerPage}
             totalPosts={data.length}
             paginate={paginate}
           />
-        ) : filteredItems.length < 6 ? (
-          ""
-        ) : (
-          <Pagination
-            postsPerPage={postsPerPage}
-            totalPosts={data.length}
-            paginate={paginate}
-          />
-        )}
+        }
+
       </HotelList>
     </>
   );
