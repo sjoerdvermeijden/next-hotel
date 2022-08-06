@@ -35,6 +35,8 @@ function Hotels() {
 
   const filterFunction = () => {
     const newArray = data.filter((item) => {
+
+      // Type filter
       if (filters.type.length >= 1) {
         if (
           filters.type.includes(item?.type.toLowerCase().replace(/\s+/g, "-"))
@@ -43,6 +45,7 @@ function Hotels() {
         }
       }
 
+      // Star filter
       if (filters.stars.length >= 1) {
         const starArray = filters.stars.map((item) => Number(item));
 
@@ -51,6 +54,7 @@ function Hotels() {
         }
       }
 
+      // Rating filter
       if (filters.rating.length >= 1) {
         const ratingArray = filters.rating.map((item) =>
           Number(item.charAt(0))
@@ -61,6 +65,7 @@ function Hotels() {
         }
       }
 
+      // Facility filter
       if (filters.facilities.length >= 1) {
         if (
           filters.facilities.some((r) =>
@@ -73,6 +78,7 @@ function Hotels() {
         }
       }
 
+      // Price filter
       if (filters.minPrice && !filters.maxPrice) {
         if (item.price >= filters.minPrice) {
           return item;
@@ -88,14 +94,13 @@ function Hotels() {
       } else if (!filters.minPrice && !filters.maxPrice) {
         return false;
       }
+
     });
 
     setFilteredItems(newArray);
   };
 
   const getFilteredPosts = () => {
-    const indexOfLastPost = currentPage * postsPerPage;
-    const indexOfFirstPost = indexOfLastPost - postsPerPage;
     const filteredArray = filteredItems.slice(indexOfFirstPost, indexOfLastPost);
     setFilteredPosts(filteredArray);
   };
@@ -122,7 +127,7 @@ function Hotels() {
                   </li>
                 );
               })
-            : filteredItems.map((hotel) => {
+            : filteredPosts.map((hotel) => {
                 return (
                   <li key={hotel.id} className="hotel-list__item">
                     <StyledLink href={`/hotels/${hotel.id}`}>
