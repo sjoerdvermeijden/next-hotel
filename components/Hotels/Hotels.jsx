@@ -86,8 +86,6 @@ function Hotels() {
 
     });
 
-    console.log(newArray)
-
     setFilteredItems(newArray);
   };
 
