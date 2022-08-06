@@ -20,7 +20,9 @@ export const StyledLink = styled.a`
 function Hotels() {
   const [filters, setFilters] = useContext(FilterContext);
   const [filteredItems, setFilteredItems] = useState([]);
-  const [filteredPosts, setFilteredPosts] = useState([])
+  const [filteredPosts, setFilteredPosts] = useState([]);
+  const [filterLength, setFilterLength] = useState(false);
+  const [showPagination, setShowPagination] = useState(true);
 
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage] = useState(5);
@@ -35,7 +37,6 @@ function Hotels() {
 
   const filterFunction = () => {
     const newArray = data.filter((item) => {
-
       // Type filter
       if (filters.type.length >= 1) {
         if (
@@ -94,31 +95,57 @@ function Hotels() {
       } else if (!filters.minPrice && !filters.maxPrice) {
         return false;
       }
-
     });
 
     setFilteredItems(newArray);
   };
 
   const getFilteredPosts = () => {
-    const filteredArray = filteredItems.slice(indexOfFirstPost, indexOfLastPost);
+    const filteredArray = filteredItems.slice(
+      indexOfFirstPost,
+      indexOfLastPost
+    );
     setFilteredPosts(filteredArray);
   };
 
   useEffect(() => {
     filterFunction();
+
+    if (
+      filters.type.length > 0 ||
+      filters.facilities.length > 0 ||
+      filters.stars.length > 0 ||
+      filters.rating.length > 0
+    ) {
+      setFilterLength(true);
+    } else {
+      setFilterLength(false);
+    }
   }, [filters]);
 
   useEffect(() => {
     getFilteredPosts();
   }, [filteredItems]);
 
+  useEffect(() => {
+
+    if (filteredItems.length < 1 && filterLength) {
+      setShowPagination(false);
+    } else if (filteredItems.length < 1) {
+      setShowPagination(true);
+    } else if (filteredItems.length < 5) {
+      setShowPagination(false);
+    } else {
+      setShowPagination(true);
+    }
+  }, [filteredItems]);
+
   return (
     <>
       <HotelList>
         <ul className="hotel-list">
-          {filteredItems.length < 1
-            ? currentPosts.map((hotel) => {
+          {filterLength
+            ? filteredItems.map((hotel) => {
                 return (
                   <li key={hotel.id} className="hotel-list__item">
                     <StyledLink href={`/hotels/${hotel.id}`}>
@@ -127,7 +154,7 @@ function Hotels() {
                   </li>
                 );
               })
-            : filteredPosts.map((hotel) => {
+            : currentPosts.map((hotel) => {
                 return (
                   <li key={hotel.id} className="hotel-list__item">
                     <StyledLink href={`/hotels/${hotel.id}`}>
@@ -138,21 +165,14 @@ function Hotels() {
               })}
         </ul>
 
-        {filteredItems.length < 1 ? (
-          <Pagination
-            postsPerPage={postsPerPage}
-            totalPosts={data.length}
-            paginate={paginate}
-          />
-        ) : filteredItems.length < 6 ? (
-          ""
-        ) : (
+        {showPagination && (
           <Pagination
             postsPerPage={postsPerPage}
             totalPosts={data.length}
             paginate={paginate}
           />
         )}
+
       </HotelList>
     </>
   );
