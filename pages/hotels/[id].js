@@ -134,9 +134,10 @@ function HotelPage() {
                               <BsFillStarFill size={12} color="darkorange" />
                             </li>
                           )
-                        )}
+                          )}
                       </ul>
                     </div>
+                    <p className="hotel__type">{hotelState.type}</p>
                     <p className="hotel__description">
                       {hotelState.description}
                     </p>
@@ -146,7 +147,6 @@ function HotelPage() {
                       </figure>
                       <div className="hotel__container">
                         <p className="hotel__adress">{hotelState.adress}</p>
-                        <p className="hotel__type">{hotelState.type}</p>
                         <div className="hotel__ratings">
                           <span className={ratingClass}>
                             {ratingState.toFixed(0)}

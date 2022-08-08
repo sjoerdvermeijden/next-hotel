@@ -115,7 +115,9 @@ function Hotels() {
       filters.type.length > 0 ||
       filters.facilities.length > 0 ||
       filters.stars.length > 0 ||
-      filters.rating.length > 0
+      filters.rating.length > 0 ||
+      filters.minPrice ||
+      filters.maxPrice
     ) {
       setFilterLength(true);
     } else {

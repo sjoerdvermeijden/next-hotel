@@ -86,10 +86,14 @@ export const HotelWrapper = styled.div`
 
     &__type {
       font-weight: bold;
+
+      &:not(:last-child) {
+        margin-bottom: 5px;
+      }
+
     }
 
     &__adress,
-    &__type,
     &__stars {
       &:not(:last-child) {
         margin-bottom: 10px;
