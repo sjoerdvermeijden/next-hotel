@@ -1,7 +1,7 @@
-import React from 'react'
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
-import { FooterWrapper } from "./Style"
+import { FooterWrapper } from "./Style";
 
 export const StyledLink = styled.a`
   display: inline-block;
@@ -17,11 +17,20 @@ function Footer() {
     <>
       <FooterWrapper>
         <Wrap>
-          <p>Zie project in Github <StyledLink href="https://github.com/sjoerdvermeijden/react-hotel" target="_blank">hier</StyledLink> | Sjoerd Vermeijden</p>
+          <p>
+            Zie project in Github{" "}
+            <StyledLink
+              href="https://github.com/sjoerdvermeijden/next-hotel"
+              target="_blank"
+            >
+              hier
+            </StyledLink>{" "}
+            | Sjoerd Vermeijden
+          </p>
         </Wrap>
       </FooterWrapper>
     </>
   );
 }
 
-export default Footer
+export default Footer;
