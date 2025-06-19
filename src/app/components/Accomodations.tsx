@@ -1,5 +1,7 @@
 import React from 'react'
 
+import Link from 'next/link'
+
 import { accomodations } from '../../../data'
 
 interface Trip {
@@ -12,11 +14,13 @@ interface Trip {
 
 async function Accomodations() {
     return (
-        <ul className='flex flex-col gap-2'>
+        <ul className='flex flex-col gap-2 w-full'>
             {
                 accomodations.map((item: Trip) => {
                     return <li key={item.id} className='p-2 rounded-md border border-gray-300'>
-                        <h2 className='text-2xl'>{item.title}</h2>
+                        <Link href={`/accomodations/${item.id}`}>
+                            <h2 className='text-2xl'>{item.title}</h2>
+                        </Link>
                         <p>{item.adress}</p>
                     </li>
                 })

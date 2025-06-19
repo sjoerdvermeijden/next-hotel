@@ -1,13 +1,15 @@
 import Header from './components/Header'
 import Footer from './components/Footer'
 
+import Filters from './components/Filters';
 import Accomodations from './components/Accomodations';
 
 export default function Home() {
   return (
     <div>
       <Header />
-      <div className='container mx-auto'>
+      <div className='container mx-auto flex py-4'>
+        <Filters />
         <Accomodations />
       </div>
       <Footer />

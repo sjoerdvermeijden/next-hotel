@@ -11,7 +11,33 @@ export const accomodations = [
             'Restaurant',
 
         ],
-        accomodation_type: 'Hotel'
+        accomodation_type: 'Hotel',
+        ratings: [
+            {
+                id: 0,
+                firstName: 'Tim',
+                lastName: 'Bricks',
+                rating: 7,
+            },
+            {
+                id: 1,
+                firstName: 'Tim',
+                lastName: 'Bricks',
+                rating: 7,
+            },
+            {
+                id: 2,
+                firstName: 'Tim',
+                lastName: 'Bricks',
+                rating: 7,
+            },
+            {
+                id: 3,
+                firstName: 'Tim',
+                lastName: 'Bricks',
+                rating: 7,
+            }
+        ]
     },
     {
         id: 1,
@@ -25,7 +51,33 @@ export const accomodations = [
             'Restaurant',
 
         ],
-        accomodation_type: 'Hotel'
+        accomodation_type: 'Hotel',
+        ratings: [
+            {
+                id: 0,
+                firstName: 'Tim',
+                lastName: 'Bricks',
+                rating: 7,
+            },
+            {
+                id: 1,
+                firstName: 'Tim',
+                lastName: 'Bricks',
+                rating: 7,
+            },
+            {
+                id: 2,
+                firstName: 'Tim',
+                lastName: 'Bricks',
+                rating: 7,
+            },
+            {
+                id: 3,
+                firstName: 'Tim',
+                lastName: 'Bricks',
+                rating: 7,
+            }
+        ]
     },
     {
         id: 2,
@@ -39,7 +91,33 @@ export const accomodations = [
             'Restaurant',
 
         ],
-        accomodation_type: 'Hotel'
+        accomodation_type: 'Hotel',
+        ratings: [
+            {
+                id: 0,
+                firstName: 'Tim',
+                lastName: 'Bricks',
+                rating: 7,
+            },
+            {
+                id: 1,
+                firstName: 'Tim',
+                lastName: 'Bricks',
+                rating: 7,
+            },
+            {
+                id: 2,
+                firstName: 'Tim',
+                lastName: 'Bricks',
+                rating: 7,
+            },
+            {
+                id: 3,
+                firstName: 'Tim',
+                lastName: 'Bricks',
+                rating: 7,
+            }
+        ]
     },
     {
         id: 3,
@@ -53,7 +131,33 @@ export const accomodations = [
             'Restaurant',
 
         ],
-        accomodation_type: 'Motel'
+        accomodation_type: 'Motel',
+        ratings: [
+            {
+                id: 0,
+                firstName: 'Tim',
+                lastName: 'Bricks',
+                rating: 7,
+            },
+            {
+                id: 1,
+                firstName: 'Tim',
+                lastName: 'Bricks',
+                rating: 7,
+            },
+            {
+                id: 2,
+                firstName: 'Tim',
+                lastName: 'Bricks',
+                rating: 7,
+            },
+            {
+                id: 3,
+                firstName: 'Tim',
+                lastName: 'Bricks',
+                rating: 7,
+            }
+        ]
     },
     {
         id: 4,
@@ -67,7 +171,33 @@ export const accomodations = [
             'Restaurant',
 
         ],
-        accomodation_type: 'Apartement'
+        accomodation_type: 'Apartement',
+        ratings: [
+            {
+                id: 0,
+                firstName: 'Tim',
+                lastName: 'Bricks',
+                rating: 7,
+            },
+            {
+                id: 1,
+                firstName: 'Tim',
+                lastName: 'Bricks',
+                rating: 7,
+            },
+            {
+                id: 2,
+                firstName: 'Tim',
+                lastName: 'Bricks',
+                rating: 7,
+            },
+            {
+                id: 3,
+                firstName: 'Tim',
+                lastName: 'Bricks',
+                rating: 7,
+            }
+        ]
     },
     {
         id: 5,
