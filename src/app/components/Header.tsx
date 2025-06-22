@@ -1,10 +1,14 @@
 import React from 'react'
 
+import Link from 'next/link'
+
 type Props = {}
 
 function Header({ }: Props) {
     return (
-        <div className='bg-red-400 py-2'>Header</div>
+        <div className='bg-red-400 py-2'>
+            <Link href="/"><h3 className="text-3xl">Header</h3></Link>
+        </div>
     )
 }
 
