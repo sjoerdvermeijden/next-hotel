@@ -22,15 +22,19 @@ interface Trip {
 }
 
 async function Accomodations() {
+
     return (
         <ul className='flex flex-col gap-2 w-full'>
             {
                 accomodations.map((item: Trip) => {
-                    return <li key={item.id} className='p-2 rounded-md border border-gray-300'>
-                        <Link href={`/accomodations/${item.id}`}>
-                            <h2 className='text-2xl font-bold text-blue-500'>{item.title}</h2>
-                        </Link>
-                        <p>{item.adress}</p>
+                    return <li key={item.id} className='p-2 rounded-md border border-gray-300 flex'>
+                        <div className="grow">
+                            <Link href={`/accomodations/${item.id}`}>
+                                <h2 className='text-2xl font-bold text-blue-500'>{item.title}</h2>
+                            </Link>
+                            <p>{item.adress}</p>
+                        </div>
+                        <p className='text-xs'>{item.ratings.length} beoordeling</p>
                     </li>
                 })
             }

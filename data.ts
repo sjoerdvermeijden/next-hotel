@@ -210,6 +210,33 @@ export const accomodations = [
             'Wifi',
             'Restaurant',
 
+        ],
+        accomodation_type: 'Apartement',
+        ratings: [
+            {
+                id: 0,
+                firstName: 'Tim',
+                lastName: 'Bricks',
+                rating: 7,
+            },
+            {
+                id: 1,
+                firstName: 'Tim',
+                lastName: 'Bricks',
+                rating: 7,
+            },
+            {
+                id: 2,
+                firstName: 'Tim',
+                lastName: 'Bricks',
+                rating: 7,
+            },
+            {
+                id: 3,
+                firstName: 'Tim',
+                lastName: 'Bricks',
+                rating: 7,
+            }
         ]
     }
 ]
