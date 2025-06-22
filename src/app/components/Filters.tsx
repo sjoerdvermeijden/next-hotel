@@ -1,8 +1,6 @@
 import React from 'react'
 
-type Props = {}
-
-function Filters({ }: Props) {
+function Filters() {
     return (
         <div className='flex flex-col shrink-0 mr-2 border border-gray-300 rounded w-[250px]'>
             <div className="border-b p-2">
