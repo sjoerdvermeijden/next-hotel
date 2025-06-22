@@ -29,7 +29,7 @@ async function Accomodations() {
         <ul className='flex flex-col gap-2 w-full'>
             {
                 accomodations.map((item: Trip) => {
-                    return <li key={item.id} className='p-2 rounded-md border border-gray-300 flex'>
+                    return <li key={item.id} className='p-2 rounded-md border border-gray-300 flex items-start'>
                         <Image
                             src={item.images[0]}
                             width={100}
@@ -42,7 +42,8 @@ async function Accomodations() {
                             </Link>
                             <p>{item.adress}</p>
                         </div>
-                        <p className='text-xs'>{item.ratings.length} beoordeling</p>
+                        <p className='text-xs mr-2'>{item.ratings.length} beoordeling</p>
+                        <span className='inline-block py-1 px-1.5 bg-blue-800 text-white rounded-t-md rounded-br-md font-bold'>9,2</span>
                     </li>
                 })
             }
