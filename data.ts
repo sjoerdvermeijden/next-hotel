@@ -37,6 +37,11 @@ export const accomodations = [
                 lastName: 'Bricks',
                 rating: 7,
             }
+        ],
+        images: [
+            'https://unsplash.com/photos/boats-dock-in-a-beautiful-coastal-town-YtULKNJ2BSM',
+            'https://unsplash.com/photos/boats-dock-in-a-beautiful-coastal-town-YtULKNJ2BSM',
+            'https://unsplash.com/photos/boats-dock-in-a-beautiful-coastal-town-YtULKNJ2BSM'
         ]
     },
     {
@@ -77,6 +82,11 @@ export const accomodations = [
                 lastName: 'Bricks',
                 rating: 7,
             }
+        ],
+        images: [
+            'https://unsplash.com/photos/boats-dock-in-a-beautiful-coastal-town-YtULKNJ2BSM',
+            'https://unsplash.com/photos/boats-dock-in-a-beautiful-coastal-town-YtULKNJ2BSM',
+            'https://unsplash.com/photos/boats-dock-in-a-beautiful-coastal-town-YtULKNJ2BSM'
         ]
     },
     {
@@ -117,6 +127,11 @@ export const accomodations = [
                 lastName: 'Bricks',
                 rating: 7,
             }
+        ],
+        images: [
+            'https://unsplash.com/photos/boats-dock-in-a-beautiful-coastal-town-YtULKNJ2BSM',
+            'https://unsplash.com/photos/boats-dock-in-a-beautiful-coastal-town-YtULKNJ2BSM',
+            'https://unsplash.com/photos/boats-dock-in-a-beautiful-coastal-town-YtULKNJ2BSM'
         ]
     },
     {
@@ -157,6 +172,11 @@ export const accomodations = [
                 lastName: 'Bricks',
                 rating: 7,
             }
+        ],
+        images: [
+            'https://unsplash.com/photos/boats-dock-in-a-beautiful-coastal-town-YtULKNJ2BSM',
+            'https://unsplash.com/photos/boats-dock-in-a-beautiful-coastal-town-YtULKNJ2BSM',
+            'https://unsplash.com/photos/boats-dock-in-a-beautiful-coastal-town-YtULKNJ2BSM'
         ]
     },
     {
@@ -197,6 +217,11 @@ export const accomodations = [
                 lastName: 'Bricks',
                 rating: 7,
             }
+        ],
+        images: [
+            'https://unsplash.com/photos/boats-dock-in-a-beautiful-coastal-town-YtULKNJ2BSM',
+            'https://unsplash.com/photos/boats-dock-in-a-beautiful-coastal-town-YtULKNJ2BSM',
+            'https://unsplash.com/photos/boats-dock-in-a-beautiful-coastal-town-YtULKNJ2BSM'
         ]
     },
     {
@@ -237,6 +262,11 @@ export const accomodations = [
                 lastName: 'Bricks',
                 rating: 7,
             }
+        ],
+        images: [
+            'https://unsplash.com/photos/boats-dock-in-a-beautiful-coastal-town-YtULKNJ2BSM',
+            'https://unsplash.com/photos/boats-dock-in-a-beautiful-coastal-town-YtULKNJ2BSM',
+            'https://unsplash.com/photos/boats-dock-in-a-beautiful-coastal-town-YtULKNJ2BSM'
         ]
     }
 ]

@@ -1,5 +1,6 @@
 import React from 'react'
 
+import Image from 'next/image'
 import Link from 'next/link'
 
 import { accomodations } from '../../../data'
@@ -19,6 +20,7 @@ interface Trip {
             rating: number
         }>
     ],
+    images: string[]
 }
 
 async function Accomodations() {
@@ -28,6 +30,12 @@ async function Accomodations() {
             {
                 accomodations.map((item: Trip) => {
                     return <li key={item.id} className='p-2 rounded-md border border-gray-300 flex'>
+                        <Image
+                            src={item.images[0]}
+                            width={100}
+                            height={100}
+                            alt="Picture of the author"
+                        />
                         <div className="grow">
                             <Link href={`/accomodations/${item.id}`}>
                                 <h2 className='text-2xl font-bold text-blue-500'>{item.title}</h2>
