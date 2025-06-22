@@ -14,7 +14,7 @@ function Filters({ }: Props) {
             <div className="border-b p-2">
                 <h3 className="font-bold">Type accomodatie:</h3>
             </div>
-            <div className="border-b p-2">
+            <div className="p-2">
                 <h3 className="font-bold">Type accomodatie:</h3>
             </div>
         </div >
