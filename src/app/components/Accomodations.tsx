@@ -21,8 +21,8 @@ function Accomodations() {
                 <div className='mr-auto'>
                     <h3 className='text-2xl font-bold'>accommodaties gevonden</h3>
                 </div>
-                <div>
-                    <div onClick={() => setGrid(!grid)}>Lijst</div>
+                <div className='flex items-center bg-gray-100 px-2 py-1 rounded-2xl'>
+                    <div className='mr-2 bg-white px-4 py-2 rounded-xl' onClick={() => setGrid(!grid)}>Lijst</div>
                     <div onClick={() => setGrid(!grid)}>Raster</div>
                 </div>
             </div>
