@@ -45,7 +45,7 @@ export const accomodations = [
             }
         ],
         images: [
-            'https://unsplash.com/photos/boats-dock-in-a-beautiful-coastal-town-YtULKNJ2BSM',
+            'https://plus.unsplash.com/premium_photo-1661964402307-02267d1423f5?q=80&w=1973&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
             'https://unsplash.com/photos/boats-dock-in-a-beautiful-coastal-town-YtULKNJ2BSM',
             'https://unsplash.com/photos/boats-dock-in-a-beautiful-coastal-town-YtULKNJ2BSM'
         ]
@@ -102,7 +102,7 @@ export const accomodations = [
             }
         ],
         images: [
-            'https://unsplash.com/photos/boats-dock-in-a-beautiful-coastal-town-YtULKNJ2BSM',
+            'https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
             'https://unsplash.com/photos/boats-dock-in-a-beautiful-coastal-town-YtULKNJ2BSM',
             'https://unsplash.com/photos/boats-dock-in-a-beautiful-coastal-town-YtULKNJ2BSM'
         ]
@@ -147,7 +147,7 @@ export const accomodations = [
             }
         ],
         images: [
-            'https://unsplash.com/photos/boats-dock-in-a-beautiful-coastal-town-YtULKNJ2BSM',
+            'https://images.unsplash.com/photo-1584132967334-10e028bd69f7?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
             'https://unsplash.com/photos/boats-dock-in-a-beautiful-coastal-town-YtULKNJ2BSM',
             'https://unsplash.com/photos/boats-dock-in-a-beautiful-coastal-town-YtULKNJ2BSM'
         ]
@@ -192,7 +192,7 @@ export const accomodations = [
             }
         ],
         images: [
-            'https://unsplash.com/photos/boats-dock-in-a-beautiful-coastal-town-YtULKNJ2BSM',
+            'https://images.unsplash.com/photo-1522798514-97ceb8c4f1c8?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
             'https://unsplash.com/photos/boats-dock-in-a-beautiful-coastal-town-YtULKNJ2BSM',
             'https://unsplash.com/photos/boats-dock-in-a-beautiful-coastal-town-YtULKNJ2BSM'
         ]
@@ -231,7 +231,7 @@ export const accomodations = [
             }
         ],
         images: [
-            'https://unsplash.com/photos/boats-dock-in-a-beautiful-coastal-town-YtULKNJ2BSM',
+            'https://images.unsplash.com/photo-1611892440504-42a792e24d32?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
             'https://unsplash.com/photos/boats-dock-in-a-beautiful-coastal-town-YtULKNJ2BSM',
             'https://unsplash.com/photos/boats-dock-in-a-beautiful-coastal-town-YtULKNJ2BSM'
         ]
@@ -288,7 +288,7 @@ export const accomodations = [
             }
         ],
         images: [
-            'https://unsplash.com/photos/boats-dock-in-a-beautiful-coastal-town-YtULKNJ2BSM',
+            'https://plus.unsplash.com/premium_photo-1663093806285-d905ca96c661?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
             'https://unsplash.com/photos/boats-dock-in-a-beautiful-coastal-town-YtULKNJ2BSM',
             'https://unsplash.com/photos/boats-dock-in-a-beautiful-coastal-town-YtULKNJ2BSM'
         ]

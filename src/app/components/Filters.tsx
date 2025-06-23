@@ -13,9 +13,10 @@ function Filters() {
                 <ul>
                     {
                         accomodation_type.map((item) => {
-                            return <li key={item.id} className='mb-3 flex'>
+                            return <li key={item.id} className='mb-3 flex items-center hover:cursor-pointer'>
                                 <span className='inline-block w-5 h-5 border border-gray-500 mr-2 rounded-[3px]'></span>
-                                <p>{item.label}</p>
+                                <p className='mr-auto'>{item.label}</p>
+                                <p>28</p>
                             </li>
                         })
                     }
@@ -26,9 +27,10 @@ function Filters() {
                 <ul>
                     {
                         accomodation_type.map((item) => {
-                            return <li key={item.id} className='mb-3 flex'>
+                            return <li key={item.id} className='mb-3 flex items-center hover:cursor-pointer'>
                                 <span className='inline-block w-5 h-5 border border-gray-500 mr-2 rounded-[3px]'></span>
-                                <p>{item.label}</p>
+                                <p className='mr-auto'>{item.label}</p>
+                                <p>28</p>
                             </li>
                         })
                     }
@@ -39,9 +41,10 @@ function Filters() {
                 <ul>
                     {
                         accomodation_type.map((item) => {
-                            return <li key={item.id} className='mb-3 flex'>
+                            return <li key={item.id} className='mb-3 flex items-center hover:cursor-pointer'>
                                 <span className='inline-block w-5 h-5 border border-gray-500 mr-2 rounded-[3px]'></span>
-                                <p>{item.label}</p>
+                                <p className='mr-auto'>{item.label}</p>
+                                <p>28</p>
                             </li>
                         })
                     }
@@ -52,9 +55,10 @@ function Filters() {
                 <ul>
                     {
                         accomodation_type.map((item) => {
-                            return <li key={item.id} className='mb-3 flex'>
+                            return <li key={item.id} className='mb-3 flex items-center hover:cursor-pointer'>
                                 <span className='inline-block w-5 h-5 border border-gray-500 mr-2 rounded-[3px]'></span>
-                                <p>{item.label}</p>
+                                <p className='mr-auto'>{item.label}</p>
+                                <p>28</p>
                             </li>
                         })
                     }
