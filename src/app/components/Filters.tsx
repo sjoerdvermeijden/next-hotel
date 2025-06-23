@@ -13,7 +13,10 @@ function Filters() {
                 <ul>
                     {
                         accomodation_type.map((item) => {
-                            return <li key={item.id} className='mb-1'>{item.label}</li>
+                            return <li key={item.id} className='mb-3 flex'>
+                                <span className='inline-block w-5 h-5 border border-gray-500 mr-2 rounded-[3px]'></span>
+                                <p>{item.label}</p>
+                            </li>
                         })
                     }
                 </ul>
@@ -23,7 +26,10 @@ function Filters() {
                 <ul>
                     {
                         accomodation_type.map((item) => {
-                            return <li key={item.id} className='mb-1'>{item.label}</li>
+                            return <li key={item.id} className='mb-3 flex'>
+                                <span className='inline-block w-5 h-5 border border-gray-500 mr-2 rounded-[3px]'></span>
+                                <p>{item.label}</p>
+                            </li>
                         })
                     }
                 </ul>
@@ -33,7 +39,10 @@ function Filters() {
                 <ul>
                     {
                         accomodation_type.map((item) => {
-                            return <li key={item.id} className='mb-1'>{item.label}</li>
+                            return <li key={item.id} className='mb-3 flex'>
+                                <span className='inline-block w-5 h-5 border border-gray-500 mr-2 rounded-[3px]'></span>
+                                <p>{item.label}</p>
+                            </li>
                         })
                     }
                 </ul>
@@ -43,7 +52,10 @@ function Filters() {
                 <ul>
                     {
                         accomodation_type.map((item) => {
-                            return <li key={item.id} className='mb-1'>{item.label}</li>
+                            return <li key={item.id} className='mb-3 flex'>
+                                <span className='inline-block w-5 h-5 border border-gray-500 mr-2 rounded-[3px]'></span>
+                                <p>{item.label}</p>
+                            </li>
                         })
                     }
                 </ul>
