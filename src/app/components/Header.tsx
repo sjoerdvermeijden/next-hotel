@@ -6,9 +6,9 @@ type Props = {}
 
 function Header({ }: Props) {
     return (
-        <div className='bg-red-400 p-2'>
+        <div className='bg-blue-800 p-2'>
             <div className='container mx-auto'>
-                <Link href="/"><h3 className="text-3xl">Header</h3></Link>
+                <Link href="/"><h3 className="text-3xl text-white font-bold">Header</h3></Link>
             </div>
         </div>
     )
