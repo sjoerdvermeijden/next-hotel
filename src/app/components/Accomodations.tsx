@@ -17,7 +17,8 @@ async function Accomodations() {
                             <Link href={`/accomodations/${item.id}`}>
                                 <h2 className='text-2xl font-bold text-blue-500'>{item.title}</h2>
                             </Link>
-                            <p>{item.adress}</p>
+                            <p className='text-sm underline text-blue-500 font-bold'>Stad</p>
+                            <p className='text-sm'>Centraal gelegen</p>
                         </div>
                         <div className='flex flex-col items-end'>
                             <p className='text-md mr-2 mb-0.5 leading-none'>beoordeling</p>
