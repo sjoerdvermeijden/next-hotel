@@ -43,7 +43,7 @@ async function Accomodations() {
                                         alt="Picture of the author"
                                     />
                                 </div>
-                                <div className='w-9 h-9 bg-white rounded-[50%] absolute right-[10px] top-[10px] flex items-center justify-center'>
+                                <div className='w-9 h-9 bg-white transition-colors rounded-[50%] absolute right-[10px] top-[10px] flex items-center justify-center hover:bg-gray-100 cursor-pointer'>
                                     <IconHeart stroke={1} />
                                 </div>
                             </div>
