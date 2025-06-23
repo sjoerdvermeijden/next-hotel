@@ -18,8 +18,8 @@ async function Accomodations() {
                 </div>
                 <Tabs defaultValue="account">
                     <TabsList>
-                        <TabsTrigger value="account">Account</TabsTrigger>
-                        <TabsTrigger value="password">Password</TabsTrigger>
+                        <TabsTrigger value="account">Lijst</TabsTrigger>
+                        <TabsTrigger value="password">Raster</TabsTrigger>
                     </TabsList>
                 </Tabs>
             </div>
