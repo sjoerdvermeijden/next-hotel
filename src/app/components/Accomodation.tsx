@@ -1,4 +1,6 @@
-import React from 'react'
+'use client'
+
+import React, { useContext } from 'react'
 
 import { Trip } from '../types/accomodations'
 
@@ -8,12 +10,15 @@ import Image from 'next/image'
 import { IconChevronRight } from '@tabler/icons-react';
 import { IconHeart } from '@tabler/icons-react';
 
+import { GridContext } from '../context/GridContext'
+
 function Accomodation({ id, title, ratings, images }: Trip) {
+    const { grid } = useContext(GridContext)
 
     return (
         <>
-            <div className='relative mr-4'>
-                <div style={{ borderRadius: '5px', overflow: 'hidden' }} className='w-[240px]'>
+            <div className={`${grid ? '' : 'mr-4'} relative`}>
+                <div style={{ borderRadius: '5px', overflow: 'hidden' }} className={`${grid ? 'w-full' : 'w-[240px]'}`}>
                     <Image
                         priority
                         src={images[0]}
@@ -28,10 +33,10 @@ function Accomodation({ id, title, ratings, images }: Trip) {
                     <IconHeart stroke={1} />
                 </div>
             </div>
-            <div className="flex w-full">
+            <div className={` ${grid ? 'p-2 flex-col' : ''} flex w-full`}>
                 <div className='grow'>
                     <Link href={`/accomodations/${id}`}>
-                        <h2 className='text-2xl font-bold text-blue-500 mb-1.5'>{title}</h2>
+                        <h2 className={`${grid ? 'text-base' : 'text-2xl'}  font-bold text-blue-500 mb-1.5`}>{title}</h2>
                     </Link>
                     <p className='text-xs underline text-blue-500 font-bold mb-1'>Stad</p>
                     <p className='text-xs'>Centraal gelegen</p>
@@ -46,7 +51,7 @@ function Accomodation({ id, title, ratings, images }: Trip) {
                     </div>
                     <button className='bg-blue-500 font-bold text-sm text-white p-2 rounded-sm flex items-center'>Bekijk beschikbaarheid <IconChevronRight stroke={2} /></button>
                 </div>
-            </div>
+            </div >
         </>
     )
 }

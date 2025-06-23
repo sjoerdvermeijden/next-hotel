@@ -22,20 +22,20 @@ function Accomodations() {
                     <h3 className='text-2xl font-bold'>accommodaties gevonden</h3>
                 </div>
                 <div>
-                    <div>Lijst</div>
-                    <div>Raster</div>
+                    <div onClick={() => setGrid(!grid)}>Lijst</div>
+                    <div onClick={() => setGrid(!grid)}>Raster</div>
                 </div>
             </div>
             <ul className={`${(grid ? 'grid grid-cols-3' : 'flex flex-col')} gap-3 w-full`}>
                 {
                     accomodations.map((item: Trip) => {
-                        return <li key={item.id} className='p-4 rounded-md border border-gray-300 flex items-start'>
+                        return <li key={item.id} className={`${grid ? 'flex-col' : 'items-start p-4'} rounded-md border border-gray-300 flex`}>
                             <Accomodation {...item} />
                         </li>
                     })
                 }
             </ul>
-        </div>
+        </div >
     )
 }
 
