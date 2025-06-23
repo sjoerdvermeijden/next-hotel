@@ -9,6 +9,7 @@ import { IconChevronRight } from '@tabler/icons-react';
 import { IconHeart } from '@tabler/icons-react';
 
 function Accomodation({ id, title, ratings, images }: Trip) {
+
     return (
         <>
             <div className='relative mr-4'>
