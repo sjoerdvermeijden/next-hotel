@@ -44,7 +44,7 @@ async function Accomodations() {
                             <div className="flex w-full">
                                 <div className='grow'>
                                     <Link href={`/accomodations/${item.id}`}>
-                                        <h2 className='text-2xl font-bold text-blue-500'>{item.title}</h2>
+                                        <h2 className='text-2xl font-bold text-blue-500 mb-1.5'>{item.title}</h2>
                                     </Link>
                                     <p className='text-xs underline text-blue-500 font-bold mb-1'>Stad</p>
                                     <p className='text-xs'>Centraal gelegen</p>
