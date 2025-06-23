@@ -17,14 +17,14 @@ type GridContextProps = {
 };
 
 const GridContextState = {
-    grid: true,
+    grid: false,
     setGrid: () => { },
 };
 
 export const GridContext = createContext<GridContextProps>(GridContextState);
 
 export function GridComponent({ children }: Props) {
-    const [grid, setGrid] = useState<boolean>(true)
+    const [grid, setGrid] = useState<boolean>(false)
 
     return (
         <GridContext.Provider value={{ grid, setGrid }}>

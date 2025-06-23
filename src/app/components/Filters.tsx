@@ -2,6 +2,8 @@
 
 import React, { useState } from 'react'
 
+import { IconCheck } from '@tabler/icons-react';
+
 import { accomodation_type } from '../../../filters'
 
 function Filters() {
@@ -18,7 +20,11 @@ function Filters() {
                     {
                         accomodation_type.map((item) => {
                             return <li key={item.id} className='mb-3 flex items-center hover:cursor-pointer'>
-                                <span className='inline-block w-5 h-5 border border-gray-500 mr-2 rounded-[3px]'></span>
+                                <span className='inline-block w-5 h-5 border border-gray-500 mr-2 rounded-[3px]'>
+                                    <span className='text-white text-xs'>
+                                        <IconCheck stroke={2} size={14} />
+                                    </span>
+                                </span>
                                 <p className='mr-auto'>{item.label}</p>
                                 <p>28</p>
                             </li>
@@ -32,7 +38,11 @@ function Filters() {
                     {
                         accomodation_type.map((item, index) => {
                             return <li key={item.id} className='mb-3 flex items-center hover:cursor-pointer' onClick={() => setIsActive([...isActive, index])}>
-                                <span className={`${(isActive.indexOf(index) > -1) ? 'bg-blue-500' : 'border-gray-500'} inline-block w-5 h-5 border  mr-2 rounded-[3px]`}></span>
+                                <span className={`${(isActive.indexOf(index) > -1) ? 'bg-blue-500' : 'border-gray-500'} inline-block w-5 h-5 border flex items-center justify-center mr-2 rounded-[3px]`}>
+                                    <span className='text-white text-xs'>
+                                        <IconCheck stroke={2} size={14} />
+                                    </span>
+                                </span>
                                 <p className='mr-auto'>{item.label}</p>
                                 <p>28</p>
                             </li>
@@ -46,7 +56,11 @@ function Filters() {
                     {
                         accomodation_type.map((item) => {
                             return <li key={item.id} className='mb-3 flex items-center hover:cursor-pointer'>
-                                <span className='inline-block w-5 h-5 border border-gray-500 mr-2 rounded-[3px]'></span>
+                                <span className='inline-block w-5 h-5 border border-gray-500 mr-2 rounded-[3px]'>
+                                    <span className='text-white text-xs'>
+                                        <IconCheck stroke={2} size={14} />
+                                    </span>
+                                </span>
                                 <p className='mr-auto'>{item.label}</p>
                                 <p>28</p>
                             </li>
@@ -60,7 +74,11 @@ function Filters() {
                     {
                         accomodation_type.map((item) => {
                             return <li key={item.id} className='mb-3 flex items-center hover:cursor-pointer'>
-                                <span className='inline-block w-5 h-5 border border-gray-500 mr-2 rounded-[3px]'></span>
+                                <span className='inline-block w-5 h-5 border border-gray-500 mr-2 rounded-[3px]'>
+                                    <span className='text-white text-xs'>
+                                        <IconCheck stroke={2} size={14} />
+                                    </span>
+                                </span>
                                 <p className='mr-auto'>{item.label}</p>
                                 <p>28</p>
                             </li>
