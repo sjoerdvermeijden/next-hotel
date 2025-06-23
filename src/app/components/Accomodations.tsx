@@ -63,7 +63,7 @@ async function Accomodations() {
                                         </div>
                                         <span className='inline-block py-1 px-1.5 bg-blue-800 text-white rounded-t-md rounded-br-md font-bold'>9,2</span>
                                     </div>
-                                    <button className='bg-blue-500 font-bold text-sm text-white p-2 rounded-sm'>Bekijk beschikbaarheid <IconChevronRight stroke={2} /></button>
+                                    <button className='bg-blue-500 font-bold text-sm text-white p-2 rounded-sm flex items-center'>Bekijk beschikbaarheid <IconChevronRight stroke={2} /></button>
                                 </div>
                             </div>
                         </li>
