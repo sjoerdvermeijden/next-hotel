@@ -1,7 +1,7 @@
 export const accomodations = [
     {
         id: 0,
-        title: 'Test',
+        title: 'Melia Maria Pita',
         country: 'Spain',
         adress: 'Lipsum word generator',
         facilities: [
@@ -36,6 +36,12 @@ export const accomodations = [
                 firstName: 'Tim',
                 lastName: 'Bricks',
                 rating: 7,
+            },
+            {
+                id: 4,
+                firstName: 'Tom',
+                lastName: 'Bricks',
+                rating: 6,
             }
         ],
         images: [
@@ -46,7 +52,7 @@ export const accomodations = [
     },
     {
         id: 1,
-        title: 'Test',
+        title: 'Melia Maria Pita',
         country: 'Greece',
         adress: 'Lipsum word generator',
         facilities: [
@@ -81,6 +87,18 @@ export const accomodations = [
                 firstName: 'Tim',
                 lastName: 'Bricks',
                 rating: 7,
+            },
+            {
+                id: 4,
+                firstName: 'Tim',
+                lastName: 'Bricks',
+                rating: 7,
+            },
+            {
+                id: 5,
+                firstName: 'Tim',
+                lastName: 'Bricks',
+                rating: 7,
             }
         ],
         images: [
@@ -91,7 +109,7 @@ export const accomodations = [
     },
     {
         id: 2,
-        title: 'Test',
+        title: 'Melia Maria Pita',
         country: 'Italy',
         adress: 'Lipsum word generator',
         facilities: [
@@ -136,7 +154,7 @@ export const accomodations = [
     },
     {
         id: 3,
-        title: 'Test',
+        title: 'Melia Maria Pita',
         country: 'Greece',
         adress: 'Lipsum word generator',
         facilities: [
@@ -181,7 +199,7 @@ export const accomodations = [
     },
     {
         id: 4,
-        title: 'Test',
+        title: 'Melia Maria Pita',
         country: 'France',
         adress: 'Lipsum word generator',
         facilities: [
@@ -210,12 +228,6 @@ export const accomodations = [
                 firstName: 'Tim',
                 lastName: 'Bricks',
                 rating: 7,
-            },
-            {
-                id: 3,
-                firstName: 'Tim',
-                lastName: 'Bricks',
-                rating: 7,
             }
         ],
         images: [
@@ -226,7 +238,7 @@ export const accomodations = [
     },
     {
         id: 5,
-        title: 'Test',
+        title: 'Melia Maria Pita',
         country: 'Belgium',
         adress: 'Lipsum word generator',
         facilities: [
@@ -258,6 +270,18 @@ export const accomodations = [
             },
             {
                 id: 3,
+                firstName: 'Tim',
+                lastName: 'Bricks',
+                rating: 7,
+            },
+            {
+                id: 4,
+                firstName: 'Tim',
+                lastName: 'Bricks',
+                rating: 7,
+            },
+            {
+                id: 5,
                 firstName: 'Tim',
                 lastName: 'Bricks',
                 rating: 7,
