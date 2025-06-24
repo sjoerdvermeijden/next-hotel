@@ -32,21 +32,31 @@ function Accomodation({ id, title, ratings, images, short_description }: Trip, i
         <>
             <div className={`${grid ? 'flex-col' : ''} flex`}>
                 <div className={`${grid ? '' : 'mr-4'} relative`}>
-                    <div style={{ borderRadius: '5px', overflow: 'hidden' }} className={`${grid ? 'w-full' : 'w-[240px]'}`}>
-                        <Image
-                            priority
-                            src={images[0]}
-                            width={240}
-                            height={240}
-                            style={{ objectFit: "cover", height: '240px', width: '240px' }}
-                            quality={80}
-                            alt="Picture of the author"
-                        />
-                    </div>
-                    <div className='w-9 h-9 bg-white transition-colors rounded-[50%] absolute right-[10px] top-[10px] flex items-center justify-center hover:bg-gray-100 cursor-pointer'>
-                        {(isSaved.indexOf(index) > -1) ? <IconHeart stroke={1} /> : <div className='text-red-600'>
-                            <IconHeartFilled />
-                        </div>}
+                    {
+                        grid ? <div style={{ borderTopLeftRadius: '5px', borderTopRightRadius: '5px', overflow: 'hidden' }} className='w-full'>
+                            <Image
+                                priority
+                                src={images[0]}
+                                width={268}
+                                height={240}
+                                style={{ objectFit: "cover", height: '240px', width: '268px' }}
+                                quality={80}
+                                alt="Picture of the author"
+                            />
+                        </div> : <div style={{ borderRadius: '5px', overflow: 'hidden' }} className='w-[240px]'>
+                            <Image
+                                priority
+                                src={images[0]}
+                                width={240}
+                                height={240}
+                                style={{ objectFit: "cover", height: '240px', width: '240px' }}
+                                quality={80}
+                                alt="Picture of the author"
+                            />
+                        </div>
+                    }
+                    <div className='w-9 h-9 bg-white transition-colors rounded-[50%] absolute right-[10px] top-[10px] flex items-center justify-center hover:bg-gray-100 cursor-pointer' onClick={() => toggleSaved(index)}>
+                        {(isSaved.indexOf(index) > -1) ? <div className='text-red-600'><IconHeartFilled /></div> : <IconHeart stroke={1} />}
                     </div>
                 </div>
                 <div className={` ${grid ? 'p-2 flex-col' : ''} flex w-full`}>

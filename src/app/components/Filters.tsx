@@ -30,7 +30,7 @@ function Filters() {
                 <h3 className="font-bold mb-2">Type accomodatie</h3>
                 <ul>
                     {
-                        accomodation_type.map((item) => {
+                        accomodation_type.map((item, index) => {
                             return <li key={item.id} className='mb-3 flex items-center hover:cursor-pointer'>
                                 <span className='inline-block w-5 h-5 border border-gray-500 mr-2 rounded-[3px]'>
                                     <span className='text-white text-xs'>
@@ -66,7 +66,7 @@ function Filters() {
                 <h3 className="font-bold mb-2">Sterren</h3>
                 <ul>
                     {
-                        accomodation_type.map((item) => {
+                        accomodation_type.map((item, index) => {
                             return <li key={item.id} className='mb-3 flex items-center hover:cursor-pointer'>
                                 <span className='inline-block w-5 h-5 border border-gray-500 mr-2 rounded-[3px]'>
                                     <span className='text-white text-xs'>
@@ -84,7 +84,7 @@ function Filters() {
                 <h3 className="font-bold mb-2">Beoordeling</h3>
                 <ul>
                     {
-                        accomodation_type.map((item) => {
+                        accomodation_type.map((item, index) => {
                             return <li key={item.id} className='mb-3 flex items-center hover:cursor-pointer'>
                                 <span className='inline-block w-5 h-5 border border-gray-500 mr-2 rounded-[3px]'>
                                     <span className='text-white text-xs'>
