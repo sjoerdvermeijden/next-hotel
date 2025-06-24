@@ -130,7 +130,9 @@ function Accomodation({ id, title, ratings, images, short_description }: Trip, i
                                 <span className={`${grid ? 'text-xs -order-1 mr-2' : ''} inline-block py-1 px-1.5 bg-blue-800 text-white rounded-t-md rounded-br-md font-bold`}>{rating?.toFixed(1)}</span>
                             </div>
                         </div>
-                        <button className={`${grid ? 'self-end' : ''} bg-blue-500 font-bold text-sm text-white p-2 rounded-sm flex items-center`}>Bekijk beschikbaarheid <IconChevronRight stroke={2} /></button>
+                        <Link href={`/accomodations/${id}`} className={`${grid ? 'self-end' : ''} bg-blue-500 font-bold text-sm text-white p-2 rounded-sm flex items-center`}>
+                            Bekijk beschikbaarheid <IconChevronRight stroke={2} />
+                        </Link>
                     </div>
                 </div >
             </div>
