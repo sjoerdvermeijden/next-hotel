@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useContext, useState } from 'react'
+import React, { useContext, useState, useEffect } from 'react'
 
 import { Trip } from '../types/accomodations'
 
@@ -15,6 +15,7 @@ import { GridContext } from '../context/GridContext'
 function Accomodation({ id, title, ratings, images, short_description }: Trip, index: number) {
     const { grid } = useContext(GridContext)
     const [isSaved, setIsSaved] = useState<number[]>([]);
+    const [rating, setRating] = useState<number>();
 
     const toggleSaved = (index: number) => {
         if (isSaved.indexOf(index) === -1) {
@@ -27,6 +28,26 @@ function Accomodation({ id, title, ratings, images, short_description }: Trip, i
             setIsSaved(newArray);
         };
     }
+
+    useEffect(() => {
+        // Returns all the ratings for single accomodation
+        const getAllRatings = ratings.map((item) => {
+            return item.rating;
+        })
+
+        // Reduces all the ratings to one number
+        const totalNumber = getAllRatings.reduce((a, v) => a = a + v, 0)
+
+        // Get total amount of ratings
+        const totalAmountOfRatings = ratings.length;
+
+        // Devides the total number to amount of ratings
+        const getSingleRating = () => {
+            return totalNumber / totalAmountOfRatings;
+        }
+
+        setRating(getSingleRating());
+    }, [])
 
     return (
         <>
@@ -106,7 +127,7 @@ function Accomodation({ id, title, ratings, images, short_description }: Trip, i
                                     <p className={`${grid ? 'text-xs' : 'font-semibold text-md'} mr-2 mb-0.5 leading-none`}>Beoordeling</p>
                                     <p className='text-xs mr-2'>{ratings.length} beoordeling</p>
                                 </div>
-                                <span className={`${grid ? 'text-xs -order-1 mr-2' : ''} inline-block py-1 px-1.5 bg-blue-800 text-white rounded-t-md rounded-br-md font-bold`}>9,2</span>
+                                <span className={`${grid ? 'text-xs -order-1 mr-2' : ''} inline-block py-1 px-1.5 bg-blue-800 text-white rounded-t-md rounded-br-md font-bold`}>{rating?.toFixed(1)}</span>
                             </div>
                         </div>
                         <button className={`${grid ? 'self-end' : ''} bg-blue-500 font-bold text-sm text-white p-2 rounded-sm flex items-center`}>Bekijk beschikbaarheid <IconChevronRight stroke={2} /></button>

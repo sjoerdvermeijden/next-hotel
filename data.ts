@@ -18,7 +18,7 @@ export const accomodations = [
                 id: 0,
                 firstName: 'Tim',
                 lastName: 'Bricks',
-                rating: 7,
+                rating: 6,
             },
             {
                 id: 1,
@@ -30,19 +30,19 @@ export const accomodations = [
                 id: 2,
                 firstName: 'Tim',
                 lastName: 'Bricks',
-                rating: 7,
+                rating: 9.9,
             },
             {
                 id: 3,
                 firstName: 'Tim',
                 lastName: 'Bricks',
-                rating: 7,
+                rating: 8,
             },
             {
                 id: 4,
                 firstName: 'Tom',
                 lastName: 'Bricks',
-                rating: 6,
+                rating: 7.5,
             }
         ],
         images: [
@@ -70,7 +70,7 @@ export const accomodations = [
                 id: 0,
                 firstName: 'Tim',
                 lastName: 'Bricks',
-                rating: 7,
+                rating: 6,
             },
             {
                 id: 1,
@@ -82,25 +82,25 @@ export const accomodations = [
                 id: 2,
                 firstName: 'Tim',
                 lastName: 'Bricks',
-                rating: 7,
+                rating: 8.8,
             },
             {
                 id: 3,
                 firstName: 'Tim',
                 lastName: 'Bricks',
-                rating: 7,
+                rating: 7.4,
             },
             {
                 id: 4,
                 firstName: 'Tim',
                 lastName: 'Bricks',
-                rating: 7,
+                rating: 8,
             },
             {
                 id: 5,
                 firstName: 'Tim',
                 lastName: 'Bricks',
-                rating: 7,
+                rating: 9,
             }
         ],
         images: [
