@@ -49,9 +49,6 @@ function Filters() {
                 <ul>
                     {
                         accomodation_type.map((item, index) => {
-
-
-
                             return <li key={item.id} className='mb-3 flex items-center hover:cursor-pointer' onClick={() => toggleFilter(index)}>
                                 <span className={`${(isActive.indexOf(index) > -1) ? 'bg-blue-500' : 'border-gray-500'} w-5 h-5 border flex items-center justify-center mr-2 rounded-[3px]`}>
                                     <span className='text-white text-xs'>

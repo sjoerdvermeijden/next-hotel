@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 
 import { Trip } from '../types/accomodations'
 
@@ -8,12 +8,25 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 import { IconChevronRight } from '@tabler/icons-react';
-import { IconHeart } from '@tabler/icons-react';
+import { IconHeart, IconHeartFilled } from '@tabler/icons-react';
 
 import { GridContext } from '../context/GridContext'
 
-function Accomodation({ id, title, ratings, images, short_description }: Trip) {
+function Accomodation({ id, title, ratings, images, short_description }: Trip, index: number) {
     const { grid } = useContext(GridContext)
+    const [isSaved, setIsSaved] = useState<number[]>([]);
+
+    const toggleSaved = (index: number) => {
+        if (isSaved.indexOf(index) === -1) {
+            setIsSaved([...isSaved, index])
+        } else {
+            const newArray = isSaved.filter(function (item) {
+                return item !== index
+            })
+
+            setIsSaved(newArray);
+        };
+    }
 
     return (
         <>
@@ -31,7 +44,9 @@ function Accomodation({ id, title, ratings, images, short_description }: Trip) {
                         />
                     </div>
                     <div className='w-9 h-9 bg-white transition-colors rounded-[50%] absolute right-[10px] top-[10px] flex items-center justify-center hover:bg-gray-100 cursor-pointer'>
-                        <IconHeart stroke={1} />
+                        {(isSaved.indexOf(index) > -1) ? <IconHeart stroke={1} /> : <div className='text-red-600'>
+                            <IconHeartFilled />
+                        </div>}
                     </div>
                 </div>
                 <div className={` ${grid ? 'p-2 flex-col' : ''} flex w-full`}>

@@ -4,8 +4,6 @@ import React, { useContext } from 'react'
 
 import { Trip } from '../types/accomodations'
 
-import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs"
-
 import Accomodation from './Accomodation'
 
 import { accomodations } from '../../../data'
@@ -28,7 +26,7 @@ function Accomodations() {
             </div>
             <ul className={`${(grid ? 'grid grid-cols-3' : 'flex flex-col')} gap-3 w-full`}>
                 {
-                    accomodations.map((item: Trip) => {
+                    accomodations.map((item: Trip, index) => {
                         return <li key={item.id} className={`${grid ? 'flex-col' : 'items-start p-4'} rounded-md border border-gray-300 flex`}>
                             <Accomodation {...item} />
                         </li>
