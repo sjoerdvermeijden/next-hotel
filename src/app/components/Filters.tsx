@@ -9,6 +9,18 @@ import { accomodation_type } from '../../../filters'
 function Filters() {
     const [isActive, setIsActive] = useState<number[]>([]);
 
+    const toggleFilter = (index: number) => {
+        if (isActive.indexOf(index) === -1) {
+            setIsActive([...isActive, index])
+        } else {
+            const newArray = isActive.filter(function (item) {
+                return item !== index
+            })
+
+            setIsActive(newArray);
+        };
+    }
+
     return (
         <div className='flex flex-col shrink-0 mr-3 border border-gray-300 rounded w-[264px] text-sm'>
             <div className="border-b p-2">
@@ -37,8 +49,11 @@ function Filters() {
                 <ul>
                     {
                         accomodation_type.map((item, index) => {
-                            return <li key={item.id} className='mb-3 flex items-center hover:cursor-pointer' onClick={() => setIsActive([...isActive, index])}>
-                                <span className={`${(isActive.indexOf(index) > -1) ? 'bg-blue-500' : 'border-gray-500'} inline-block w-5 h-5 border flex items-center justify-center mr-2 rounded-[3px]`}>
+
+
+
+                            return <li key={item.id} className='mb-3 flex items-center hover:cursor-pointer' onClick={() => toggleFilter(index)}>
+                                <span className={`${(isActive.indexOf(index) > -1) ? 'bg-blue-500' : 'border-gray-500'} w-5 h-5 border flex items-center justify-center mr-2 rounded-[3px]`}>
                                     <span className='text-white text-xs'>
                                         <IconCheck stroke={2} size={14} />
                                     </span>

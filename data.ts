@@ -4,6 +4,7 @@ export const accomodations = [
         title: 'Melia Maria Pita',
         country: 'Spain',
         adress: 'Lipsum word generator',
+        short_description: 'Lipsum word generator Lipsum word generator Lipsum word generator Lipsum word generator Lipsum word generator',
         facilities: [
             'Pool',
             'Free parking',
@@ -55,6 +56,7 @@ export const accomodations = [
         title: 'Melia Maria Pita',
         country: 'Greece',
         adress: 'Lipsum word generator',
+        short_description: 'Lipsum word generator Lipsum word generator Lipsum word generator Lipsum word generator Lipsum word generator',
         facilities: [
             'Pool',
             'Free parking',
@@ -112,6 +114,7 @@ export const accomodations = [
         title: 'Melia Maria Pita',
         country: 'Italy',
         adress: 'Lipsum word generator',
+        short_description: 'Lipsum word generator Lipsum word generator Lipsum word generator Lipsum word generator Lipsum word generator',
         facilities: [
             'Pool',
             'Free parking',
@@ -157,6 +160,7 @@ export const accomodations = [
         title: 'Melia Maria Pita',
         country: 'Greece',
         adress: 'Lipsum word generator',
+        short_description: 'Lipsum word generator Lipsum word generator Lipsum word generator Lipsum word generator Lipsum word generator',
         facilities: [
             'Pool',
             'Free parking',
@@ -202,6 +206,7 @@ export const accomodations = [
         title: 'Melia Maria Pita',
         country: 'France',
         adress: 'Lipsum word generator',
+        short_description: 'Lipsum word generator Lipsum word generator Lipsum word generator Lipsum word generator Lipsum word generator',
         facilities: [
             'Pool',
             'Free parking',
@@ -241,6 +246,7 @@ export const accomodations = [
         title: 'Melia Maria Pita',
         country: 'Belgium',
         adress: 'Lipsum word generator',
+        short_description: 'Lipsum word generator Lipsum word generator Lipsum word generator Lipsum word generator Lipsum word generator',
         facilities: [
             'Pool',
             'Free parking',

@@ -3,6 +3,7 @@ export interface Trip {
     title: string,
     country: string,
     adress: string,
+    short_description: string,
     facilities: string[],
     accomodation_type: string,
     ratings: [
