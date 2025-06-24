@@ -17,7 +17,7 @@ function Accomodations() {
         <div className='flex flex-col w-full'>
             <div className='mb-3 flex items-center w-full'>
                 <div className='mr-auto'>
-                    <h3 className='text-2xl font-bold'>accommodaties gevonden</h3>
+                    <h3 className='text-2xl font-bold'>Spanje: 1039 accommodaties gevonden</h3>
                 </div>
                 <div className='flex items-center bg-gray-100 px-2 py-1 rounded-2xl text-sm'>
                     <div className='mr-2 bg-white px-4 py-2 rounded-xl' onClick={() => setGrid(!grid)}>Lijst</div>

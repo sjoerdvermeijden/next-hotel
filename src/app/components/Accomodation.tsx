@@ -8,7 +8,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 import { IconChevronRight } from '@tabler/icons-react';
-import { IconHeart, IconHeartFilled } from '@tabler/icons-react';
+import { IconHeart, IconHeartFilled, IconStarFilled } from '@tabler/icons-react';
 
 import { GridContext } from '../context/GridContext'
 
@@ -61,23 +61,52 @@ function Accomodation({ id, title, ratings, images, short_description }: Trip, i
                 </div>
                 <div className={` ${grid ? 'p-2 flex-col' : ''} flex w-full`}>
                     <div className='grow'>
-                        <Link href={`/accomodations/${id}`}>
-                            <h2 className={`${grid ? 'text-base' : 'text-2xl'}  font-bold text-blue-500 mb-1.5`}>{title}</h2>
-                        </Link>
+                        <div className='flex items-center'>
+                            <Link href={`/accomodations/${id}`}>
+                                <h2 className={`${grid ? 'text-base' : 'text-2xl'}  font-bold text-blue-500 mr-2 mb-1.5`}>{title}</h2>
+                            </Link>
+
+                            {
+                                grid ?
+                                    <ul className='flex text-yellow-400 -mt-1'>
+                                        <li className='mr-1'>
+                                            <IconStarFilled size={12} />
+                                        </li>
+                                        <li className='mr-1'>
+                                            <IconStarFilled size={12} />
+                                        </li>
+                                        <li>
+                                            <IconStarFilled size={12} />
+                                        </li>
+                                    </ul>
+                                    :
+                                    <ul className='flex text-yellow-400 -mt-1'>
+                                        <li className='mr-1'>
+                                            <IconStarFilled size={14} />
+                                        </li>
+                                        <li className='mr-1'>
+                                            <IconStarFilled size={14} />
+                                        </li>
+                                        <li>
+                                            <IconStarFilled size={14} />
+                                        </li>
+                                    </ul>
+                            }
+                        </div>
                         <div className='text-xs mb-2'>
                             <p className='underline text-blue-500 font-bold mb-1'>Stad</p>
                             <p className='mb-1'>Centraal gelegen</p>
                             <p>{short_description}</p>
                         </div>
                     </div>
-                    <div>
+                    <div className='flex flex-col'>
                         <div className={`${grid ? '-order-1' : 'items-end'} flex flex-col`}>
                             <div className={`${grid ? 'items-center' : ''} flex mb-2`}>
                                 <div className={`${grid ? '' : 'flex-col'} flex items-end `}>
                                     <p className={`${grid ? 'text-xs' : 'font-semibold text-md'} mr-2 mb-0.5 leading-none`}>Beoordeling</p>
                                     <p className='text-xs mr-2'>{ratings.length} beoordeling</p>
                                 </div>
-                                <span className={`${grid ? 'text-xs' : ''} inline-block py-1 px-1.5 bg-blue-800 text-white rounded-t-md rounded-br-md font-bold`}>9,2</span>
+                                <span className={`${grid ? 'text-xs -order-1 mr-2' : ''} inline-block py-1 px-1.5 bg-blue-800 text-white rounded-t-md rounded-br-md font-bold`}>9,2</span>
                             </div>
                         </div>
                         <button className={`${grid ? 'self-end' : ''} bg-blue-500 font-bold text-sm text-white p-2 rounded-sm flex items-center`}>Bekijk beschikbaarheid <IconChevronRight stroke={2} /></button>
