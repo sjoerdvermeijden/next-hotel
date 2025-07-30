@@ -84,12 +84,12 @@ function Accomodation({ id, title, ratings, images, short_description }: Trip, i
                     <div className='grow'>
                         <div className='flex items-center'>
                             <Link href={`/accomodations/${id}`}>
-                                <h2 className={`${grid ? 'text-base' : 'text-2xl'}  font-bold text-blue-500 mr-2 mb-1.5`}>{title}</h2>
+                                <h2 className={`${grid ? 'text-base' : 'text-1xl'}  font-extrabold text-blue-600 mr-2 mb-1.5`}>{title}</h2>
                             </Link>
 
                             {
                                 grid ?
-                                    <ul className='flex text-yellow-400 -mt-1'>
+                                    <ul className='flex text-yellow-500 -mt-1'>
                                         <li className='mr-1'>
                                             <IconStarFilled size={12} />
                                         </li>
@@ -101,7 +101,7 @@ function Accomodation({ id, title, ratings, images, short_description }: Trip, i
                                         </li>
                                     </ul>
                                     :
-                                    <ul className='flex text-yellow-400 -mt-1'>
+                                    <ul className='flex text-yellow-500 -mt-1'>
                                         <li className='mr-1'>
                                             <IconStarFilled size={14} />
                                         </li>

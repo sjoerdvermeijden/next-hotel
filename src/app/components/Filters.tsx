@@ -22,7 +22,7 @@ function Filters() {
     }
 
     return (
-        <div className='flex flex-col shrink-0 mr-3 border border-gray-300 rounded w-[264px] text-sm'>
+        <div className='flex flex-col shrink-0 mr-4 border border-gray-300 rounded w-[264px] text-sm'>
             <div className="border-b p-2">
                 <p className='font-bold'>Filter op:</p>
             </div>
