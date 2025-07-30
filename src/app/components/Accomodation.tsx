@@ -8,7 +8,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 import { IconChevronRight } from '@tabler/icons-react';
-import { IconHeart, IconHeartFilled, IconStarFilled } from '@tabler/icons-react';
+import { IconHeart, IconHeartFilled, IconStarFilled, IconMapPin } from '@tabler/icons-react';
 
 import { GridContext } from '../context/GridContext'
 
@@ -115,7 +115,7 @@ function Accomodation({ id, title, ratings, images, short_description }: Trip, i
                             }
                         </div>
                         <div className='text-xs mb-2'>
-                            <p className='underline text-blue-500 font-bold mb-1'>Stad</p>
+                            <div className='underline text-blue-500 font-bold mb-1 flex'><span className='mr-1 inline-block'><IconMapPin size={14} /></span> Stad</div>
                             <p className='mb-1'>Centraal gelegen</p>
                             <p>{short_description}</p>
                         </div>

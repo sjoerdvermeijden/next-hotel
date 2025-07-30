@@ -11,7 +11,7 @@ export default async function AccomodationPage({ params }: { params: Promise<{ i
     return (
         <>
             <div className='container mx-auto flex flex-col py-4'>
-                <h3 className='text-3xl text-blue-500 font-bold'>{user.name}</h3>
+                <h3 className='text-3xl text-blue-500 font-bold'></h3>
                 <div>AccomodationPage</div>
             </div>
         </>
