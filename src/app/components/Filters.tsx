@@ -4,20 +4,46 @@ import React, { useState } from 'react'
 
 import { IconCheck } from '@tabler/icons-react';
 
-import { accomodation_type } from '../../../filters'
+import { accomodation_type, accomodation_stars, accomodation_facilities } from '../../../filters'
 
 function Filters() {
-    const [isActive, setIsActive] = useState<number[]>([]);
+    const [activeFacility, setActiveFacility] = useState<number[]>([]);
+    const [activeAccomodation, setActiveAccomodation] = useState<number[]>([]);
+    const [activeStars, setActiveStars] = useState<number[]>([]);
 
-    const toggleFilter = (index: number) => {
-        if (isActive.indexOf(index) === -1) {
-            setIsActive([...isActive, index])
+    const facilityFilter = (index: number) => {
+        if (activeFacility.indexOf(index) === -1) {
+            setActiveFacility([...activeFacility, index])
         } else {
-            const newArray = isActive.filter(function (item) {
+            const newArray = activeFacility.filter(function (item) {
                 return item !== index
             })
 
-            setIsActive(newArray);
+            setActiveFacility(newArray);
+        };
+    }
+
+    const accomodationFilter = (index: number) => {
+        if (activeAccomodation.indexOf(index) === -1) {
+            setActiveAccomodation([...activeAccomodation, index])
+        } else {
+            const newArray = activeAccomodation.filter(function (item) {
+                return item !== index
+            })
+
+            setActiveAccomodation(newArray);
+        };
+    }
+
+    const starFilter = (index: number) => {
+        if (activeStars.indexOf(index) === -1) {
+            setActiveStars([...activeStars, index])
+        } else {
+            const newArray = activeStars.filter(function (item) {
+                return item !== index
+            })
+
+            setActiveStars(newArray);
         };
     }
 
@@ -31,8 +57,8 @@ function Filters() {
                 <ul>
                     {
                         accomodation_type.map((item, index) => {
-                            return <li key={item.id} className='mb-3 flex items-center hover:cursor-pointer'>
-                                <span className='inline-block w-5 h-5 border border-gray-500 mr-2 rounded-[3px]'>
+                            return <li key={item.id} className='mb-3 flex items-center hover:cursor-pointer' onClick={() => accomodationFilter(index)}>
+                                <span className={`${(activeAccomodation.indexOf(index) > -1) ? 'bg-blue-500' : 'border-gray-500'} w-5 h-5 border flex items-center justify-center mr-2 rounded-[3px]`}>
                                     <span className='text-white text-xs'>
                                         <IconCheck stroke={2} size={14} />
                                     </span>
@@ -48,9 +74,9 @@ function Filters() {
                 <h3 className="font-bold mb-2">Faciliteiten</h3>
                 <ul>
                     {
-                        accomodation_type.map((item, index) => {
-                            return <li key={item.id} className='mb-3 flex items-center hover:cursor-pointer' onClick={() => toggleFilter(index)}>
-                                <span className={`${(isActive.indexOf(index) > -1) ? 'bg-blue-500' : 'border-gray-500'} w-5 h-5 border flex items-center justify-center mr-2 rounded-[3px]`}>
+                        accomodation_facilities.map((item, index) => {
+                            return <li key={item.id} className='mb-3 flex items-center hover:cursor-pointer' onClick={() => facilityFilter(index)}>
+                                <span className={`${(activeFacility.indexOf(index) > -1) ? 'bg-blue-500' : 'border-gray-500'} w-5 h-5 border flex items-center justify-center mr-2 rounded-[3px]`}>
                                     <span className='text-white text-xs'>
                                         <IconCheck stroke={2} size={14} />
                                     </span>
@@ -66,9 +92,9 @@ function Filters() {
                 <h3 className="font-bold mb-2">Sterren</h3>
                 <ul>
                     {
-                        accomodation_type.map((item, index) => {
-                            return <li key={item.id} className='mb-3 flex items-center hover:cursor-pointer'>
-                                <span className='inline-block w-5 h-5 border border-gray-500 mr-2 rounded-[3px]'>
+                        accomodation_stars.map((item, index) => {
+                            return <li key={item.id} className='mb-3 flex items-center hover:cursor-pointer' onClick={() => starFilter(index)}>
+                                <span className={`${(activeStars.indexOf(index) > -1) ? 'bg-blue-500' : 'border-gray-500'} w-5 h-5 border flex items-center justify-center mr-2 rounded-[3px]`}>
                                     <span className='text-white text-xs'>
                                         <IconCheck stroke={2} size={14} />
                                     </span>

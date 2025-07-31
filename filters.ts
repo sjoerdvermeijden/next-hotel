@@ -32,3 +32,57 @@ export const accomodation_type = [
         label: 'Bed & breakfasts'
     }
 ]
+
+export const accomodation_facilities = [
+    {
+        id: 0,
+        label: 'Parkeren'
+    },
+    {
+        id: 1,
+        label: 'Restaurant'
+    },
+    {
+        id: 2,
+        label: 'Roomservice'
+    },
+    {
+        id: 3,
+        label: 'Gym'
+    },
+    {
+        id: 4,
+        label: 'Gratis WiFi'
+    },
+    {
+        id: 5,
+        label: 'Zwembad'
+    },
+    {
+        id: 6,
+        label: 'Rolstoeltoegankelijk'
+    }
+]
+
+export const accomodation_stars = [
+    {
+        id: 0,
+        label: '5 sterren'
+    },
+    {
+        id: 1,
+        label: '4 sterren'
+    },
+    {
+        id: 2,
+        label: '3 sterren'
+    },
+    {
+        id: 3,
+        label: '2 sterren'
+    },
+    {
+        id: 4,
+        label: '1 ster'
+    }
+]
