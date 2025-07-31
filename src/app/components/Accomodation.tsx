@@ -8,7 +8,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 import { IconChevronRight } from '@tabler/icons-react';
-import { IconHeart, IconHeartFilled, IconStarFilled, IconMapPin, IconThumbUp } from '@tabler/icons-react';
+import { IconHeart, IconHeartFilled, IconStarFilled, IconMapPin, IconThumbUpFilled } from '@tabler/icons-react';
 
 import { GridContext } from '../context/GridContext'
 
@@ -90,7 +90,7 @@ function Accomodation({ id, title, ratings, images, short_description }: Trip, i
                             {
                                 grid ?
                                     <div className='flex items-center'>
-                                        <ul className='flex text-yellow-500 -mt-1.5 mr-2'>
+                                        <ul className='flex text-yellow-500 -mt-1.5 mr-1.5'>
                                             <li className='mr-0.5'>
                                                 <IconStarFilled size={12} />
                                             </li>
@@ -101,11 +101,13 @@ function Accomodation({ id, title, ratings, images, short_description }: Trip, i
                                                 <IconStarFilled size={12} />
                                             </li>
                                         </ul>
-                                        <IconThumbUp size={16} />
+                                        <div className='-mt-1.5 bg-yellow-500 py-0.5 px-1 rounded-sm'>
+                                            <IconThumbUpFilled color="white" size={14} />
+                                        </div>
                                     </div>
                                     :
                                     <div className='flex items-center'>
-                                        <ul className='flex text-yellow-500 -mt-1.5 mr-2'>
+                                        <ul className='flex text-yellow-500 -mt-1.5 mr-1.5'>
                                             <li className='mr-0.5'>
                                                 <IconStarFilled size={12} />
                                             </li>
@@ -116,7 +118,9 @@ function Accomodation({ id, title, ratings, images, short_description }: Trip, i
                                                 <IconStarFilled size={12} />
                                             </li>
                                         </ul>
-                                        <IconThumbUp size={16} />
+                                        <div className='-mt-1.5 bg-yellow-500 py-0.5 px-1 rounded-sm'>
+                                            <IconThumbUpFilled color="white" size={14} />
+                                        </div>
                                     </div>
                             }
                         </div>
