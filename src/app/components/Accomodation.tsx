@@ -8,7 +8,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 import { IconChevronRight } from '@tabler/icons-react';
-import { IconHeart, IconHeartFilled, IconStarFilled, IconMapPin } from '@tabler/icons-react';
+import { IconHeart, IconHeartFilled, IconStarFilled, IconMapPin, IconThumbUp } from '@tabler/icons-react';
 
 import { GridContext } from '../context/GridContext'
 
@@ -89,29 +89,35 @@ function Accomodation({ id, title, ratings, images, short_description }: Trip, i
 
                             {
                                 grid ?
-                                    <ul className='flex text-yellow-500 -mt-1.5'>
-                                        <li className='mr-0.5'>
-                                            <IconStarFilled size={12} />
-                                        </li>
-                                        <li className='mr-0.5'>
-                                            <IconStarFilled size={12} />
-                                        </li>
-                                        <li>
-                                            <IconStarFilled size={12} />
-                                        </li>
-                                    </ul>
+                                    <div className='flex items-center'>
+                                        <ul className='flex text-yellow-500 -mt-1.5 mr-2'>
+                                            <li className='mr-0.5'>
+                                                <IconStarFilled size={12} />
+                                            </li>
+                                            <li className='mr-0.5'>
+                                                <IconStarFilled size={12} />
+                                            </li>
+                                            <li>
+                                                <IconStarFilled size={12} />
+                                            </li>
+                                        </ul>
+                                        <IconThumbUp size={16} />
+                                    </div>
                                     :
-                                    <ul className='flex text-yellow-500 -mt-1.5'>
-                                        <li className='mr-0.5'>
-                                            <IconStarFilled size={14} />
-                                        </li>
-                                        <li className='mr-0.5'>
-                                            <IconStarFilled size={14} />
-                                        </li>
-                                        <li>
-                                            <IconStarFilled size={14} />
-                                        </li>
-                                    </ul>
+                                    <div className='flex items-center'>
+                                        <ul className='flex text-yellow-500 -mt-1.5 mr-2'>
+                                            <li className='mr-0.5'>
+                                                <IconStarFilled size={12} />
+                                            </li>
+                                            <li className='mr-0.5'>
+                                                <IconStarFilled size={12} />
+                                            </li>
+                                            <li>
+                                                <IconStarFilled size={12} />
+                                            </li>
+                                        </ul>
+                                        <IconThumbUp size={16} />
+                                    </div>
                             }
                         </div>
                         <div className='text-xs mb-2'>
