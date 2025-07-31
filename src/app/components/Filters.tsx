@@ -4,12 +4,13 @@ import React, { useState } from 'react'
 
 import { IconCheck } from '@tabler/icons-react';
 
-import { accomodation_type, accomodation_stars, accomodation_facilities } from '../../../filters'
+import { accomodation_type, accomodation_stars, accomodation_facilities, accomodation_rating } from '../../../filters'
 
 function Filters() {
     const [activeFacility, setActiveFacility] = useState<number[]>([]);
     const [activeAccomodation, setActiveAccomodation] = useState<number[]>([]);
     const [activeStars, setActiveStars] = useState<number[]>([]);
+    const [activeRating, setActiveRating] = useState<number[]>([]);
 
     const facilityFilter = (index: number) => {
         if (activeFacility.indexOf(index) === -1) {
@@ -44,6 +45,18 @@ function Filters() {
             })
 
             setActiveStars(newArray);
+        };
+    }
+
+    const ratingFilter = (index: number) => {
+        if (activeRating.indexOf(index) === -1) {
+            setActiveRating([...activeRating, index])
+        } else {
+            const newArray = activeRating.filter(function (item) {
+                return item !== index
+            })
+
+            setActiveRating(newArray);
         };
     }
 
@@ -110,9 +123,9 @@ function Filters() {
                 <h3 className="font-bold mb-2">Beoordeling</h3>
                 <ul>
                     {
-                        accomodation_type.map((item, index) => {
-                            return <li key={item.id} className='mb-3 flex items-center hover:cursor-pointer'>
-                                <span className='inline-block w-5 h-5 border border-gray-500 mr-2 rounded-[3px]'>
+                        accomodation_rating.map((item, index) => {
+                            return <li key={item.id} className='mb-3 flex items-center hover:cursor-pointer' onClick={() => ratingFilter(index)}>
+                                <span className={`${(activeRating.indexOf(index) > -1) ? 'bg-blue-500' : 'border-gray-500'} w-5 h-5 border flex items-center justify-center mr-2 rounded-[3px]`}>
                                     <span className='text-white text-xs'>
                                         <IconCheck stroke={2} size={14} />
                                     </span>

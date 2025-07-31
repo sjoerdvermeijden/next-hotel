@@ -86,3 +86,22 @@ export const accomodation_stars = [
         label: '1 ster'
     }
 ]
+
+export const accomodation_rating = [
+    {
+        id: 0,
+        label: 'Fantastisch: 9+'
+    },
+    {
+        id: 1,
+        label: 'Erg goed: 8+'
+    },
+    {
+        id: 2,
+        label: 'Goed: 7+'
+    },
+    {
+        id: 3,
+        label: 'Aangenaam: 6+'
+    }
+]
