@@ -10,6 +10,8 @@ import { accomodations } from '../../../data'
 
 import { GridContext } from '../context/GridContext'
 
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+
 function Accomodations() {
     const { grid, setGrid } = useContext(GridContext)
 
@@ -20,8 +22,8 @@ function Accomodations() {
                     <h3 className='text-1xl font-extrabold'>Spanje: 1039 accommodaties gevonden</h3>
                 </div>
                 <div className='flex items-center bg-gray-100 px-2 py-1 rounded-2xl text-sm'>
-                    <div className='mr-2 bg-white px-4 py-2 rounded-xl' onClick={() => setGrid(!grid)}>Lijst</div>
-                    <div onClick={() => setGrid(!grid)}>Raster</div>
+                    <div className={`${(grid ? '' : 'bg-white rounded-xl')} px-4 py-2`} onClick={() => setGrid(!grid)}>Lijst</div>
+                    <div className={`${(grid ? 'bg-white rounded-xl' : '')} px-4 py-2`} onClick={() => setGrid(!grid)}>Raster</div>
                 </div>
             </div>
             <ul className={`${(grid ? 'grid grid-cols-3' : 'flex flex-col')} gap-3 w-full`}>

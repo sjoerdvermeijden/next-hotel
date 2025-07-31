@@ -84,16 +84,16 @@ function Accomodation({ id, title, ratings, images, short_description }: Trip, i
                     <div className='grow'>
                         <div className='flex items-center'>
                             <Link href={`/accomodations/${id}`}>
-                                <h2 className={`${grid ? 'text-base' : 'text-1xl'}  font-extrabold text-blue-600 mr-2 mb-1.5`}>{title}</h2>
+                                <h2 className={`${grid ? 'text-base' : 'text-1xl'}  font-extrabold text-blue-600 mr-2 mb-1.5 hover:text-black`}>{title}</h2>
                             </Link>
 
                             {
                                 grid ?
-                                    <ul className='flex text-yellow-500 -mt-1'>
-                                        <li className='mr-1'>
+                                    <ul className='flex text-yellow-500 -mt-1.5'>
+                                        <li className='mr-0.5'>
                                             <IconStarFilled size={12} />
                                         </li>
-                                        <li className='mr-1'>
+                                        <li className='mr-0.5'>
                                             <IconStarFilled size={12} />
                                         </li>
                                         <li>
@@ -101,11 +101,11 @@ function Accomodation({ id, title, ratings, images, short_description }: Trip, i
                                         </li>
                                     </ul>
                                     :
-                                    <ul className='flex text-yellow-500 -mt-1'>
-                                        <li className='mr-1'>
+                                    <ul className='flex text-yellow-500 -mt-1.5'>
+                                        <li className='mr-0.5'>
                                             <IconStarFilled size={14} />
                                         </li>
-                                        <li className='mr-1'>
+                                        <li className='mr-0.5'>
                                             <IconStarFilled size={14} />
                                         </li>
                                         <li>
@@ -124,7 +124,7 @@ function Accomodation({ id, title, ratings, images, short_description }: Trip, i
                         <div className={`${grid ? '-order-1' : 'items-end'} flex flex-col`}>
                             <div className={`${grid ? 'items-center' : ''} flex mb-2`}>
                                 <div className={`${grid ? '' : 'flex-col'} flex items-end `}>
-                                    <p className={`${grid ? 'text-xs' : 'font-semibold text-md'} mr-2 mb-0.5 leading-none`}>Beoordeling</p>
+                                    <p className={`${grid ? 'text-xs' : 'font-semibold text-md'} text-1xl mr-2 mb-0.5 leading-none`}>Beoordeling</p>
                                     <p className='text-xs mr-2'>{ratings.length} beoordeling</p>
                                 </div>
                                 <span className={`${grid ? 'text-xs -order-1 mr-2' : ''} inline-block py-1 px-1.5 bg-blue-800 text-white rounded-t-md rounded-br-md font-bold`}>{rating?.toFixed(1)}</span>
