@@ -39,7 +39,7 @@ function AccomodationLayout({ id }: Props) {
             <div className='mb-6 border-b pb-4 text-sm'>
                 <p><span className='text-blue-600'>Home</span> - Accomodation</p>
             </div>
-            <div className='flex items-center mb-8'>
+            <div className='flex items-center mb-4'>
                 <div className='mr-auto'>
                     <div className='flex items-center mb-2'>
                         <ul className='flex text-yellow-500 -mt-1.5 mr-1.5'>
@@ -92,7 +92,7 @@ function AccomodationLayout({ id }: Props) {
                     </div>
                 </div>
             </div>
-            <div className='flex items-start'>
+            <div className='flex items-start mb-4'>
                 <div className='flex'>
                     <div className='mr-2'>
                         {
@@ -152,6 +152,24 @@ function AccomodationLayout({ id }: Props) {
                         <span className="inline-block py-1 px-1.5 border rounded-t-md rounded-br-md font-bold">6.5</span>
                     </div>
                 </div>
+            </div>
+            <div>
+                <ul className='flex gap-2'>
+                    {
+                        accomodation?.facilities.map((item) => {
+                            return <li key={item.id}><div className='border p-2 rounded-lg'>{item.label}</div></li>
+                        })
+                    }
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    {
+                        accomodation?.ratings.map((item) => {
+
+                        })
+                    }
+                </ul>
             </div>
         </div>
     )

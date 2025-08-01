@@ -12,7 +12,7 @@ import { IconHeart, IconHeartFilled, IconStarFilled, IconMapPin, IconThumbUpFill
 
 import { GridContext } from '../context/GridContext'
 
-function Accomodation({ id, title, ratings, images, short_description }: Trip, index: number) {
+function Accomodation({ id, title, reviews, images, short_description }: Trip, index: number) {
     const { grid } = useContext(GridContext)
     const [isSaved, setIsSaved] = useState<number[]>([]);
     const [rating, setRating] = useState<number>();
@@ -31,7 +31,7 @@ function Accomodation({ id, title, ratings, images, short_description }: Trip, i
 
     useEffect(() => {
         // Returns all the ratings for single accomodation
-        const getAllRatings = ratings.map((item) => {
+        const getAllRatings = reviews.map((item) => {
             return item.rating;
         })
 
@@ -39,7 +39,7 @@ function Accomodation({ id, title, ratings, images, short_description }: Trip, i
         const totalNumber = getAllRatings.reduce((a, v) => a = a + v, 0)
 
         // Get total amount of ratings
-        const totalAmountOfRatings = ratings.length;
+        const totalAmountOfRatings = reviews.length;
 
         // Devides the total number to amount of ratings
         const getSingleRating = () => {
@@ -139,7 +139,7 @@ function Accomodation({ id, title, ratings, images, short_description }: Trip, i
                             <div className={`${grid ? 'items-center' : ''} flex mb-2`}>
                                 <div className={`${grid ? '' : 'flex-col'} flex items-end `}>
                                     <p className={`${grid ? 'text-xs' : 'font-semibold text-md'} text-1xl mr-2 mb-0.5 leading-none`}>Beoordeling</p>
-                                    <p className='text-xs mr-2'>{ratings.length} beoordeling</p>
+                                    <p className='text-xs mr-2'>{reviews.length} beoordeling</p>
                                 </div>
                                 <span className={`${grid ? 'text-xs -order-1 mr-2' : ''} inline-block py-1 px-1.5 bg-blue-800 text-white rounded-t-md rounded-br-md font-bold`}>{rating?.toFixed(1)}</span>
                             </div>

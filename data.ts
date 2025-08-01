@@ -6,14 +6,29 @@ export const accomodations = [
         adress: 'Lipsum word generator',
         short_description: 'Lipsum word generator Lipsum word generator Lipsum word generator Lipsum word generator Lipsum word generator',
         facilities: [
-            'Pool',
-            'Free parking',
-            'Wifi',
-            'Restaurant',
-
+            {
+                id: 0,
+                icon: '',
+                label: 'Pool',
+            },
+            {
+                id: 1,
+                icon: '',
+                label: 'Wifi',
+            },
+            {
+                id: 2,
+                icon: '',
+                label: 'Restaurant',
+            },
+            {
+                id: 3,
+                icon: '',
+                label: 'Free parking',
+            },
         ],
         accomodation_type: 'Hotel',
-        ratings: [
+        reviews: [
             {
                 id: 0,
                 firstName: 'Tim',
@@ -58,14 +73,29 @@ export const accomodations = [
         adress: 'Lipsum word generator',
         short_description: 'Lipsum word generator Lipsum word generator Lipsum word generator Lipsum word generator Lipsum word generator',
         facilities: [
-            'Pool',
-            'Free parking',
-            'Wifi',
-            'Restaurant',
-
+            {
+                id: 0,
+                icon: '',
+                label: 'Pool',
+            },
+            {
+                id: 1,
+                icon: '',
+                label: 'Wifi',
+            },
+            {
+                id: 2,
+                icon: '',
+                label: 'Restaurant',
+            },
+            {
+                id: 3,
+                icon: '',
+                label: 'Free parking',
+            },
         ],
         accomodation_type: 'Hotel',
-        ratings: [
+        reviews: [
             {
                 id: 0,
                 firstName: 'Tim',
@@ -116,14 +146,29 @@ export const accomodations = [
         adress: 'Lipsum word generator',
         short_description: 'Lipsum word generator Lipsum word generator Lipsum word generator Lipsum word generator Lipsum word generator',
         facilities: [
-            'Pool',
-            'Free parking',
-            'Wifi',
-            'Restaurant',
-
+            {
+                id: 0,
+                icon: '',
+                label: 'Pool',
+            },
+            {
+                id: 1,
+                icon: '',
+                label: 'Wifi',
+            },
+            {
+                id: 2,
+                icon: '',
+                label: 'Restaurant',
+            },
+            {
+                id: 3,
+                icon: '',
+                label: 'Free parking',
+            },
         ],
         accomodation_type: 'Hotel',
-        ratings: [
+        reviews: [
             {
                 id: 0,
                 firstName: 'Tim',
@@ -162,14 +207,29 @@ export const accomodations = [
         adress: 'Lipsum word generator',
         short_description: 'Lipsum word generator Lipsum word generator Lipsum word generator Lipsum word generator Lipsum word generator',
         facilities: [
-            'Pool',
-            'Free parking',
-            'Wifi',
-            'Restaurant',
-
+            {
+                id: 0,
+                icon: '',
+                label: 'Pool',
+            },
+            {
+                id: 1,
+                icon: '',
+                label: 'Wifi',
+            },
+            {
+                id: 2,
+                icon: '',
+                label: 'Restaurant',
+            },
+            {
+                id: 3,
+                icon: '',
+                label: 'Free parking',
+            },
         ],
         accomodation_type: 'Motel',
-        ratings: [
+        reviews: [
             {
                 id: 0,
                 firstName: 'Tim',
@@ -208,14 +268,29 @@ export const accomodations = [
         adress: 'Lipsum word generator',
         short_description: 'Lipsum word generator Lipsum word generator Lipsum word generator Lipsum word generator Lipsum word generator',
         facilities: [
-            'Pool',
-            'Free parking',
-            'Wifi',
-            'Restaurant',
-
+            {
+                id: 0,
+                icon: '',
+                label: 'Pool',
+            },
+            {
+                id: 1,
+                icon: '',
+                label: 'Wifi',
+            },
+            {
+                id: 2,
+                icon: '',
+                label: 'Restaurant',
+            },
+            {
+                id: 3,
+                icon: '',
+                label: 'Free parking',
+            },
         ],
         accomodation_type: 'Apartement',
-        ratings: [
+        reviews: [
             {
                 id: 0,
                 firstName: 'Tim',
@@ -248,14 +323,29 @@ export const accomodations = [
         adress: 'Lipsum word generator',
         short_description: 'Lipsum word generator Lipsum word generator Lipsum word generator Lipsum word generator Lipsum word generator',
         facilities: [
-            'Pool',
-            'Free parking',
-            'Wifi',
-            'Restaurant',
-
+            {
+                id: 0,
+                icon: '',
+                label: 'Pool',
+            },
+            {
+                id: 1,
+                icon: '',
+                label: 'Wifi',
+            },
+            {
+                id: 2,
+                icon: '',
+                label: 'Restaurant',
+            },
+            {
+                id: 3,
+                icon: '',
+                label: 'Free parking',
+            },
         ],
         accomodation_type: 'Apartement',
-        ratings: [
+        reviews: [
             {
                 id: 0,
                 firstName: 'Tim',

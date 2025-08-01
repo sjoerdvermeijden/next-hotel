@@ -4,9 +4,13 @@ export interface Trip {
     country: string,
     adress: string,
     short_description: string,
-    facilities: string[],
+    facilities: Array<{
+        id: number,
+        icon: string,
+        label: string,
+    }>,
     accomodation_type: string,
-    ratings: [
+    reviews: [
         Array<{
             id: number,
             firstName: string,
