@@ -4,6 +4,8 @@ import React, { useState, useEffect } from 'react'
 
 import { IconStarFilled, IconThumbUpFilled, IconMapPinFilled, IconHeart, IconShare, IconTag } from '@tabler/icons-react';
 
+import { TooltipProvider, Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip"
+
 import Image from 'next/image'
 
 import { accomodations } from '../../../data'
@@ -60,9 +62,27 @@ function AccomodationLayout({ id }: Props) {
                 </div>
                 <div className='flex flex-col items-end'>
                     <div className='flex items-center text-blue-500 mb-2'>
-                        <span className='inline-block mr-2 rounded hover:bg-blue-50 p-4 cursor-pointer'><IconHeart size={24} /></span>
-                        <span className='inline-block mr-2 rounded hover:bg-blue-50 p-4 cursor-pointer'><IconShare size={24} /></span>
-                        <button className='bg-blue-600 text-white rounded px-4 py-2 font-bold text-sm'>Boek nu</button>
+
+                        <TooltipProvider>
+                            <Tooltip>
+                                <TooltipTrigger>
+                                    <span className='inline-block mr-2 rounded hover:bg-blue-50 p-4 cursor-pointer'><IconHeart size={24} /></span>
+                                </TooltipTrigger>
+                                <TooltipContent>
+                                    <p className='font-bold'>Dit item opslaan</p>
+                                </TooltipContent>
+                            </Tooltip>
+                            <Tooltip>
+                                <TooltipTrigger>
+                                    <span className='inline-block mr-2 rounded hover:bg-blue-50 p-4 cursor-pointer'><IconShare size={24} /></span>
+                                </TooltipTrigger>
+                                <TooltipContent>
+                                    <p className='font-bold'>Deel deze accomodatie</p>
+                                </TooltipContent>
+                            </Tooltip>
+                        </TooltipProvider>
+
+                        <button className='bg-blue-600 text-white rounded px-4 py-2 font-bold text-sm hover:bg-blue-700'>Boek nu</button>
                     </div>
                     <div className='flex items-center hover:bg-blue-50 p-2 rounded cursor-pointer'>
                         <div className='mr-2 text-blue-500'>
@@ -73,19 +93,51 @@ function AccomodationLayout({ id }: Props) {
                 </div>
             </div>
             <div className='flex items-start'>
-                <div className='mr-4'>
-                    {
-                        accomodation &&
-                        <Image
-                            priority
-                            src={accomodation.images[0]}
-                            width={830}
-                            height={460}
-                            style={{ objectFit: "cover", height: '460px', width: '830px', borderRadius: '5px' }}
-                            quality={80}
-                            alt="Picture of the author"
-                        />
-                    }
+                <div className='flex'>
+                    <div className='mr-2'>
+                        {
+                            accomodation &&
+                            <Image
+                                priority
+                                src={accomodation.images[0]}
+                                width={545}
+                                height={361}
+                                style={{ objectFit: "cover", height: '361px', width: '545px', borderRadius: '5px' }}
+                                quality={80}
+                                alt="Picture of the author"
+                            />
+                        }
+                    </div>
+                    <div className='flex flex-col mr-2'>
+                        <div className='mb-2'>
+                            {
+                                accomodation &&
+                                <Image
+                                    priority
+                                    src={accomodation.images[0]}
+                                    width={275}
+                                    height={176}
+                                    style={{ objectFit: "cover", height: '176px', width: '275px', borderRadius: '5px' }}
+                                    quality={80}
+                                    alt="Picture of the author"
+                                />
+                            }
+                        </div>
+                        <div>
+                            {
+                                accomodation &&
+                                <Image
+                                    priority
+                                    src={accomodation.images[0]}
+                                    width={275}
+                                    height={176}
+                                    style={{ objectFit: "cover", height: '176px', width: '275px', borderRadius: '5px' }}
+                                    quality={80}
+                                    alt="Picture of the author"
+                                />
+                            }
+                        </div>
+                    </div>
                 </div>
                 <div className="flex flex-col border rounded-sm w-[265px]">
                     <div className='flex border-b p-2 justify-end'>
