@@ -1,9 +1,6 @@
-'use client'
-
 import React from 'react'
-import { accomodations } from '../../../../data'
 
-import { Trip } from '@/app/types/accomodations'
+import AccomodationLayout from "@/app/components/AccomodationLayout"
 
 export default async function AccomodationPage({ params }: { params: Promise<{ id: number }> }) {
     const { id } = await params
@@ -11,8 +8,7 @@ export default async function AccomodationPage({ params }: { params: Promise<{ i
     return (
         <>
             <div className='container mx-auto flex flex-col py-4'>
-                <h3 className='text-3xl text-blue-500 font-bold'></h3>
-                <div>AccomodationPage</div>
+                <AccomodationLayout id={id} />
             </div>
         </>
     )
