@@ -34,30 +34,35 @@ export const accomodations = [
                 firstName: 'Tim',
                 lastName: 'Bricks',
                 rating: 6,
+                review: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using'
             },
             {
                 id: 1,
                 firstName: 'Tim',
                 lastName: 'Bricks',
                 rating: 7,
+                review: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using'
             },
             {
                 id: 2,
                 firstName: 'Tim',
                 lastName: 'Bricks',
                 rating: 9.9,
+                review: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using'
             },
             {
                 id: 3,
                 firstName: 'Tim',
                 lastName: 'Bricks',
                 rating: 8,
+                review: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using'
             },
             {
                 id: 4,
                 firstName: 'Tom',
                 lastName: 'Bricks',
                 rating: 7.5,
+                review: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using'
             }
         ],
         images: [
@@ -101,36 +106,42 @@ export const accomodations = [
                 firstName: 'Tim',
                 lastName: 'Bricks',
                 rating: 6,
+                review: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using'
             },
             {
                 id: 1,
                 firstName: 'Tim',
                 lastName: 'Bricks',
                 rating: 7,
+                review: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using'
             },
             {
                 id: 2,
                 firstName: 'Tim',
                 lastName: 'Bricks',
                 rating: 8.8,
+                review: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using'
             },
             {
                 id: 3,
                 firstName: 'Tim',
                 lastName: 'Bricks',
                 rating: 7.4,
+                review: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using'
             },
             {
                 id: 4,
                 firstName: 'Tim',
                 lastName: 'Bricks',
                 rating: 8,
+                review: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using'
             },
             {
                 id: 5,
                 firstName: 'Tim',
                 lastName: 'Bricks',
                 rating: 9,
+                review: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using'
             }
         ],
         images: [
@@ -174,24 +185,28 @@ export const accomodations = [
                 firstName: 'Tim',
                 lastName: 'Bricks',
                 rating: 7,
+                review: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using'
             },
             {
                 id: 1,
                 firstName: 'Tim',
                 lastName: 'Bricks',
                 rating: 7,
+                review: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using'
             },
             {
                 id: 2,
                 firstName: 'Tim',
                 lastName: 'Bricks',
                 rating: 7,
+                review: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using'
             },
             {
                 id: 3,
                 firstName: 'Tim',
                 lastName: 'Bricks',
                 rating: 7,
+                review: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using'
             }
         ],
         images: [
@@ -235,24 +250,28 @@ export const accomodations = [
                 firstName: 'Tim',
                 lastName: 'Bricks',
                 rating: 7,
+                review: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using'
             },
             {
                 id: 1,
                 firstName: 'Tim',
                 lastName: 'Bricks',
                 rating: 7,
+                review: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using'
             },
             {
                 id: 2,
                 firstName: 'Tim',
                 lastName: 'Bricks',
                 rating: 7,
+                review: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using'
             },
             {
                 id: 3,
                 firstName: 'Tim',
                 lastName: 'Bricks',
                 rating: 7,
+                review: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using'
             }
         ],
         images: [
@@ -296,18 +315,21 @@ export const accomodations = [
                 firstName: 'Tim',
                 lastName: 'Bricks',
                 rating: 7,
+                review: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using'
             },
             {
                 id: 1,
                 firstName: 'Tim',
                 lastName: 'Bricks',
                 rating: 7,
+                review: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using'
             },
             {
                 id: 2,
                 firstName: 'Tim',
                 lastName: 'Bricks',
                 rating: 7,
+                review: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using'
             }
         ],
         images: [
@@ -351,36 +373,42 @@ export const accomodations = [
                 firstName: 'Tim',
                 lastName: 'Bricks',
                 rating: 7,
+                review: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using'
             },
             {
                 id: 1,
                 firstName: 'Tim',
                 lastName: 'Bricks',
                 rating: 7,
+                review: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using'
             },
             {
                 id: 2,
                 firstName: 'Tim',
                 lastName: 'Bricks',
                 rating: 7,
+                review: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using'
             },
             {
                 id: 3,
                 firstName: 'Tim',
                 lastName: 'Bricks',
                 rating: 7,
+                review: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using'
             },
             {
                 id: 4,
                 firstName: 'Tim',
                 lastName: 'Bricks',
                 rating: 7,
+                review: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using'
             },
             {
                 id: 5,
                 firstName: 'Tim',
                 lastName: 'Bricks',
                 rating: 7,
+                review: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using'
             }
         ],
         images: [
