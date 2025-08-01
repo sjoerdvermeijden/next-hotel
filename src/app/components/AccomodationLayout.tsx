@@ -143,7 +143,7 @@ function AccomodationLayout({ id }: Props) {
                     <div className='flex border-b p-2 justify-end'>
                         <div className="flex flex-col">
                             <p className="text-1xl mr-2 mb-0.5 leading-none">Beoordeling</p>
-                            <p className='text-xs mr-2'>{accomodation?.ratings.length} beoordeling</p >
+                            <p className='text-xs mr-2'>{accomodation?.reviews.length} beoordeling</p >
                         </div>
                         <span className="inline-block py-1 px-1.5 bg-blue-800 text-white rounded-t-md rounded-br-md font-bold">{7.7}</span>
                     </div>
@@ -163,13 +163,7 @@ function AccomodationLayout({ id }: Props) {
                 </ul>
             </div>
             <div>
-                <ul>
-                    {
-                        accomodation?.ratings.map((item) => {
-
-                        })
-                    }
-                </ul>
+                <ul></ul>
             </div>
         </div>
     )
