@@ -2,12 +2,11 @@
 
 import React, { useState, useEffect } from 'react'
 
-import { Navigation, Pagination, A11y } from 'swiper/modules';
+import { Navigation, A11y } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
-import 'swiper/css/pagination';
 
 import { accomodations } from '../../../data'
 
@@ -37,9 +36,8 @@ function AccomodationReviews({ id }: Props) {
             <Swiper
                 spaceBetween={10}
                 slidesPerView={3}
-                modules={[Navigation, Pagination, A11y]}
+                modules={[Navigation, A11y]}
                 navigation
-                pagination={{ clickable: true }}
             >
                 {
                     accomodation?.reviews.map((item, index) => {
