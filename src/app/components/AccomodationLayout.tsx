@@ -106,50 +106,126 @@ function AccomodationLayout({ id }: Props) {
                 </div>
             </div>
             <div className='flex items-start mb-4'>
-                <div className='flex'>
-                    <div className='mr-2'>
-                        {
-                            accomodation &&
-                            <Image
-                                priority
-                                src={accomodation.images[0]}
-                                width={545}
-                                height={361}
-                                style={{ objectFit: "cover", height: '361px', width: '545px', borderRadius: '5px' }}
-                                quality={80}
-                                alt="Picture of the author"
-                            />
-                        }
+                <div>
+                    <div className='flex mb-2'>
+                        <div className='mr-2'>
+                            {
+                                accomodation &&
+                                <Image
+                                    priority
+                                    src={accomodation.images[0]}
+                                    width={545}
+                                    height={361}
+                                    style={{ objectFit: "cover", height: '361px', width: '545px', borderRadius: '5px' }}
+                                    quality={80}
+                                    alt="Picture of the author"
+                                />
+                            }
+                        </div>
+                        <div className='flex flex-col mr-2'>
+                            <div className='mb-2'>
+                                {
+                                    accomodation &&
+                                    <Image
+                                        priority
+                                        src={accomodation.images[0]}
+                                        width={275}
+                                        height={176}
+                                        style={{ objectFit: "cover", height: '176px', width: '275px', borderRadius: '5px' }}
+                                        quality={80}
+                                        alt="Picture of the author"
+                                    />
+                                }
+                            </div>
+                            <div>
+                                {
+                                    accomodation &&
+                                    <Image
+                                        priority
+                                        src={accomodation.images[0]}
+                                        width={275}
+                                        height={176}
+                                        style={{ objectFit: "cover", height: '176px', width: '275px', borderRadius: '5px' }}
+                                        quality={80}
+                                        alt="Picture of the author"
+                                    />
+                                }
+                            </div>
+                        </div>
                     </div>
-                    <div className='flex flex-col mr-2'>
-                        <div className='mb-2'>
-                            {
-                                accomodation &&
-                                <Image
-                                    priority
-                                    src={accomodation.images[0]}
-                                    width={275}
-                                    height={176}
-                                    style={{ objectFit: "cover", height: '176px', width: '275px', borderRadius: '5px' }}
-                                    quality={80}
-                                    alt="Picture of the author"
-                                />
-                            }
-                        </div>
-                        <div>
-                            {
-                                accomodation &&
-                                <Image
-                                    priority
-                                    src={accomodation.images[0]}
-                                    width={275}
-                                    height={176}
-                                    style={{ objectFit: "cover", height: '176px', width: '275px', borderRadius: '5px' }}
-                                    quality={80}
-                                    alt="Picture of the author"
-                                />
-                            }
-                        </div>
+                    <div>
+                        <ul className='flex'>
+                            <li className='mr-2'>
+                                {
+                                    accomodation &&
+                                    <Image
+                                        priority
+                                        src={accomodation.images[0]}
+                                        width={160}
+                                        height={105}
+                                        style={{ objectFit: "cover", height: '105px', width: '160px', borderRadius: '5px' }}
+                                        quality={80}
+                                        alt="Picture of the author"
+                                    />
+                                }
+                            </li>
+                            <li className='mr-2'>
+                                {
+                                    accomodation &&
+                                    <Image
+                                        priority
+                                        src={accomodation.images[0]}
+                                        width={160}
+                                        height={105}
+                                        style={{ objectFit: "cover", height: '105px', width: '160px', borderRadius: '5px' }}
+                                        quality={80}
+                                        alt="Picture of the author"
+                                    />
+                                }
+                            </li>
+                            <li className='mr-2'>
+                                {
+                                    accomodation &&
+                                    <Image
+                                        priority
+                                        src={accomodation.images[0]}
+                                        width={160}
+                                        height={105}
+                                        style={{ objectFit: "cover", height: '105px', width: '160px', borderRadius: '5px' }}
+                                        quality={80}
+                                        alt="Picture of the author"
+                                    />
+                                }
+                            </li>
+                            <li className='mr-2'>
+                                {
+                                    accomodation &&
+                                    <Image
+                                        priority
+                                        src={accomodation.images[0]}
+                                        width={160}
+                                        height={105}
+                                        style={{ objectFit: "cover", height: '105px', width: '160px', borderRadius: '5px' }}
+                                        quality={80}
+                                        alt="Picture of the author"
+                                    />
+                                }
+                            </li>
+                            <li className='mr-2'>
+                                {
+                                    accomodation &&
+                                    <Image
+                                        priority
+                                        src={accomodation.images[0]}
+                                        width={160}
+                                        height={105}
+                                        style={{ objectFit: "cover", height: '105px', width: '160px', borderRadius: '5px' }}
+                                        quality={80}
+                                        alt="Picture of the author"
+                                    />
+                                }
+                            </li>
+                        </ul>
                     </div>
                 </div>
                 <div className="flex flex-col border rounded-sm w-[265px]">
@@ -172,7 +248,7 @@ function AccomodationLayout({ id }: Props) {
                                 accomodation?.reviews.map((item, index) => {
                                     return <li key={index}>
                                         <SwiperSlide>
-                                            <div className='p-4 text-sm'>
+                                            <div className='p-4 text-xs'>
                                                 <p className='mb-4'>&quot;{item?.review}&quot;</p>
                                                 <div className='flex items-center'>
                                                     <span className='inline-flex font-bold text-white items-center justify-center bg-green-700 w-8 h-8 mr-2 rounded-[50%]'>{item?.firstName.charAt(0)}</span>
