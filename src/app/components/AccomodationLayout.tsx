@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react'
 
-import { IconStarFilled, IconThumbUpFilled, IconMapPinFilled, IconHeart, IconShare, IconTag } from '@tabler/icons-react';
+import { IconStarFilled, IconThumbUpFilled, IconMapPinFilled, IconHeart, IconHeartFilled, IconShare, IconTag } from '@tabler/icons-react';
 
 import { TooltipProvider, Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip"
 
@@ -18,6 +18,7 @@ type Props = {
 
 function AccomodationLayout({ id }: Props) {
     const [accomodation, setAccomodation] = useState<Trip | undefined>();
+    const [isSaved, setIsSaved] = useState<boolean>();
 
     const accomodationId = id;
 
@@ -66,7 +67,7 @@ function AccomodationLayout({ id }: Props) {
                         <TooltipProvider>
                             <Tooltip>
                                 <TooltipTrigger>
-                                    <span className='inline-block mr-2 rounded hover:bg-blue-50 p-4 cursor-pointer'><IconHeart size={24} /></span>
+                                    <span className='inline-block mr-2 rounded hover:bg-blue-50 p-4 cursor-pointer' onClick={() => setIsSaved(!isSaved)}>{isSaved ? <div className='text-red-600'><IconHeartFilled size={26} /></div> : <IconHeart size={26} />}</span>
                                 </TooltipTrigger>
                                 <TooltipContent>
                                     <p className='font-bold'>Dit item opslaan</p>
