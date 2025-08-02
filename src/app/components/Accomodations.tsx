@@ -26,7 +26,7 @@ function Accomodations() {
             </div>
             <ul className={`${(grid ? 'grid grid-cols-3' : 'flex flex-col')} gap-3 w-full`}>
                 {
-                    accomodations.map((item: Trip, index) => {
+                    accomodations.map((item: Trip) => {
                         return <li key={item.id} className={`${grid ? 'flex-col' : 'items-start p-4'} rounded-md border border-gray-300 flex`}>
                             <Accomodation {...item} />
                         </li>
