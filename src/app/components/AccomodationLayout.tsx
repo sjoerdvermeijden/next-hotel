@@ -118,6 +118,7 @@ function AccomodationLayout({ id }: Props) {
                                     height={361}
                                     style={{ objectFit: "cover", height: '361px', width: '545px', borderRadius: '5px' }}
                                     quality={80}
+                                    placeholder="blur"
                                     alt="Picture of the author"
                                 />
                             }
@@ -133,6 +134,7 @@ function AccomodationLayout({ id }: Props) {
                                         height={176}
                                         style={{ objectFit: "cover", height: '176px', width: '275px', borderRadius: '5px' }}
                                         quality={80}
+                                        placeholder="blur"
                                         alt="Picture of the author"
                                     />
                                 }
@@ -147,6 +149,7 @@ function AccomodationLayout({ id }: Props) {
                                         height={176}
                                         style={{ objectFit: "cover", height: '176px', width: '275px', borderRadius: '5px' }}
                                         quality={80}
+                                        placeholder="blur"
                                         alt="Picture of the author"
                                     />
                                 }
@@ -165,6 +168,7 @@ function AccomodationLayout({ id }: Props) {
                                         height={105}
                                         style={{ objectFit: "cover", height: '105px', width: '160px', borderRadius: '5px' }}
                                         quality={80}
+                                        placeholder="blur"
                                         alt="Picture of the author"
                                     />
                                 }
@@ -179,6 +183,7 @@ function AccomodationLayout({ id }: Props) {
                                         height={105}
                                         style={{ objectFit: "cover", height: '105px', width: '160px', borderRadius: '5px' }}
                                         quality={80}
+                                        placeholder="blur"
                                         alt="Picture of the author"
                                     />
                                 }
@@ -193,6 +198,7 @@ function AccomodationLayout({ id }: Props) {
                                         height={105}
                                         style={{ objectFit: "cover", height: '105px', width: '160px', borderRadius: '5px' }}
                                         quality={80}
+                                        placeholder="blur"
                                         alt="Picture of the author"
                                     />
                                 }
@@ -207,6 +213,7 @@ function AccomodationLayout({ id }: Props) {
                                         height={105}
                                         style={{ objectFit: "cover", height: '105px', width: '160px', borderRadius: '5px' }}
                                         quality={80}
+                                        placeholder="blur"
                                         alt="Picture of the author"
                                     />
                                 }
@@ -221,6 +228,7 @@ function AccomodationLayout({ id }: Props) {
                                         height={105}
                                         style={{ objectFit: "cover", height: '105px', width: '160px', borderRadius: '5px' }}
                                         quality={80}
+                                        placeholder="blur"
                                         alt="Picture of the author"
                                     />
                                 }
