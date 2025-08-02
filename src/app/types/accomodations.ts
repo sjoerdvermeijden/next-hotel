@@ -10,13 +10,11 @@ export interface Trip {
         label: string,
     }>,
     accomodation_type: string,
-    reviews: [
-        Array<{
-            id: number,
-            firstName: string,
-            lastName: string,
-            rating: number
-        }>
-    ],
+    reviews: Array<{
+        id: number,
+        firstName: string,
+        lastName: string,
+        rating: number
+    }>,
     images: string[]
 }
