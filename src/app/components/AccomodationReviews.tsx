@@ -2,6 +2,13 @@
 
 import React, { useState, useEffect } from 'react'
 
+import { Navigation, Pagination, A11y } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+
 import { accomodations } from '../../../data'
 
 import { Trip } from '../types/accomodations'
@@ -26,24 +33,33 @@ function AccomodationReviews({ id }: Props) {
     return (
         <div>
             <h3 className='text-1xl font-bold mb-2'>Gasten die hier verbleven vonden dit het beste</h3>
-            <ul className='grid gap-2 grid-cols-3'>
+
+            <Swiper
+                spaceBetween={10}
+                slidesPerView={3}
+                modules={[Navigation, Pagination, A11y]}
+                navigation
+                pagination={{ clickable: true }}
+            >
                 {
                     accomodation?.reviews.map((item, index) => {
                         return <li key={index}>
-                            <div className='rounded border p-4 text-sm'>
-                                <div className='flex items-center mb-2'>
-                                    <span className='inline-flex font-bold text-white items-center justify-center bg-green-700 w-8 h-8 mr-2 rounded-[50%]'>{item?.firstName.charAt(0)}</span>
-                                    <div className='flex flex-col'>
-                                        <p className='font-bold'>{item?.firstName}</p>
-                                        <p className="text-xs">{item?.country}</p>
+                            <SwiperSlide>
+                                <div className='rounded border p-4 text-sm'>
+                                    <div className='flex items-center mb-2'>
+                                        <span className='inline-flex font-bold text-white items-center justify-center bg-green-700 w-8 h-8 mr-2 rounded-[50%]'>{item?.firstName.charAt(0)}</span>
+                                        <div className='flex flex-col'>
+                                            <p className='font-bold'>{item?.firstName}</p>
+                                            <p className="text-xs">{item?.country}</p>
+                                        </div>
                                     </div>
+                                    <p>&quot;{item?.review}&quot;</p>
                                 </div>
-                                <p>&quot;{item?.review}&quot;</p>
-                            </div>
+                            </SwiperSlide>
                         </li>;
                     })
                 }
-            </ul>
+            </Swiper>
         </div>
     )
 }
