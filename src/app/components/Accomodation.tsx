@@ -12,17 +12,17 @@ import { IconHeart, IconHeartFilled, IconStarFilled, IconMapPin, IconThumbUpFill
 
 import { GridContext } from '../context/GridContext'
 
-function Accomodation({ id, title, reviews, images, short_description }: Trip, index: number) {
+function Accomodation({ id, title, reviews, images, short_description }: Trip) {
     const { grid } = useContext(GridContext)
     const [isSaved, setIsSaved] = useState<number[]>([]);
     const [rating, setRating] = useState<number>();
 
-    const toggleSaved = (index: number) => {
-        if (isSaved.indexOf(index) === -1) {
-            setIsSaved([...isSaved, index])
+    const toggleSaved = (id: number) => {
+        if (isSaved.indexOf(id) === -1) {
+            setIsSaved([...isSaved, id])
         } else {
             const newArray = isSaved.filter(function (item) {
-                return item !== index
+                return item !== id
             })
 
             setIsSaved(newArray);
@@ -80,8 +80,8 @@ function Accomodation({ id, title, reviews, images, short_description }: Trip, i
                             </Link>
                         </div>
                     }
-                    <div className='w-9 h-9 bg-white transition-colors rounded-[50%] absolute right-[10px] top-[10px] flex items-center justify-center hover:bg-gray-100 cursor-pointer' onClick={() => toggleSaved(index)}>
-                        {(isSaved.indexOf(index) > -1) ? <div className='text-red-600'><IconHeartFilled /></div> : <IconHeart stroke={1} />}
+                    <div className='w-9 h-9 bg-white transition-colors rounded-[50%] absolute right-[10px] top-[10px] flex items-center justify-center hover:bg-gray-100 cursor-pointer' onClick={() => toggleSaved(id)}>
+                        {(isSaved.indexOf(id) > -1) ? <div className='text-red-600'><IconHeartFilled /></div> : <IconHeart stroke={1} />}
                     </div>
                 </div>
                 <div className={` ${grid ? 'p-2 flex-col' : ''} flex w-full`}>

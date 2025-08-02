@@ -245,8 +245,8 @@ function AccomodationLayout({ id }: Props) {
                             navigation
                         >
                             {
-                                accomodation?.reviews.map((item) => {
-                                    return <li key={item.id}>
+                                accomodation?.reviews.map((item, index) => {
+                                    return <li key={index}>
                                         <SwiperSlide>
                                             <div className='p-4 text-xs'>
                                                 <p className='mb-4'>&quot;{item?.review}&quot;</p>

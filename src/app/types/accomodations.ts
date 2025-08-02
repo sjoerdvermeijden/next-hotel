@@ -14,7 +14,9 @@ export interface Trip {
         id: number,
         firstName: string,
         lastName: string,
-        rating: number
+        rating: number,
+        review: string,
+        country: string
     }>,
     images: string[]
 }
