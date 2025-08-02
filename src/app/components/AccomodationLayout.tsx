@@ -145,6 +145,9 @@ function AccomodationLayout({ id }: Props) {
                         </div>
                         <span className="inline-block py-1 px-1.5 bg-blue-800 text-white rounded-t-md rounded-br-md font-bold">{7.7}</span>
                     </div>
+                    <div className='p-2 border-b'>
+                        <p className='text-sm font-bold'>Gastern die hier verbleven vonden dit het beste</p>
+                    </div>
                     <div className='flex p-2 items-center'>
                         <p className='text-sm font-bold mr-auto'>Uitstekende locatie!</p>
                         <span className="inline-block py-1 px-1.5 border rounded-t-md rounded-br-md font-bold">6.5</span>
