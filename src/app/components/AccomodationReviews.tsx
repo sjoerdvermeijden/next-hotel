@@ -32,32 +32,34 @@ function AccomodationReviews({ id }: Props) {
     return (
         <div>
             <h3 className='text-1xl font-bold mb-2'>Gasten die hier verbleven vonden dit het beste</h3>
-
-            <Swiper
-                spaceBetween={10}
-                slidesPerView={3}
-                modules={[Navigation, A11y]}
-                navigation
-            >
-                {
-                    accomodation?.reviews.map((item, index) => {
-                        return <li key={index}>
-                            <SwiperSlide>
-                                <div className='rounded border p-4 text-sm'>
-                                    <div className='flex items-center mb-2'>
-                                        <span className='inline-flex font-bold text-white items-center justify-center bg-green-700 w-8 h-8 mr-2 rounded-[50%]'>{item?.firstName.charAt(0)}</span>
-                                        <div className='flex flex-col'>
-                                            <p className='font-bold'>{item?.firstName}</p>
-                                            <p className="text-xs">{item?.country}</p>
+            <div className='mb-6'>
+                <Swiper
+                    spaceBetween={10}
+                    slidesPerView={3}
+                    modules={[Navigation, A11y]}
+                    navigation
+                >
+                    {
+                        accomodation?.reviews.map((item, index) => {
+                            return <li key={index}>
+                                <SwiperSlide>
+                                    <div className='rounded border p-4 text-sm'>
+                                        <div className='flex items-center mb-2'>
+                                            <span className='inline-flex font-bold text-white items-center justify-center bg-green-700 w-8 h-8 mr-2 rounded-[50%]'>{item?.firstName.charAt(0)}</span>
+                                            <div className='flex flex-col'>
+                                                <p className='font-bold'>{item?.firstName}</p>
+                                                <p className="text-xs">{item?.country}</p>
+                                            </div>
                                         </div>
+                                        <p>&quot;{item?.review}&quot;</p>
                                     </div>
-                                    <p>&quot;{item?.review}&quot;</p>
-                                </div>
-                            </SwiperSlide>
-                        </li>;
-                    })
-                }
-            </Swiper>
+                                </SwiperSlide>
+                            </li>;
+                        })
+                    }
+                </Swiper>
+            </div>
+            <button className='border border-blue-600 text-blue-600 border-2 py-2 px-4 rounded font-bold text-sm'>Lees alle beoordelingen</button>
         </div>
     )
 }

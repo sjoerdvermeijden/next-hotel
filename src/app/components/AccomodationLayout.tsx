@@ -6,6 +6,12 @@ import { IconStarFilled, IconThumbUpFilled, IconMapPinFilled, IconHeart, IconHea
 
 import { TooltipProvider, Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip"
 
+import { Navigation, A11y } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+import 'swiper/css';
+import 'swiper/css/navigation';
+
 import Image from 'next/image'
 
 import { accomodations } from '../../../data'
@@ -82,12 +88,21 @@ function AccomodationLayout({ id }: Props) {
 
                         <button className='bg-blue-600 text-white rounded px-4 py-2 font-bold text-sm hover:bg-blue-700'>Boek nu</button>
                     </div>
-                    <div className='flex items-center hover:bg-blue-50 p-2 rounded cursor-pointer'>
-                        <div className='mr-2 text-blue-500'>
-                            <IconTag size={18} />
+                    <TooltipProvider>
+                        <div className='flex items-center hover:bg-blue-50 p-2 rounded cursor-pointer'>
+                            <div className='mr-2 text-blue-500'>
+                                <IconTag size={18} />
+                            </div>
+                            <Tooltip>
+                                <TooltipTrigger>
+                                    <p className='text-sm text-blue-500 font-bold'>Wij matchen de prijs</p>
+                                </TooltipTrigger>
+                                <TooltipContent>
+                                    <p className='font-bold text-green-800'>Wij matchen de prijs</p>
+                                </TooltipContent>
+                            </Tooltip>
                         </div>
-                        <p className='text-sm text-blue-500 font-bold'>Wij matchen de prijs</p>
-                    </div>
+                    </TooltipProvider>
                 </div>
             </div>
             <div className='flex items-start mb-4'>
@@ -147,6 +162,31 @@ function AccomodationLayout({ id }: Props) {
                     </div>
                     <div className='p-2 border-b'>
                         <p className='text-sm font-bold'>Gastern die hier verbleven vonden dit het beste</p>
+                        <Swiper
+                            spaceBetween={10}
+                            slidesPerView={1}
+                            modules={[Navigation, A11y]}
+                            navigation
+                        >
+                            {
+                                accomodation?.reviews.map((item, index) => {
+                                    return <li key={index}>
+                                        <SwiperSlide>
+                                            <div className='p-4 text-sm'>
+                                                <p className='mb-4'>&quot;{item?.review}&quot;</p>
+                                                <div className='flex items-center'>
+                                                    <span className='inline-flex font-bold text-white items-center justify-center bg-green-700 w-8 h-8 mr-2 rounded-[50%]'>{item?.firstName.charAt(0)}</span>
+                                                    <div className='flex flex-col'>
+                                                        <p className='font-bold'>{item?.firstName}</p>
+                                                        <p className="text-xs">{item?.country}</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </SwiperSlide>
+                                    </li>;
+                                })
+                            }
+                        </Swiper>
                     </div>
                     <div className='flex p-2 items-center'>
                         <p className='text-sm font-bold mr-auto'>Uitstekende locatie!</p>
