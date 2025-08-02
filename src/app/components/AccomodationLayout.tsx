@@ -12,6 +12,8 @@ import { accomodations } from '../../../data'
 
 import { Trip } from '../types/accomodations'
 
+import AccomodationReviews from './AccomodationReviews';
+
 type Props = {
     id: number
 }
@@ -29,11 +31,6 @@ function AccomodationLayout({ id }: Props) {
             }
         })
     }, [])
-
-    useEffect(() => {
-        console.log(accomodation?.images[0]);
-    }, [accomodation])
-
 
     return (
         <div>
@@ -154,7 +151,7 @@ function AccomodationLayout({ id }: Props) {
                     </div>
                 </div>
             </div>
-            <div>
+            <div className='mb-4'>
                 <ul className='flex gap-2'>
                     {
                         accomodation?.facilities.map((item) => {
@@ -163,9 +160,7 @@ function AccomodationLayout({ id }: Props) {
                     }
                 </ul>
             </div>
-            <div>
-                <ul></ul>
-            </div>
+            <AccomodationReviews id={id} />
         </div>
     )
 }

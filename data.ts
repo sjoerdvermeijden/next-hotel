@@ -33,6 +33,7 @@ export const accomodations = [
                 id: 0,
                 firstName: 'Tim',
                 lastName: 'Bricks',
+                country: 'Nederland',
                 rating: 6,
                 review: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using'
             },
@@ -40,6 +41,7 @@ export const accomodations = [
                 id: 1,
                 firstName: 'Tim',
                 lastName: 'Bricks',
+                country: 'Nederland',
                 rating: 7,
                 review: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using'
             },
@@ -47,6 +49,7 @@ export const accomodations = [
                 id: 2,
                 firstName: 'Tim',
                 lastName: 'Bricks',
+                country: 'Nederland',
                 rating: 9.9,
                 review: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using'
             },
@@ -54,6 +57,7 @@ export const accomodations = [
                 id: 3,
                 firstName: 'Tim',
                 lastName: 'Bricks',
+                country: 'Nederland',
                 rating: 8,
                 review: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using'
             },
@@ -61,6 +65,7 @@ export const accomodations = [
                 id: 4,
                 firstName: 'Tom',
                 lastName: 'Bricks',
+                country: 'Nederland',
                 rating: 7.5,
                 review: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using'
             }
@@ -105,6 +110,7 @@ export const accomodations = [
                 id: 0,
                 firstName: 'Tim',
                 lastName: 'Bricks',
+                country: 'Nederland',
                 rating: 6,
                 review: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using'
             },
@@ -112,6 +118,7 @@ export const accomodations = [
                 id: 1,
                 firstName: 'Tim',
                 lastName: 'Bricks',
+                country: 'Nederland',
                 rating: 7,
                 review: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using'
             },
@@ -119,6 +126,7 @@ export const accomodations = [
                 id: 2,
                 firstName: 'Tim',
                 lastName: 'Bricks',
+                country: 'Nederland',
                 rating: 8.8,
                 review: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using'
             },
@@ -126,6 +134,7 @@ export const accomodations = [
                 id: 3,
                 firstName: 'Tim',
                 lastName: 'Bricks',
+                country: 'Nederland',
                 rating: 7.4,
                 review: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using'
             },
@@ -133,6 +142,7 @@ export const accomodations = [
                 id: 4,
                 firstName: 'Tim',
                 lastName: 'Bricks',
+                country: 'Nederland',
                 rating: 8,
                 review: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using'
             },
@@ -140,6 +150,7 @@ export const accomodations = [
                 id: 5,
                 firstName: 'Tim',
                 lastName: 'Bricks',
+                country: 'Nederland',
                 rating: 9,
                 review: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using'
             }
@@ -184,6 +195,7 @@ export const accomodations = [
                 id: 0,
                 firstName: 'Tim',
                 lastName: 'Bricks',
+                country: 'Nederland',
                 rating: 7,
                 review: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using'
             },
@@ -191,6 +203,7 @@ export const accomodations = [
                 id: 1,
                 firstName: 'Tim',
                 lastName: 'Bricks',
+                country: 'Nederland',
                 rating: 7,
                 review: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using'
             },
@@ -198,6 +211,7 @@ export const accomodations = [
                 id: 2,
                 firstName: 'Tim',
                 lastName: 'Bricks',
+                country: 'Nederland',
                 rating: 7,
                 review: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using'
             },
@@ -205,6 +219,7 @@ export const accomodations = [
                 id: 3,
                 firstName: 'Tim',
                 lastName: 'Bricks',
+                country: 'Nederland',
                 rating: 7,
                 review: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using'
             }
@@ -249,6 +264,7 @@ export const accomodations = [
                 id: 0,
                 firstName: 'Tim',
                 lastName: 'Bricks',
+                country: 'Nederland',
                 rating: 7,
                 review: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using'
             },
@@ -256,6 +272,7 @@ export const accomodations = [
                 id: 1,
                 firstName: 'Tim',
                 lastName: 'Bricks',
+                country: 'Nederland',
                 rating: 7,
                 review: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using'
             },
@@ -263,6 +280,7 @@ export const accomodations = [
                 id: 2,
                 firstName: 'Tim',
                 lastName: 'Bricks',
+                country: 'Nederland',
                 rating: 7,
                 review: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using'
             },
@@ -270,6 +288,7 @@ export const accomodations = [
                 id: 3,
                 firstName: 'Tim',
                 lastName: 'Bricks',
+                country: 'Nederland',
                 rating: 7,
                 review: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using'
             }
@@ -314,6 +333,7 @@ export const accomodations = [
                 id: 0,
                 firstName: 'Tim',
                 lastName: 'Bricks',
+                country: 'Nederland',
                 rating: 7,
                 review: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using'
             },
@@ -321,6 +341,7 @@ export const accomodations = [
                 id: 1,
                 firstName: 'Tim',
                 lastName: 'Bricks',
+                country: 'Nederland',
                 rating: 7,
                 review: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using'
             },
@@ -328,6 +349,7 @@ export const accomodations = [
                 id: 2,
                 firstName: 'Tim',
                 lastName: 'Bricks',
+                country: 'Nederland',
                 rating: 7,
                 review: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using'
             }
@@ -372,6 +394,7 @@ export const accomodations = [
                 id: 0,
                 firstName: 'Tim',
                 lastName: 'Bricks',
+                country: 'Nederland',
                 rating: 7,
                 review: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using'
             },
@@ -379,6 +402,7 @@ export const accomodations = [
                 id: 1,
                 firstName: 'Tim',
                 lastName: 'Bricks',
+                country: 'Nederland',
                 rating: 7,
                 review: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using'
             },
@@ -386,6 +410,7 @@ export const accomodations = [
                 id: 2,
                 firstName: 'Tim',
                 lastName: 'Bricks',
+                country: 'Nederland',
                 rating: 7,
                 review: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using'
             },
@@ -393,6 +418,7 @@ export const accomodations = [
                 id: 3,
                 firstName: 'Tim',
                 lastName: 'Bricks',
+                country: 'Nederland',
                 rating: 7,
                 review: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using'
             },
@@ -400,6 +426,7 @@ export const accomodations = [
                 id: 4,
                 firstName: 'Tim',
                 lastName: 'Bricks',
+                country: 'Nederland',
                 rating: 7,
                 review: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using'
             },
@@ -407,6 +434,7 @@ export const accomodations = [
                 id: 5,
                 firstName: 'Tim',
                 lastName: 'Bricks',
+                country: 'Nederland',
                 rating: 7,
                 review: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using'
             }
