@@ -63,7 +63,6 @@ function Accomodation({ id, title, reviews, images, short_description }: Trip) {
                                     height={240}
                                     style={{ objectFit: "cover", height: '240px', width: '268px' }}
                                     quality={80}
-                                    placeholder="blur"
                                     alt="Picture of the author"
                                 />
                             </Link>
@@ -76,7 +75,6 @@ function Accomodation({ id, title, reviews, images, short_description }: Trip) {
                                     height={240}
                                     style={{ objectFit: "cover", height: '240px', width: '240px' }}
                                     quality={80}
-                                    placeholder="blur"
                                     alt="Picture of the author"
                                 />
                             </Link>
