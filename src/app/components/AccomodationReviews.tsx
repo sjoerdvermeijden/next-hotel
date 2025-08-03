@@ -2,7 +2,9 @@
 
 import React, { useState, useEffect } from 'react'
 
-import { Navigation, A11y } from 'swiper/modules';
+import { IconChevronRight, IconChevronLeft } from '@tabler/icons-react';
+
+import { Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import 'swiper/css';
@@ -19,6 +21,9 @@ type Props = {
 function AccomodationReviews({ id }: Props) {
     const [accomodation, setAccomodation] = useState<Trip | undefined>();
 
+    const navigationPrevRef = React.useRef(null)
+    const navigationNextRef = React.useRef(null)
+
     const accomodationId = id;
 
     useEffect(() => {
@@ -32,12 +37,19 @@ function AccomodationReviews({ id }: Props) {
     return (
         <div>
             <h3 className='text-1xl font-bold mb-2'>Gasten die hier verbleven vonden dit het beste</h3>
-            <div className='mb-6'>
+            <div className='relative'>
                 <Swiper
                     spaceBetween={10}
                     slidesPerView={3}
-                    modules={[Navigation, A11y]}
-                    navigation
+                    modules={[Navigation]}
+                    navigation={{
+                        prevEl: navigationPrevRef.current,
+                        nextEl: navigationNextRef.current,
+                    }}
+                    onBeforeInit={(swiper) => {
+                        swiper.navigation.nextEl = navigationNextRef.current;
+                        swiper.navigation.prevEl = navigationPrevRef.current;
+                    }}
                 >
                     {
                         accomodation?.reviews.map((item, index) => {
@@ -58,8 +70,10 @@ function AccomodationReviews({ id }: Props) {
                         })
                     }
                 </Swiper>
+                <button className='absolute -left-6 top-[50%] w-12 h-12 -translate-y-[50%] rounded-[50%] shadow-lg bg-white z-10 flex items-center justify-center' ref={navigationPrevRef}><IconChevronLeft stroke={2} /></button>
+                <button className='absolute -right-6 top-[50%] w-12 h-12 -translate-y-[50%] rounded-[50%] shadow-lg bg-white z-10 flex items-center justify-center' ref={navigationNextRef}><IconChevronRight stroke={2} /></button>
             </div>
-            <button className='border border-blue-600 text-blue-600 border-2 py-2 px-4 rounded font-bold text-sm'>Lees alle beoordelingen</button>
+            <button className='border border-blue-600 text-blue-600 border-w-2 py-2 px-4 mt-6 rounded font-bold text-sm'>Lees alle beoordelingen</button>
         </div>
     )
 }
