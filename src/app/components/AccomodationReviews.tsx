@@ -21,8 +21,8 @@ type Props = {
 function AccomodationReviews({ id }: Props) {
     const [accomodation, setAccomodation] = useState<Trip | undefined>();
 
-    const navigationPrevRef = React.useRef(null)
-    const navigationNextRef = React.useRef(null)
+    const navigationPrevRef = React.useRef<HTMLElement>(null)
+    const navigationNextRef = React.useRef<HTMLElement>(null)
 
     const accomodationId = id;
 
@@ -47,8 +47,8 @@ function AccomodationReviews({ id }: Props) {
                         nextEl: navigationNextRef.current,
                     }}
                     onBeforeInit={(swiper) => {
-                        swiper.navigation.nextEl = navigationNextRef.current;
-                        swiper.navigation.prevEl = navigationPrevRef.current;
+                        swiper.navigation.nextEl = navigationNextRef.current!;
+                        swiper.navigation.prevEl = navigationPrevRef.current!;
                     }}
                 >
                     {
