@@ -21,8 +21,8 @@ type Props = {
 function AccomodationReviews({ id }: Props) {
     const [accomodation, setAccomodation] = useState<Trip | undefined>();
 
-    const navigationPrevRef = React.useRef<HTMLElement>(null)
-    const navigationNextRef = React.useRef<HTMLElement>(null)
+    const navigationPrevRef = React.useRef<HTMLButtonElement | null>(null)
+    const navigationNextRef = React.useRef<HTMLButtonElement | null>(null)
 
     const accomodationId = id;
 
