@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react'
 
-import { IconStarFilled, IconThumbUpFilled, IconMapPinFilled, IconHeart, IconHeartFilled, IconShare, IconTag } from '@tabler/icons-react';
+import { IconStarFilled, IconThumbUpFilled, IconMapPinFilled, IconHeart, IconHeartFilled, IconShare, IconTag, IconChevronRight, IconChevronLeft } from '@tabler/icons-react';
 
 import { TooltipProvider, Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip"
 
@@ -27,6 +27,9 @@ type Props = {
 function AccomodationLayout({ id }: Props) {
     const [accomodation, setAccomodation] = useState<Trip | undefined>();
     const [isSaved, setIsSaved] = useState<boolean>();
+
+    const navigationPrevRef = React.useRef<HTMLButtonElement | null>(null)
+    const navigationNextRef = React.useRef<HTMLButtonElement | null>(null)
 
     const accomodationId = id;
 
@@ -236,13 +239,20 @@ function AccomodationLayout({ id }: Props) {
                         </div>
                         <span className="inline-block py-1 px-1.5 bg-blue-800 text-white rounded-t-md rounded-br-md font-bold">{7.7}</span>
                     </div>
-                    <div className='p-2 border-b'>
+                    <div className='p-2 border-b relative'>
                         <p className='text-sm font-bold'>Gastern die hier verbleven vonden dit het beste</p>
                         <Swiper
                             spaceBetween={10}
                             slidesPerView={1}
                             modules={[Navigation, A11y]}
-                            navigation
+                            navigation={{
+                                prevEl: navigationPrevRef.current,
+                                nextEl: navigationNextRef.current,
+                            }}
+                            onBeforeInit={(swiper) => {
+                                swiper.navigation.nextEl = navigationNextRef.current!;
+                                swiper.navigation.prevEl = navigationPrevRef.current!;
+                            }}
                         >
                             {
                                 accomodation?.reviews.map((item, index) => {
@@ -263,6 +273,8 @@ function AccomodationLayout({ id }: Props) {
                                 })
                             }
                         </Swiper>
+                        <button className='absolute -left-2 top-[50%] w-8 h-8 -translate-y-[50%] rounded-[50%] shadow-lg bg-white z-10 flex items-center justify-center' ref={navigationPrevRef}><IconChevronLeft size={16} stroke={2} /></button>
+                        <button className='absolute -right-2 top-[50%] w-8 h-8 -translate-y-[50%] rounded-[50%] shadow-lg bg-white z-10 flex items-center justify-center' ref={navigationNextRef}><IconChevronRight size={16} stroke={2} /></button>
                     </div>
                     <div className='flex p-2 items-center'>
                         <p className='text-sm font-bold mr-auto'>Uitstekende locatie!</p>
