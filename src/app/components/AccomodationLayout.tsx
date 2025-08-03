@@ -273,8 +273,8 @@ function AccomodationLayout({ id }: Props) {
                                 })
                             }
                         </Swiper>
-                        <button className='absolute -left-2 top-[50%] w-8 h-8 -translate-y-[50%] rounded-[50%] shadow-lg bg-white z-10 flex items-center justify-center' ref={navigationPrevRef}><IconChevronLeft size={16} stroke={2} /></button>
-                        <button className='absolute -right-2 top-[50%] w-8 h-8 -translate-y-[50%] rounded-[50%] shadow-lg bg-white z-10 flex items-center justify-center' ref={navigationNextRef}><IconChevronRight size={16} stroke={2} /></button>
+                        <button className='absolute -left-2 top-[50%] w-8 h-8 -translate-y-[50%] rounded-[50%] shadow-[0_3px_10px_rgb(0,0,0,0.2)] bg-white z-10 flex items-center justify-center' ref={navigationPrevRef}><IconChevronLeft size={16} stroke={2} /></button>
+                        <button className='absolute -right-2 top-[50%] w-8 h-8 -translate-y-[50%] rounded-[50%] shadow-[0_3px_10px_rgb(0,0,0,0.2)] bg-white z-10 flex items-center justify-center' ref={navigationNextRef}><IconChevronRight size={16} stroke={2} /></button>
                     </div>
                     <div className='flex p-2 items-center'>
                         <p className='text-sm font-bold mr-auto'>Uitstekende locatie!</p>
