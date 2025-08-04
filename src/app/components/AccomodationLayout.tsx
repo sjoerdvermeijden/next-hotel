@@ -121,11 +121,7 @@ function AccomodationLayout({ id }: Props) {
                                     height={361}
                                     style={{ objectFit: "cover", height: '361px', width: '545px', borderRadius: '5px' }}
                                     quality={80}
-                                    data-loaded='false'
-                                    onLoad={event => {
-                                        event.currentTarget.setAttribute('data-loaded', 'true')
-                                    }}
-                                    className='data-[loaded=false]:animate-pulse data-[loaded=false]:bg-gray-100/10'
+
                                     alt="Picture of the author"
                                 />
                             }
