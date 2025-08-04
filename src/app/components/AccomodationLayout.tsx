@@ -9,6 +9,8 @@ import { TooltipProvider, Tooltip, TooltipContent, TooltipTrigger } from "@/comp
 import { Navigation, A11y } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
+import NextBreadcrumb from './Breadcrumb';
+
 import 'swiper/css';
 import 'swiper/css/navigation';
 
@@ -44,7 +46,14 @@ function AccomodationLayout({ id }: Props) {
     return (
         <div>
             <div className='mb-6 border-b pb-4 text-sm'>
-                <p><span className='text-blue-600'>Home</span> - Accomodation</p>
+                <NextBreadcrumb
+                    homeElement={'Home'}
+                    separator={<span> &rsaquo; </span>}
+                    activeClasses='ext-amber-500'
+                    containerClasses='flex py-2'
+                    listClasses='first:ml-0 text-blue-700 last:text-black hover:underline mx-2'
+                    capitalizeLinks
+                />
             </div>
             <div className='flex items-center mb-4'>
                 <div className='mr-auto'>
