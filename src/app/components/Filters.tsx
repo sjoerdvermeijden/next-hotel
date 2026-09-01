@@ -62,11 +62,11 @@ function Filters() {
 
     return (
         <div className='flex flex-col shrink-0 mr-4 border border-gray-200 rounded w-[264px] text-sm'>
-            <div className="border-b p-2">
+            <div className="border-b p-3">
                 <p className='font-bold'>Filter op:</p>
             </div>
-            <div className="border-b p-2">
-                <h3 className="font-bold mb-2">Type accomodatie</h3>
+            <div className="border-b p-3">
+                <h2 className="font-bold mb-2 ml-3">Type accomodatie</h2>
                 <ul>
                     {
                         accomodation_type.map((item, index) => {
@@ -76,15 +76,15 @@ function Filters() {
                                         <IconCheck stroke={2} size={14} />
                                     </span>
                                 </span>
-                                <p className='mr-auto'>{item.label}</p>
-                                <p>28</p>
+                                <p className='mr-auto text-[13px]'>{item.label}</p>
+                                <p className="text-[13px]">28</p>
                             </li>
                         })
                     }
                 </ul>
             </div >
-            <div className="border-b p-2">
-                <h3 className="font-bold mb-2">Faciliteiten</h3>
+            <div className="border-b p-3">
+                <h2 className="font-bold mb-2 ml-3">Faciliteiten</h2>
                 <ul>
                     {
                         accomodation_facilities.map((item, index) => {
@@ -94,15 +94,15 @@ function Filters() {
                                         <IconCheck stroke={2} size={14} />
                                     </span>
                                 </span>
-                                <p className='mr-auto'>{item.label}</p>
-                                <p>28</p>
+                                <p className='mr-auto text-[13px]'>{item.label}</p>
+                                <p className="text-[13px]">28</p>
                             </li>
                         })
                     }
                 </ul>
             </div>
-            <div className="border-b p-2">
-                <h3 className="font-bold mb-2">Sterren</h3>
+            <div className="border-b p-3">
+                <h2 className="font-bold mb-2 ml-3">Sterren</h2>
                 <ul>
                     {
                         accomodation_stars.map((item, index) => {
@@ -112,15 +112,15 @@ function Filters() {
                                         <IconCheck stroke={2} size={14} />
                                     </span>
                                 </span>
-                                <p className='mr-auto'>{item.label}</p>
-                                <p>28</p>
+                                <p className='mr-auto text-[13px]'>{item.label}</p>
+                                <p className="text-[13px]">28</p>
                             </li>
                         })
                     }
                 </ul>
             </div>
             <div className="p-2">
-                <h3 className="font-bold mb-2">Beoordeling</h3>
+                <h2 className="font-bold mb-2 ml-3">Beoordeling</h2>
                 <ul>
                     {
                         accomodation_rating.map((item, index) => {
@@ -130,8 +130,8 @@ function Filters() {
                                         <IconCheck stroke={2} size={14} />
                                     </span>
                                 </span>
-                                <p className='mr-auto'>{item.label}</p>
-                                <p>28</p>
+                                <p className='mr-auto text-[13px]'>{item.label}</p>
+                                <p className="text-[13px]">28</p>
                             </li>
                         })
                     }
