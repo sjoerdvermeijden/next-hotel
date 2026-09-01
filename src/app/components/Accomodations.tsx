@@ -19,9 +19,9 @@ function Accomodations() {
                 <div className='mr-auto'>
                     <h2 className='text-[20px] font-extrabold'>Spanje: 1039 accommodaties gevonden</h2>
                 </div>
-                <div className='flex items-center bg-gray-100 px-2 py-1 rounded-2xl text-sm'>
-                    <div className={`${(grid ? '' : 'bg-white rounded-xl')} px-4 py-2 hover:cursor-pointer`} onClick={() => setGrid(false)}>Lijst</div>
-                    <div className={`${(grid ? 'bg-white rounded-xl' : '')} px-4 py-2 hover:cursor-pointer`} onClick={() => setGrid(true)}>Raster</div>
+                <div className='flex items-center bg-gray-100 border border-color-200 px-1 py-1 rounded-2xl text-sm'>
+                    <div className={`${(grid ? '' : 'bg-white border rounded-xl')} px-2 py-1 border-gray-400 hover:cursor-pointer`} onClick={() => setGrid(false)}>Lijst</div>
+                    <div className={`${(grid ? 'bg-white border rounded-xl' : '')} px-2 py-1 border-gray-400 hover:cursor-pointer`} onClick={() => setGrid(true)}>Raster</div>
                 </div>
             </div>
             <ul className={`${(grid ? 'grid grid-cols-3' : 'flex flex-col')} gap-3 w-full`}>
