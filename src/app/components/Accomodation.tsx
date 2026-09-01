@@ -80,8 +80,8 @@ function Accomodation({ id, title, reviews, images, short_description }: Trip) {
                             </Link>
                         </div>
                     }
-                    <div className='w-9 h-9 bg-white transition-colors rounded-[50%] absolute right-[10px] top-[10px] flex items-center justify-center hover:bg-gray-100 cursor-pointer' onClick={() => toggleSaved(id)}>
-                        {(isSaved.indexOf(id) > -1) ? <div className='text-red-600'><IconHeartFilled /></div> : <IconHeart stroke={1} />}
+                    <div className='w-9 h-9 bg-white transition-colors rounded-[50%] absolute right-[9px] top-[9px] flex items-center justify-center hover:bg-gray-100 cursor-pointer' onClick={() => toggleSaved(id)}>
+                        {(isSaved.indexOf(id) > -1) ? <div className='text-red-600'><IconHeartFilled size={20} /></div> : <IconHeart size={20} stroke={1} />}
                     </div>
                 </div>
                 <div className={` ${grid ? 'p-2 flex-col' : ''} flex w-full`}>
