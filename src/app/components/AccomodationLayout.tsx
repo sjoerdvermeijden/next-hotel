@@ -135,7 +135,7 @@ function AccomodationLayout({ id }: Props) {
                                 />
                             }
                         </div>
-                        <div className='flex flex-col mr-2'>
+                        <div className='flex flex-col mr-4'>
                             <div className='mb-2'>
                                 {
                                     accomodation &&
@@ -167,7 +167,7 @@ function AccomodationLayout({ id }: Props) {
                         </div>
                     </div>
                     <div>
-                        <ul className='flex'>
+                        <ul className='flex pr-2'>
                             <li className='mr-2'>
                                 {
                                     accomodation &&
