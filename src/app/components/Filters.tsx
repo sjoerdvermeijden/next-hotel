@@ -63,7 +63,7 @@ function Filters() {
     return (
         <div className='flex flex-col shrink-0 mr-4 border border-gray-200 rounded w-[264px] text-sm'>
             <div className="border-b p-3">
-                <p className='font-bold'>Filter op:</p>
+                <p className='text-base font-bold'>Filter op:</p>
             </div>
             <div className="border-b p-3">
                 <h2 className="font-bold mb-2 ml-3">Type accomodatie</h2>
