@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <div>
       <Header />
-      <div className='container mx-auto flex items-start py-4'>
+      <div className='container max-w-[1095px] mx-auto flex items-start py-4'>
         <Filters />
         <Accomodations />
       </div>
