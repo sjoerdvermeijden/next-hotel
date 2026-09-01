@@ -12,7 +12,7 @@ function Header() {
                     <div className='flex items-center'>
                         <div className='text-white font-bold mr-[10px] px-[9px] py-[7px] rounded-[3px] hover:bg-blue-900 cursor-pointer'>EUR</div>
                         <div className="flex items-center justify-center mr-[10px] px-[9px] py-[7px] rounded-[3px] hover:bg-blue-900 cursor-pointer">
-                            <span className="inline-flex items-center justify-center text-center text-white w-5 h-5 border border-white text-xs rounded-[50%]">?</span>
+                            <span className="inline-flex items-center justify-center text-center text-white w-6 h-6 border border-white text-xs rounded-[50%]">?</span>
                         </div>
                         <span className='font-bold text-white mr-2 transition-colors hover:bg-blue-900 px-4 py-2 rounded cursor-pointer'>Registreer je accommodatie</span>
                         <div className='flex text-blue-500 font-bold text-sm'>
