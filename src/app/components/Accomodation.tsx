@@ -88,7 +88,7 @@ function Accomodation({ id, title, reviews, images, short_description }: Trip) {
                     <div className='grow'>
                         <div className='flex items-center'>
                             <Link href={`/accomodations/${id}`}>
-                                <h2 className={`${grid ? 'text-base' : 'text-1xl'}  font-extrabold text-blue-600 mr-2 mb-1.5 hover:text-black`}>{title}</h2>
+                                <h2 className={`${grid ? 'text-base' : 'text-xl'}  font-extrabold text-blue-600 mr-2 mb-1.5 hover:text-black`}>{title}</h2>
                             </Link>
 
                             {
@@ -144,7 +144,7 @@ function Accomodation({ id, title, reviews, images, short_description }: Trip) {
                                 <span className={`${grid ? 'text-xs -order-1 mr-2' : ''} inline-block py-1 px-1.5 bg-blue-800 text-white rounded-t-md rounded-br-md font-bold`}>{rating?.toFixed(1)}</span>
                             </div>
                         </div>
-                        <Link href={`/accomodations/${id}`} className={`${grid ? 'self-end' : ''} bg-blue-500 font-bold text-sm text-white p-2 rounded-sm flex transition-colors items-center hover:bg-blue-600`}>
+                        <Link href={`/accomodations/${id}`} className={`${grid ? 'self-end' : ''} bg-blue-500 font-bold text-sm text-white p-2 rounded-sm text-right flex transition-colors items-center hover:bg-blue-600`}>
                             Bekijk beschikbaarheid <IconChevronRight stroke={2} />
                         </Link>
                     </div>
